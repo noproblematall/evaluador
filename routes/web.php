@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::domain(env('EVALUADOR'))->group(base_path('routes/sub/evaluador.php'));
+Route::domain(env('EVALUADOR_TEST'))->group(base_path('routes/sub/evaluador.php'));
+
