@@ -1,0 +1,38 @@
+{
+  "_from": "@zurich/web-sdk@1.4.0",
+  "_id": "@zurich/web-sdk@1.4.0",
+  "_inBundle": false,
+  "_integrity": "sha512-jkAzQm6tUbToUq8AO4VHtVmI09QcTQEumkFstGVBDnujkatKcn40QeJ2wtxnL1rTxG9p++XC2mbyjx6FcYIz3w==",
+  "_location": "/@zurich/web-sdk",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "@zurich/web-sdk@1.4.0",
+    "name": "@zurich/web-sdk",
+    "escapedName": "@zurich%2fweb-sdk",
+    "scope": "@zurich",
+    "rawSpec": "1.4.0",
+    "saveSpec": null,
+    "fetchSpec": "1.4.0"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/@zurich/web-sdk/-/web-sdk-1.4.0.tgz",
+  "_shasum": "b196c152654a4f298e31fa25ff117b0bfc633412",
+  "_spec": "@zurich/web-sdk@1.4.0",
+  "_where": "E:\\New folder (2)",
+  "author": "",
+  "bundleDependencies": false,
+  "dependencies": {},
+  "deprecated": false,
+  "description": "Zurich Web SDK",
+  "devDependencies": {},
+  "license": "ISC",
+  "name": "@zurich/web-sdk",
+  "private": false,
+  "scripts": {},
+  "version": "1.4.0"
+}

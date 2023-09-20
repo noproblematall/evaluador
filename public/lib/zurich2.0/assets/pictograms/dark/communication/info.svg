@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="140px" height="140px" viewBox="0 0 140 140" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>pictogram/dark/communication/info</title>
+    <g id="pictogram/dark/communication/info" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="info" transform="translate(-0.000100, 0.000000)">
+            <path d="M140,70 C140,108.66 108.66,140 70,140 C31.34,140 0,108.66 0,70 C0,31.34 31.34,0 70,0 C108.66,0 140,31.34 140,70" id="circle" fill="#91BFE3"></path>
+            <g id="picto" transform="translate(65.404100, 25.301500)" fill="#2167AE">
+                <path d="M4.583,1.42108547e-14 C2.056,1.42108547e-14 0,2.056 0,4.583 C0,7.111 2.056,9.167 4.583,9.167 C7.11,9.167 9.166,7.111 9.166,4.583 C9.166,2.056 7.11,1.42108547e-14 4.583,1.42108547e-14" id="Fill-4"></path>
+                <path d="M4.6924,89.3969 C2.2074,89.3969 0.1924,87.3819 0.1924,84.8969 L0.1924,28.9979 C0.1924,26.5129 2.2074,24.4979 4.6924,24.4979 C7.1774,24.4979 9.1924,26.5129 9.1924,28.9979 L9.1924,84.8969 C9.1924,87.3819 7.1774,89.3969 4.6924,89.3969" id="Fill-6"></path>
+            </g>
+        </g>
+    </g>
+</svg>

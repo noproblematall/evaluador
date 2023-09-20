@@ -1,0 +1,14 @@
+{
+  "name": "@zurich/web-sdk",
+  "version": "2.0.1",
+  "private": false,
+  "description": "Zurich Web SDK",
+  "scripts": {},
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {},
+  "dependencies": {},
+  "engines": {
+    "node": "14.20.1"
+  }
+}

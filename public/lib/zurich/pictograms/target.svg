@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="140px" height="140px" viewBox="0 0 140 140" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>pictogram/finance/target</title>
+    <g id="pictogram/finance/target" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="target" transform="translate(-0.000000, 0.000000)">
+            <path d="M140,70 C140,108.66 108.66,140 70,140 C31.34,140 0,108.66 0,70 C0,31.34 31.34,0 70,0 C108.66,0 140,31.34 140,70" id="circle" fill="#91BFE3"></path>
+            <g id="picto" transform="translate(20.000000, 20.000000)">
+                <path d="M100,50 C100,77.614 77.614,100 50,100 C22.386,100 0,77.614 0,50 C0,22.386 22.386,0 50,0 C77.614,0 100,22.386 100,50" id="Fill-4" fill="#2167AE"></path>
+                <path d="M82,50 C82,67.673 67.673,82 50,82 C32.327,82 18,67.673 18,50 C18,32.327 32.327,18 50,18 C67.673,18 82,32.327 82,50" id="Fill-6" fill="#ECEEEF"></path>
+                <path d="M65,50 C65,58.284 58.284,65 50,65 C41.716,65 35,58.284 35,50 C35,41.716 41.716,35 50,35 C58.284,35 65,41.716 65,50" id="Fill-8" fill="#91BFE3"></path>
+                <path d="M110,38 L99.63,50 L110,62 L80.37,62 L75.185,56 L52.5,56 C49.462,56 47,53.538 47,50.5 C47,47.462 49.462,45 52.5,45 L74.321,45 L80.37,38 L110,38 Z" id="Fill-10" fill="#DAD2BD"></path>
+            </g>
+        </g>
+    </g>
+</svg>

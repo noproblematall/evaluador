@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="140px" height="140px" viewBox="0 0 140 140" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>pictogram/mobility/location/plain</title>
+    <g id="pictogram/mobility/location/plain" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="location" transform="translate(-0.000100, 0.000000)">
+            <path d="M140,70 C140,108.66 108.66,140 70,140 C31.34,140 0,108.66 0,70 C0,31.34 31.34,0 70,0 C108.66,0 140,31.34 140,70" id="circle" fill="#91BFE3"></path>
+            <g id="picto" transform="translate(30.587900, 22.992100)">
+                <path d="M67.297,11.5275 C51.927,-3.8425 26.918,-3.8425 11.547,11.5275 C4.101,18.9725 0,28.8725 0,39.4015 C0,49.9315 4.101,59.8305 11.557,67.2875 L38.547,93.6605 C38.791,93.8975 39.106,94.0165 39.422,94.0165 C39.737,94.0165 40.052,93.8975 40.295,93.6605 L67.297,67.2775 C82.667,51.9055 82.667,26.8965 67.297,11.5275" id="Fill-4" fill="#2167AE"></path>
+                <path d="M39.4216,19.3029 C28.4346,19.3029 19.4956,28.2409 19.4956,39.2289 C19.4956,50.2169 28.4346,59.1559 39.4216,59.1559 C50.4086,59.1559 59.3476,50.2169 59.3476,39.2289 C59.3476,28.2409 50.4086,19.3029 39.4216,19.3029" id="Fill-6" fill="#DAD2BD"></path>
+            </g>
+        </g>
+    </g>
+</svg>

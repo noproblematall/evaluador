@@ -1,7 +1,6 @@
 <?php 
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\EvaluadorController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [EvaluadorController::class, 'index'])->name('index');

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="140px" height="140px" viewBox="0 0 140 140" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>pictogram/dark/communication/chat</title>
+    <g id="pictogram/dark/communication/chat" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="chat" transform="translate(-0.000100, 0.000000)">
+            <path d="M140,70 C140,108.66 108.66,140 70,140 C31.34,140 0,108.66 0,70 C0,31.34 31.34,0 70,0 C108.66,0 140,31.34 140,70" id="circle" fill="#91BFE3"></path>
+            <g id="picto" transform="translate(21.312800, 29.218200)">
+                <path d="M32.875,0 C14.747,0 -7.10542736e-15,14.748 -7.10542736e-15,32.876 L-7.10542736e-15,64.502 C-7.10542736e-15,65.192 0.559,65.752 1.25,65.752 L32.875,65.752 C51.002,65.752 65.751,51.004 65.751,32.876 C65.751,14.748 51.002,0 32.875,0" id="Fill-4" fill="#DAD2BD"></path>
+                <path d="M72.4062,31.6265 C58.6382,31.6265 47.4372,42.8275 47.4372,56.5955 C47.4372,70.3635 58.6382,81.5645 72.4062,81.5645 L96.1252,81.5645 C96.8152,81.5645 97.3752,81.0045 97.3752,80.3145 L97.3752,56.5955 C97.3752,42.8275 86.1742,31.6265 72.4062,31.6265" id="Fill-6" fill="#2167AE"></path>
+            </g>
+        </g>
+    </g>
+</svg>
