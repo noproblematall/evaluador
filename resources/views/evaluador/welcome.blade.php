@@ -25,6 +25,9 @@
 <body class="">
     <div class='page-container'>
         @include('evaluador.components.page_1')
+        @include('evaluador.components.page_2')
+        @include('evaluador.components.page_3')
+        @include('evaluador.components.page_4')
     </div>
 
 

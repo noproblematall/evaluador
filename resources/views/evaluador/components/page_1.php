@@ -1,4 +1,4 @@
-<section id="page_1" class="page-content animate__animated animate__fadeIn">
+<section id="page_1" class="page-content animate__animated animate__fadeIn ">
     <div class='box'>
         <div class='text-center'>
             <h1 class='hola'>¡HOLA!</h1>

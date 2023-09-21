@@ -1,62 +1,368 @@
 body {
-    height : 100vh!important;
-    overflow : hidden;
+    height: 100vh !important;
+    overflow: hidden;
 }
+
 .page-container {
-    max-width : 450px;
-    height : 100%;
-    margin : auto;
-    box-shadow : 0 4px 8px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
+    max-width: 450px;
+    height: 100%;
+    margin: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .19);
 }
+
 .page-content {
-    width : 100%;
-    height : 100%;
+    width: 100%;
+    height: 100%;
+    background-color: #EBEFF0;
+    padding: 10px;
 }
+
 #page_1 {
     background-image: url(https://z-eval.s3.amazonaws.com/Console.png);
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center;
-    position : relative;
-}
-#page_1 .box {
-    position : absolute;
-    top : 16vh;
-    width : 70%;
-    left : 15%;
-    height : 38vh;
-    display : flex;
-    flex-direction : column;
-    align-items: center;
-    justify-content:space-between;
-}
-#page_1 .hola {
-    font-family: 'VT323';
-    font-size :  56px;
-    font-weight : 400;
-    color : #23366f;
-}
-#page_1 .description {
-    font-family: 'ZurichSans-Medium';
-    font-size :  20px;
-    font-weight : 400;
-    color : #23366f;
-    line-height : 1.2;
-}
-#page_1 .start_button {
-    background-color : #1fb1e6;
-    border-bottom : 8px solid #23366f;
-    color : #fff;
-    font-family: 'ZurichSans-Medium';
-    font-size : 24px;
-    padding : 8px 20px;
-    text-decoration : none;
+    position: relative;
 }
 
+#page_1 .box {
+    position: absolute;
+    top: 15vh;
+    width: 70%;
+    left: 15%;
+    height: 38vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#page_1 .hola {
+    font-family: 'VT323';
+    font-size: 56px;
+    font-weight: 400;
+    color: #23366f;
+}
+
+#page_1 .description {
+    font-family: 'ZurichSans-Medium', Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: #23366f;
+    line-height: 1.2;
+}
+
+#page_1 .start_button {
+    background-color: #1fb1e6;
+    border-bottom: 8px solid #23366f;
+    color: #fff;
+    font-family: 'ZurichSans-Medium', Arial, sans-serif;
+    font-size: 24px;
+    padding: 8px 20px;
+    text-decoration: none;
+}
+
+.zurich-logo {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.card {
+    max-width: unset !important;
+    width: 100%;
+    min-height: 80vh !important;
+}
+
+/* page_2 */
+.inner {
+    background-image: url(https://z-eval.s3.amazonaws.com/misc/Console+small.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    max-height: 300px;
+    height: 66vw;
+    position: relative;
+}
+
+.console-small-container {
+    position: absolute;
+    top: 50%;
+    height: 76%;
+    width: 86%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#page_2 .title-container {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#page_2 .title {
+    font-family: 'ZurichSans-Medium', Arial, sans-serif;
+    font-size: 20px;
+    color: #215193;
+}
+
+#page_2 .character-selector-box {
+    width: 98%;
+    height: 80%;
+    overflow: hidden;
+    position: relative;
+    margin: auto;
+}
+
+#page_2 .character-selector {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 120%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: -5px;
+}
+
+#page_2 .character-item input {
+    display: none;
+}
+
+#page_2 label img {
+    width: 15vw;
+    max-width: 70px;
+}
+
+#page_2 label img.activated {
+    width: 18vw;
+    max-width: 80px;
+}
+
+#page_2 .deactivated,
+#page_2 input[type="radio"]:checked+label .activated {
+    display: block;
+}
+
+#page_2 .activated,
+#page_2 input[type="radio"]:checked+label .deactivated {
+    display: none;
+}
+
+#page_2 .input-group {
+    font-family: 'ZurichSans-Regular', Arial, sans-serif;
+    font-size: 18px;
+    color: #215193;
+}
+
+#page_2 .name {
+    width: 70px;
+    border: none;
+    font-size: 14px;
+}
+
+#page_2 .age {
+    width: 20px;
+    border: none;
+    font-size: 14px;
+}
+
+.continue_btn {
+    color: white;
+    padding: 6px 20px 8px;
+    background-color: #2167AE;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.error {
+    font-size: 14px;
+}
+
+/***** page 3 ******/
+#page_3 .title-container {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#page_3 .title {
+    font-family: 'ZurichSans-Medium', Arial, sans-serif;
+    font-size: 20px;
+    color: #215193;
+}
+
+#page_3 .item-selector-box {
+    width: 98%;
+    height: 80%;
+    overflow: hidden;
+    position: relative;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#page_3 .items-container {
+    width: 80vw;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#page_3 .number-content {
+    color: #215193;
+    font-size: 16px
+}
+
+#page_3 .number {
+    font-size: 24px;
+    font-family: 'ZurichSans-Medium', Arial, sans-serif;
+    font-weight: bold;
+}
+
+#page_3 .number-content {
+    color: #666;
+    font-family: 'ZurichSans-Medium', Arial, sans-serif;
+}
+
+#page_3 .activated .number-content {
+    color: #215193;
+}
+
+#page_3 .image-content {
+    margin-top: -10px;
+}
+
+#page_3 .image-content img {
+    width: 14vw;
+    max-width: 66px;
+}
+
+#page_3 .image-item img.inactivated,
+#page_3 .image-item.activated img.activated {
+    display: block;
+}
+
+#page_3 .image-item img.activated,
+#page_3 .image-item.activated img.inactivated {
+    display: none;
+}
+
+#page_3 .item .item-title {
+    color: #215193;
+    font-size: 16px;
+    font-family: 'ZurichSans-Medium', Arial, sans-serif;
+}
+
+#page_3 .item .item-description {
+    color: #215193;
+    font-size: 12px;
+    font-family: 'ZurichSans-Medium', Arial, sans-serif;
+}
+
+#page_3 .minus-btn,
+#page_3 .plus-btn {
+    padding: 4px 6px;
+    border: 1px solid #1fb1e6;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+#page_3 .minus-btn .icon,
+#page_3 .plus-btn .icon {
+    color: #2159ae;
+    font-size: 16px;
+}
+
+#page_3 .item-value {
+    width: 50px;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 16px;
+    color: #666;
+    font-family: 'ZurichSans-Medium', Arial, sans-serif;
+}
+
+#page_3 .item.activated .item-value {
+    color: #1fb1e6;
+}
+
+/* *******  page 4 ******/
+#page_4 .title-container {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#page_4 .title {
+    font-family: 'ZurichSans-Medium', Arial, sans-serif;
+    font-size: 20px;
+    color: #215193;
+}
+#page_4 .item-selector-box {
+    width: 98%;
+    height: 80%;
+    overflow: hidden;
+    position: relative;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#page_4 .item-selector-box img {
+    width : 15vw;
+    max-width : 66px;
+}
+#page_4 .items-container {
+    width: 80vw;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#page_4 .item input[type='radio'] {
+    display :none;
+}
+#page_4 .item label{
+    width : 100%;
+    height : 50px;
+    border-radius : 8px;
+    background-color : #D9D9D9;
+    color : #545454;
+    font-family: 'ZurichSans-Medium', Arial, sans-serif;
+    font-size: 14px;
+    line-height : 1;
+}
+#page_4 .item input[type='radio']:checked + label {
+    background-color : #A6E9AB;
+    color : #215193;
+}
+
+.prev_link {
+    color: #2167ae;
+    cursor: pointer;
+    font-size: 11px;
+}
+
+.prev_link span.icon {
+    font-size: 18px;
+}
 
 @media (max-width: 450px) {
     .page-container {
-        box-shadow : none;
+        box-shadow: none;
+    }
+
+    .title {
+        font-size: 16px !important;
     }
 }
-
