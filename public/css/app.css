@@ -169,7 +169,7 @@ body {
 }
 
 #page_2 .age {
-    width: 20px;
+    width: 28px;
     border: none;
     font-size: 18px;
     font-weight : bold;
@@ -421,66 +421,65 @@ body {
     max-width : 120px;
     left : -120px;
     bottom : 10px;
-    transition : left 3s;
+    transition : left 1.5s;
     position : absolute;
 }
 #page_5 .todo-0.activated {
     left : 0px;
-    transition : left 5s;
+    transition : left 1.5s;
 }
 #page_5 .todo-1 {
     width : 28vw;
     max-width : 120px;
     right : -120px;
     bottom : 10px;
-    transition : right 3s;
+    transition : right 1.5s;
     position : absolute;
 }
 /* home */
 #page_5 .todo-1.activated {
     right : 0px;
-    transition : right 3s;
+    transition : right 1.5s;
 }
 #page_5 .todo-1 {
     width : 35vw;
     max-width : 140px;
     right : -140px;
     bottom : 10px;
-    transition : right 3s;
+    transition : right 1.5s;
     position : absolute;
 }
 /* luggage */
 #page_5 .todo-2.activated {
     bottom : 10px;
-    transition : bottom 3s;
+    transition : bottom 1.5s;
 }
 #page_5 .todo-2 {
     width : 28vw;
     max-width : 120px;
     left : 10%;
     bottom : 100%;
-    transition : bottom 3s;
+    transition : bottom 1.5s;
     position : absolute;
 }
 /* desk */
 #page_5 .todo-3.activated {
     bottom : 10px;
-    transition : bottom 3s;
+    transition : bottom 1.5s;
 }
 #page_5 .todo-3 {
     width : 35vw;
     max-width : 150px;
     left : 30%;
     bottom : -100%;
-    transition : bottom 3s;
+    transition : bottom 1.5s;
     position : absolute;
 }
 /* coin */
 #page_5 .todo-4.activated {
-    transition : bottom 3s;
     bottom : 40%;
     transform : rotate(3600deg);
-    transition : bottom 3s, transform 3s;
+    transition : bottom 3s, transform 1.5s;
 }
 #page_5 .todo-4 {
     width : 18vw;
@@ -488,7 +487,7 @@ body {
     bottom : 100%;
     left : 55%;
     transform : rotate(0deg);
-    transition : bottom 3s, transform 3s;
+    transition : bottom 3s, transform 1.5s;
     position : absolute;
 }
 /* ************** page 6 */
