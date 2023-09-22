@@ -60,10 +60,10 @@
             </div>
         </div>
         <div class='pt-5 pb-4 input-group d-flex justify-content-center'>
-            <span>Me llamo &nbsp;&nbsp;</span>
-            <input type='text' name='name' id='name' placeholder='..........' required class='name' />
-            <span>&nbsp;y tengo  &nbsp;&nbsp;</span>
-            <input type='text' name='age' id='age' placeholder='..' required  class='age' />
+            <span>Me llamo &nbsp;</span>
+            <input type='text' name='name' id='name' placeholder='..............' required class='name' />
+            <span>&nbsp;y tengo  &nbsp;</span>
+            <input type='text' name='age' id='age' placeholder='.....' required  class='age' />
             <span>&nbsp;años.</span>
         </div>
         <div class='error text-center text-danger mb-2'>&nbsp;</div>

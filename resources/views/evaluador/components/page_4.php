@@ -18,29 +18,32 @@
             </div>
         </div>
         <div class='items-container mt-4 row'>
-            <div class='col-6 item'>
+            <div class='col-6 item mt-2 mb-1 px-2'>
                 <input type='radio' name='job' id='job-0' value='0' >
                 <label for='job-0' class='item-label d-flex justify-content-center align-items-center px-1'>
                     <p class='text-center'>Si, en relación de dependencia</p>
                 </label>
             </div>
-            <div class='col-6 item'>
-                <input type='radio' name='job' id='job-1' value='0' >
+            <div class='col-6 item mt-2 mb-1 px-2'>
+                <input type='radio' name='job' id='job-1' value='1' >
                 <label for='job-1' class='item-label d-flex justify-content-center  align-items-center px-1'>
                     <p class='text-center'>Si, independiente / en mi negocio</p>
                 </label>
             </div>
-            <div class='col-6 item'>
-                <input type='radio' name='job' id='job-2' value='0' >
+            <div class='col-6 item  mt-2 mb-1 px-2'>
+                <input type='radio' name='job' id='job-2' value='2' >
                 <label for='job-2' class='item-label d-flex justify-content-center  align-items-center px-1'>
-                    <p class='text-center'>Si, independiente / en mi negocio</p>
+                    <p class='text-center'>Si, administro mi casa</p>
                 </label>
             </div>
-            <div class='col-6 '>aaa</div>
-            <div class='col-6'>aaa</div>
-            <div class='col-6'>aaa</div>
+            <div class='col-6 item  mt-2 mb-1 px-2'>
+                <input type='radio' name='job' id='job-3' value='3' >
+                <label for='job-3' class='item-label d-flex justify-content-center  align-items-center px-1'>
+                    <p class='text-center'>No por el momento</p>
+                </label>
+            </div>
         </div>
-        <div class='error text-center text-danger mb-2'>&nbsp;</div>
-        <button class='continue_btn mx-auto' id='to_page_4'>Continuar</button>
+        <div class='error text-center text-danger my-2'>&nbsp;</div>
+        <button class='continue_btn mx-auto' id='to_page_5'>Continuar</button>
     </div>
 </section>

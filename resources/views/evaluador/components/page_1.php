@@ -1,3 +1,4 @@
+<!-- <section id="page_1" class="page-content animate__animated animate__fadeIn d-none"> -->
 <section id="page_1" class="page-content animate__animated animate__fadeIn ">
     <div class='box'>
         <div class='text-center'>

@@ -28,6 +28,9 @@
         @include('evaluador.components.page_2')
         @include('evaluador.components.page_3')
         @include('evaluador.components.page_4')
+        @include('evaluador.components.page_5')
+        @include('evaluador.components.page_6')
+        @include('evaluador.components.page_7')
     </div>
 
 
