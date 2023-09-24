@@ -39,6 +39,7 @@ $(document).ready(function () {
     $('#age').css('color', 'unset');
     name = name1;
     age = age1;
+    character = $('#page_2 input[type="radio"]:checked').val();
     selectedImage = $('#page_2 input[type="radio"]:checked').siblings().filter('label').find('img.activated').attr('src');
     $('#page_2').addClass('d-none');
     $('#page_3').removeClass('d-none');
@@ -103,7 +104,7 @@ $(document).ready(function () {
     if (elem.length > 0) {
       $('#page_4 .error').html('&nbsp;');
     } else {
-      return $('#page_4 .error').text('please select one item');
+      return $('#page_4 .error').text('por favor seleccione un elemento');
     }
     job = elem.siblings().filter('label').find('p').text();
     $('#page_5 .selected-image').attr('src', selectedImage);
@@ -143,7 +144,7 @@ $(document).ready(function () {
     if (elem.length > 0) {
       $('#page_5 .error').html('&nbsp; ');
     } else {
-      return $('#page_5 .error').text('please select one item');
+      return $('#page_5 .error').text('por favor seleccione artículos');
     }
     $('#page_5 input[type="checkbox"]:checked').each(function () {
       todo.push($(this).val());
@@ -186,7 +187,7 @@ $(document).ready(function () {
     if (elem.length > 0) {
       $('#page_6 .error').html('&nbsp; ');
     } else {
-      return $('#page_6 .error').text('please select one item');
+      return $('#page_6 .error').text('por favor seleccione artículos');
     }
     $('#page_6 input[type="checkbox"]:checked').each(function () {
       plan.push($(this).val());
