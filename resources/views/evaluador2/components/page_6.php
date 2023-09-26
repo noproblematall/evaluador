@@ -18,7 +18,7 @@
         <hr />
         <div class='items-container mt-2 row px-0'>
             <p class='consider-description text-center mt-3'>El plan que mejor se adaptan a tu caso:</p>
-            <div class='items mt-2 mb-1'>
+            <div class='items mt-2 mb-1 px-0'>
                 <div class='item d-flex justify-content-between align-items-center mb-3'>
                     <div class='content'>
                         <div class='item-title lh-1'>Zurich Options</div>
