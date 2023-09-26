@@ -19,14 +19,26 @@
         <div class='character-selector  d-flex justify-content-around align-items-center'>
             <div class='col d-flex justify-content-center align-items-center position-relative'>
                 <div class='character-item'>
-                    <input type='radio' name='character' id='character-hombreGrande' value='hombreGrande' />
-                    <label for='character-hombreGrande'>
-                        <img src='https://z-eval.s3.amazonaws.com/pers/Hombre+Grande+b.png' alt='Hombre Grande' class='deactivated' />
-                        <img src='https://z-eval.s3.amazonaws.com/pers/Hombre+Grande+a.png' alt='Hombre Grande' class='activated' />
+                    <input type='radio' name='character' id='character-hombre' value='hombre' />
+                    <label for='character-hombre'>
+                        <img src='https://z-eval.s3.amazonaws.com/pers/hombre+b.png' alt='Hombre' class='deactivated' />
+                        <img src='https://z-eval.s3.amazonaws.com/pers/hombre+a.png' alt='Hombre' class='activated' />
                     </label>
                 </div>
                 <div class='animation-container position-absolute w-100 h-100 d-flex justify-content-center align-items-center'>
-                    <img src='https://z-eval.s3.amazonaws.com/pers/Hombre+Grande+a.png' alt='Hombre Grande' class='animation1' />
+                    <img src='https://z-eval.s3.amazonaws.com/pers/hombre+a.png' alt='Hombre Grande' class='animation1' />
+                </div>
+            </div>
+            <div class='col d-flex justify-content-center align-items-center position-relative'>
+                <div class='character-item'>
+                    <input type='radio' name='character' id='character-mujer' value='mujer'  />
+                    <label for='character-mujer'>
+                        <img src='https://z-eval.s3.amazonaws.com/pers/Mujer+b.png' alt='Mujer' class='deactivated' />
+                        <img src='https://z-eval.s3.amazonaws.com/pers/Mujer+a.png' alt='Mujer' class='activated' />
+                    </label>
+                </div>
+                <div class='animation-container position-absolute w-100 h-100 d-flex justify-content-center align-items-center'>
+                    <img src='https://z-eval.s3.amazonaws.com/pers/Mujer+a.png' alt='Mujer' class='animation2' />
                 </div>
             </div>
             <div class='col d-flex justify-content-center align-items-center position-relative'>
@@ -38,31 +50,19 @@
                     </label>
                 </div>
                 <div class='animation-container position-absolute w-100 h-100 d-flex justify-content-center align-items-center'>
-                    <img src='https://z-eval.s3.amazonaws.com/pers/Nobi+a.png' alt='Nobi' class='animation2' />
-                </div>
-            </div>
-            <div class='col d-flex justify-content-center align-items-center position-relative'>
-                <div class='character-item'>
-                    <input type='radio' name='character' id='character-mujer' value='mujer' />
-                    <label for='character-mujer'>
-                        <img src='https://z-eval.s3.amazonaws.com/pers/Mujer+b.png' alt='Mujer' class='deactivated' />
-                        <img src='https://z-eval.s3.amazonaws.com/pers/Mujer+a.png' alt='Mujer' class='activated' />
-                    </label>
-                </div>
-                <div class='animation-container position-absolute w-100 h-100 d-flex justify-content-center align-items-center'>
-                    <img src='https://z-eval.s3.amazonaws.com/pers/Mujer+a.png' alt='Mujer' class='animation3' />
+                    <img src='https://z-eval.s3.amazonaws.com/pers/Nobi+a.png' alt='Nobi' class='animation3' />
                 </div>
             </div>
         </div>
     </div>
     <div class='d-flex  align-items-center'>
-        <img src='https://z-eval.s3.amazonaws.com/misc/select.png' alt='img' width='18' />
+        <img src='https://z-eval.s3.amazonaws.com/misc/pen.png' alt='img' width='20' />
         <p class='color-blue px-2'>Completá tus datos</p>
     </div>
     <div class='card p-3 mt-2'>
         <div class="textfield  ">
             <span class="icon icon--pencil_24_outline"></span>
-            <input id="name" name="name" class="textfield-control" value="" type="text" placeholder="Nombres" />
+            <input id="name" name="name" class="textfield-control" value="" type="text" placeholder="Nombre" />
             <label class="textfield-label" for="name"></label>
         </div>
         <div class="textfield  ">

@@ -9,7 +9,7 @@
     </div>
     <div class='d-flex  align-items-center'>
         <img src='https://z-eval.s3.amazonaws.com/misc/target.png' alt='img' width='18' />
-        <p class='color-blue px-2 title'>Qué objetivos querés alcanzar en los próximos años?</p>
+        <p class='color-blue px-2 title'>¿Qué objetivos querés alcanzar en los próximos años?</p>
     </div>
     <div class='card mt-2 px-3 pb-3'>
         <div class='todo-image-container'>

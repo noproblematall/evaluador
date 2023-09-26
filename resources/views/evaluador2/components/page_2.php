@@ -9,7 +9,7 @@
     </div>
     <div class='d-flex  align-items-center'>
         <img src='https://z-eval.s3.amazonaws.com/misc/people.png' alt='img' width='18' />
-        <p class='color-blue px-2'>Cuántas personas tenés a cargo?</p>
+        <p class='color-blue px-2'>¿Cuántas personas tenés a cargo?</p>
     </div>
     <div class='card mt-2 p-3'>
         <div class='item-selector-box d-flex justify-content-center align-items-center py-3'>
