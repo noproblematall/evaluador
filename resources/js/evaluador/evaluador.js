@@ -142,7 +142,7 @@ $(document).ready(function () {
         'Comprar una casa',
         'Viajar todos los años',
         'Emprender un proyecto',
-        'Independencia financiera',
+        'generar un ahorro rentable',
         'Ninguno de los anteriores'
     ]
     $('#to_page_6').click(function () {
@@ -190,11 +190,11 @@ $(document).ready(function () {
     })
     let plan = [];
     let plan_str_arr = [
-        'La inversión de mis ahorros',
-        'Asegurar a mis hijos su educación',
+        'Rentabilizar mis ahorros',
+        'Educación de alto nivel para mis hijos',
         'Conservar mi nivel de vida en el retiro',
         'La continuidad de mi empresa o proyecto',
-        'Recursos para mi salud',
+        'Tener un fondo para emergencias',
         'No tengo planes'
     ];
     $('#to_page_7').click(function () {

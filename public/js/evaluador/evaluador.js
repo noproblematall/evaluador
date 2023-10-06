@@ -138,7 +138,7 @@ $(document).ready(function () {
     }
   });
   var todo = [];
-  var todo_str_arr = ['Comprar un auto', 'Comprar una casa', 'Viajar todos los años', 'Emprender un proyecto', 'Independencia financiera', 'Ninguno de los anteriores'];
+  var todo_str_arr = ['Comprar un auto', 'Comprar una casa', 'Viajar todos los años', 'Emprender un proyecto', 'generar un ahorro rentable', 'Ninguno de los anteriores'];
   $('#to_page_6').click(function () {
     var elem = $('#page_5 input[type="checkbox"]:checked');
     if (elem.length > 0) {
@@ -181,7 +181,7 @@ $(document).ready(function () {
     }
   });
   var plan = [];
-  var plan_str_arr = ['La inversión de mis ahorros', 'Asegurar a mis hijos su educación', 'Conservar mi nivel de vida en el retiro', 'La continuidad de mi empresa o proyecto', 'Recursos para mi salud', 'No tengo planes'];
+  var plan_str_arr = ['Rentabilizar mis ahorros', 'Educación de alto nivel para mis hijos', 'Conservar mi nivel de vida en el retiro', 'La continuidad de mi empresa o proyecto', 'Tener un fondo para emergencias', 'No tengo planes'];
   $('#to_page_7').click(function () {
     var elem = $('#page_6 input[type="checkbox"]:checked');
     if (elem.length > 0) {

@@ -32,10 +32,18 @@ $(document).ready(function () {
     name = name1;
     age = age1;
     character = character1;
-    selectedImage = $('#page_1 input[type="radio"]:checked').siblings().filter('label').find('img.activated').attr('src');
+    selectedImage = $('#page_1 input[type="radio"]:checked').parent().siblings().filter('label').find('img.activated').attr('src');
     $('#page_1').addClass('d-none');
     $('#page_2').removeClass('d-none');
     console.log('selected Image', selectedImage);
+  });
+  $('#page_1 input[type="radio"]').change(function () {
+    $('#page_1 label img.activated').removeClass('d-none');
+    $('#page_1 label img.deactivated').removeClass('d-none');
+    $('#page_1 label img.activated').addClass('d-none');
+    var elem = $(this);
+    elem.parent().siblings().filter('label').find('img.activated').removeClass('d-none');
+    elem.parent().siblings().filter('label').find('img.deactivated').addClass('d-none');
   });
   /*********   page 2  ************/
   var member = {
@@ -51,14 +59,14 @@ $(document).ready(function () {
     if (input_value > 0) {
       var val = input_value - 1;
       input_elem.val(val);
-      $("#page_2 .image-item.".concat(input_name, " .number")).text(val);
-      $("#page_2 .item.".concat(input_name, " .item-value")).text(val);
+      $("#page_2 .image-item[data-item=".concat(input_name, "] .number")).text(val);
+      $("#page_2 .item[data-item=".concat(input_name, "] .item-value")).text(val);
       if (val > 0) {
-        $("#page_2 .image-item.".concat(input_name)).addClass('activated');
-        $("#page_2 .item.".concat(input_name)).addClass('activated');
+        $("#page_2 .image-item[data-item=".concat(input_name, "]")).addClass('activated');
+        $("#page_2 .item[data-item=".concat(input_name, "]")).addClass('activated');
       } else {
-        $("#page_2 .image-item.".concat(input_name)).removeClass('activated');
-        $("#page_2 .item.".concat(input_name)).removeClass('activated');
+        $("#page_2 .image-item[data-item=".concat(input_name, "]")).removeClass('activated');
+        $("#page_2 .item[data-item=".concat(input_name, "]")).removeClass('activated');
       }
       member[input_name] = val;
     }
@@ -69,11 +77,16 @@ $(document).ready(function () {
     var input_value = parseInt(input_elem.val());
     var val = input_value + 1;
     input_elem.val(val);
-    $("#page_2 .image-item.".concat(input_name, " .number")).text(val);
-    $("#page_2 .item.".concat(input_name, " .item-value")).text(val);
-    $("#page_2 .image-item.".concat(input_name)).addClass('activated');
-    $("#page_2 .item.".concat(input_name)).addClass('activated');
+    $("#page_2 .image-item[data-item=".concat(input_name, "] .number")).text(val);
+    $("#page_2 .item[data-item=".concat(input_name, "] .item-value")).text(val);
+    $("#page_2 .image-item[data-item=".concat(input_name, "]")).addClass('activated');
+    $("#page_2 .item[data-item=".concat(input_name, "]")).addClass('activated');
     member[input_name] = val;
+  });
+  $('#page_2 .image-item').click(function () {
+    var input_name = $(this).data('item');
+    console.log('item', input_name);
+    $("#page_2 .item[data-item=".concat(input_name, "] .plus-btn")).trigger('click');
   });
   $('#prev_page_1').click(function () {
     $('#page_1').removeClass('d-none');
@@ -132,7 +145,7 @@ $(document).ready(function () {
     }
   });
   var todo = [];
-  var todo_str_arr = ['Comprar un auto', 'Comprar una casa', 'Viajar todos los años', 'Emprender un proyecto', 'Independencia financiera', 'Ninguno de los anteriores'];
+  var todo_str_arr = ['Comprar un auto', 'Comprar una casa', 'Viajar todos los años', 'Emprender un proyecto', 'generar un ahorro rentable', 'Ninguno de los anteriores'];
   $('#to_page_5').click(function () {
     var elem = $('#page_4 input[type="checkbox"]:checked');
     if (elem.length > 0) {
@@ -175,7 +188,7 @@ $(document).ready(function () {
     }
   });
   var plan = [];
-  var plan_str_arr = ['La inversión de mis ahorros', 'Asegurar a mis hijos su educación', 'Conservar mi nivel de vida en el retiro', 'La continuidad de mi empresa o proyecto', 'Recursos para mi salud', 'No tengo planes'];
+  var plan_str_arr = ['Rentabilizar mis ahorros', 'Educación de alto nivel para mis hijos', 'Conservar mi nivel de vida en el retiro', 'La continuidad de mi empresa o proyecto', 'Tener un fondo para emergencias', 'No tengo planes'];
   $('#to_page_6').click(function () {
     var elem = $('#page_5 input[type="checkbox"]:checked');
     if (elem.length > 0) {
@@ -231,15 +244,24 @@ $(document).ready(function () {
     var str = '';
     products.map(function (p, index) {
       if (p.selected > 0 && i < 2) {
-        str += "\n                <div class='item d-flex justify-content-between align-items-center mb-3'>\n                    <div class='content'>\n                        <div class='item-title lh-1'>".concat(p.title, "</div>\n                        <p class='item-description'>").concat(p.subtitle, "</p>\n                    </div>\n                    <a href='").concat(p.btn_link, "' alt='Pdf' target='_blank' class='info'>\n                        Saber m\xE1s\n                    </a>\n                </div>");
+        str += "\n                <div class='item d-flex justify-content-between align-items-center mb-3'>\n                    <div class='content'>\n                        <div class='item-title lh-1'>".concat(p.title, "</div>\n                        <p class='item-description'>").concat(p.subtitle, "</p>\n                    </div>\n                    <button class='info'>\n                        Saber m\xE1s\n                    </button>\n                </div>");
         if (i > 0) $('#page_6 .consider-description').text('Los planes que mejor se adaptan a tu caso:');
         i++;
       }
     });
     $('#page_6 .items-container .items').html(str);
-    console.log('page 6', products, str);
     $('#page_6').removeClass('d-none');
     $('#page_5').addClass('d-none');
+  });
+  $('#page_6 .item button.info').click(function () {
+    console.log('show modal', $('#send_email_modal').html());
+    $('#send_email_modal').modal({
+      backdrop: 'static'
+    });
+  });
+  $('#send_email_modal_btn').on('click', function (e) {
+    console.log('close btn');
+    $('#send_email_modal').modal('hide');
   });
   /******** page 7  */
   $('#prev_page_5').click(function () {

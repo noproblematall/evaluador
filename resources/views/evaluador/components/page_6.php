@@ -29,13 +29,13 @@
             <div class='col-6 item  mt-2 mb-1 px-2'>
                 <input type='checkbox' name='plan' id='plan-0' value='0' >
                 <label for='plan-0' class='item-label d-flex justify-content-center align-items-center px-1'>
-                    <p class='text-center'>La inversión de mis ahorros</p>
+                    <p class='text-center'>Rentabilizar mis ahorros</p>
                 </label>
             </div>
             <div class='col-6 item  mt-2 mb-1 px-2'>
                 <input type='checkbox' name='plan' id='plan-1' value='1' >
                 <label for='plan-1' class='item-label d-flex justify-content-center align-items-center px-1'>
-                    <p class='text-center'>Asegurar a mis hijos su educación</p>
+                    <p class='text-center'>Educación de alto nivel para mis hijos</p>
                 </label>
             </div>
             <div class='col-6 item  mt-2 mb-1 px-2'>
@@ -53,7 +53,7 @@
             <div class='col-6 item  mt-2 mb-1 px-2'>
                 <input type='checkbox' name='plan' id='plan-4' value='4' >
                 <label for='plan-4' class='item-label d-flex justify-content-center align-items-center px-1'>
-                    <p class='text-center'>Recursos para mi salud</p>
+                    <p class='text-center'>Tener un fondo para emergencias</p>
                 </label>
             </div>
             <div class='col-6 item  mt-2 mb-1 px-2'>

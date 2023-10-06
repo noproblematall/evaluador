@@ -38,14 +38,10 @@ body .card {
     border-radius : 30px;
 }
 #page_1 .character-selector {
-    height : 60vw;
-    max-height : 240px;
+    height : 65vw;
+    max-height : 255px;
     width : 100%;
 }
-#page_1 .character-item input {
-    display: none;
-}
-
 #page_1 .character-item img {
     width: 20vw;
     max-width: 70px;
@@ -54,14 +50,6 @@ body .card {
 #page_1  img.activated {
     width: 24vw;
     max-width: 90px;
-}
-#page_1 .deactivated,
-#page_1 input[type="radio"]:checked+label .activated {
-    display: block;
-}
-#page_1 .activated,
-#page_1 input[type="radio"]:checked+label .deactivated {
-    display: none;
 }
 #page_1 img.animation1, #page_1 img.animation2, #page_1 img.animation3 {
     width : 20vw;
@@ -113,9 +101,15 @@ body .card {
 }
 
 #page_2 .number {
-    font-size: 24px;
+    font-size: 26px;
     font-family: 'ZurichSans-Medium', Arial, sans-serif;
     font-weight: bold;
+}
+#page_2 .item .minus-btn{
+    opacity : 0;
+}
+#page_2 .item.activated .minus-btn{
+    opacity : 1;
 }
 
 #page_2 .number-content {
@@ -489,5 +483,51 @@ body .card {
     font-family: 'ZurichSans-Regular', Arial, sans-serif;
     color : #215193;
     font-size : 12px;
+}
+.modal-header {
+    background-color: #ECEEEF;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 5px 10px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    border-bottom: 1px solid #dee2e6;
+}
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;    
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    outline: 0;
+}
+.modal-body {
+    position: relative;
+    flex: 1 1 auto;
+    padding: 1rem;
+}
+.modal .modal-dialog {
+    width : calc(100% - 3rem);
+    max-width : 400px;
+    margin : 1.5rem auto;
+}
+button {
+    text-decoration : none;
+}
+.modal-header .close {
+    padding-top: 18px;
+    padding-right: 22px;
+}
+.modal .close {
+    color: #2167AE;
+    font-size: 30px;
+    margin: -1rem -1rem -1rem auto;
+}
+.modal-dialog-centered {    
+    min-height: calc(100% - 3rem);
 }
 

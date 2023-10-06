@@ -53,7 +53,7 @@
             <div class='col-6 item  mt-2 mb-1 px-2'>
                 <input type='checkbox' name='todo' id='todo-4' value='4' >
                 <label for='todo-4' class='item-label d-flex justify-content-center align-items-center px-1'>
-                    <p class='text-center'>Independencia financiera</p>
+                    <p class='text-center'>generar un ahorro rentable</p>
                 </label>
             </div>
             <div class='col-6 item  mt-2 mb-1 px-2'>

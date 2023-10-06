@@ -30,6 +30,8 @@
         @include('evaluador2.components.page_4')
         @include('evaluador2.components.page_5')
         @include('evaluador2.components.page_6')
+
+        @include('evaluador2.components.modal')
     </div>
 
 
@@ -44,7 +46,7 @@
     <script src="{{asset('lib/jquery.mask.min.js')}}"></script>
     <script src="{{asset('lib/cleave.min.js')}}"></script>
     <script src="{{asset('lib/jquery.cookie.js')}}"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script> -->
     <script src="{{mix('js/evaluador/evaluador2.js')}}"></script>
 </body>
 

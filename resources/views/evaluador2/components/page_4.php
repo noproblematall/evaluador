@@ -24,7 +24,7 @@
         </div>
         <hr />
         <div class='items-container mt-2 row'>
-            <p class='todo-description text-center my-1'>En los próximos años me gustaría…</p>
+            <p class='todo-description text-center mt-1 mb-3'>Podés elegir varias opciones</p>
             <div class='col-6 item  mt-2 mb-1 px-2'>
                 <input type='checkbox' name='todo' id='todo-0' value='0'>
                 <label for='todo-0' class='item-label d-flex justify-content-center align-items-center px-1'>
@@ -52,7 +52,7 @@
             <div class='col-6 item  mt-2 mb-1 px-2'>
                 <input type='checkbox' name='todo' id='todo-4' value='4'>
                 <label for='todo-4' class='item-label d-flex justify-content-center align-items-center px-1'>
-                    <p class='text-center'>Independencia financiera</p>
+                    <p class='text-center'>generar un ahorro rentable</p>
                 </label>
             </div>
             <div class='col-6 item  mt-2 mb-1 px-2'>

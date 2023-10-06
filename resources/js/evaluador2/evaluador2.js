@@ -25,10 +25,18 @@ $(document).ready(function () {
         $('#page_1 .error').html('&nbsp;')
         $('#age').parent().removeClass('has-error');
         name = name1; age = age1; character = character1;
-        selectedImage = $('#page_1 input[type="radio"]:checked').siblings().filter('label').find('img.activated').attr('src');
+        selectedImage = $('#page_1 input[type="radio"]:checked').parent().siblings().filter('label').find('img.activated').attr('src');
         $('#page_1').addClass('d-none');
         $('#page_2').removeClass('d-none');
         console.log('selected Image', selectedImage)
+    })
+    $('#page_1 input[type="radio"]').change(function() {
+        $('#page_1 label img.activated').removeClass('d-none')
+        $('#page_1 label img.deactivated').removeClass('d-none')
+        $('#page_1 label img.activated').addClass('d-none')
+        let elem = $(this);
+        elem.parent().siblings().filter('label').find('img.activated').removeClass('d-none')
+        elem.parent().siblings().filter('label').find('img.deactivated').addClass('d-none')
     })
     /*********   page 2  ************/
     let member = {
@@ -44,14 +52,14 @@ $(document).ready(function () {
         if (input_value > 0) {
             let val = input_value - 1;
             input_elem.val(val);
-            $(`#page_2 .image-item.${input_name} .number`).text(val);
-            $(`#page_2 .item.${input_name} .item-value`).text(val);
+            $(`#page_2 .image-item[data-item=${input_name}] .number`).text(val);
+            $(`#page_2 .item[data-item=${input_name}] .item-value`).text(val);
             if (val > 0) {
-                $(`#page_2 .image-item.${input_name}`).addClass('activated');
-                $(`#page_2 .item.${input_name}`).addClass('activated');
+                $(`#page_2 .image-item[data-item=${input_name}]`).addClass('activated');
+                $(`#page_2 .item[data-item=${input_name}]`).addClass('activated');
             } else {
-                $(`#page_2 .image-item.${input_name}`).removeClass('activated');
-                $(`#page_2 .item.${input_name}`).removeClass('activated');
+                $(`#page_2 .image-item[data-item=${input_name}]`).removeClass('activated');
+                $(`#page_2 .item[data-item=${input_name}]`).removeClass('activated');
             }
             member[input_name] = val;
         }
@@ -62,11 +70,16 @@ $(document).ready(function () {
         let input_value = parseInt(input_elem.val());
         let val = input_value + 1;
         input_elem.val(val);
-        $(`#page_2 .image-item.${input_name} .number`).text(val);
-        $(`#page_2 .item.${input_name} .item-value`).text(val);
-        $(`#page_2 .image-item.${input_name}`).addClass('activated');
-        $(`#page_2 .item.${input_name}`).addClass('activated');
+        $(`#page_2 .image-item[data-item=${input_name}] .number`).text(val);
+        $(`#page_2 .item[data-item=${input_name}] .item-value`).text(val);
+        $(`#page_2 .image-item[data-item=${input_name}]`).addClass('activated');
+        $(`#page_2 .item[data-item=${input_name}]`).addClass('activated');
         member[input_name] = val;
+    })
+    $('#page_2 .image-item').click(function(){
+        let input_name = $(this).data('item');
+        console.log('item', input_name)
+        $(`#page_2 .item[data-item=${input_name}] .plus-btn`).trigger('click');
     })
     $('#prev_page_1').click(function () {
         $('#page_1').removeClass('d-none');
@@ -133,7 +146,7 @@ $(document).ready(function () {
         'Comprar una casa',
         'Viajar todos los años',
         'Emprender un proyecto',
-        'Independencia financiera',
+        'generar un ahorro rentable',
         'Ninguno de los anteriores'
     ]
     $('#to_page_5').click(function () {
@@ -181,11 +194,11 @@ $(document).ready(function () {
     })
     let plan = [];
     let plan_str_arr = [
-        'La inversión de mis ahorros',
-        'Asegurar a mis hijos su educación',
+        'Rentabilizar mis ahorros',
+        'Educación de alto nivel para mis hijos',
         'Conservar mi nivel de vida en el retiro',
         'La continuidad de mi empresa o proyecto',
-        'Recursos para mi salud',
+        'Tener un fondo para emergencias',
         'No tengo planes'
     ];
     $('#to_page_6').click(function () {
@@ -244,20 +257,28 @@ $(document).ready(function () {
                         <div class='item-title lh-1'>${p.title}</div>
                         <p class='item-description'>${p.subtitle}</p>
                     </div>
-                    <a href='${p.btn_link}' alt='Pdf' target='_blank' class='info'>
+                    <button class='info'>
                         Saber más
-                    </a>
+                    </button>
                 </div>`;   
                 if (i > 0) $('#page_6 .consider-description').text('Los planes que mejor se adaptan a tu caso:');             
                 i++;
             }
         })
         $('#page_6 .items-container .items').html(str);
-        console.log('page 6', products, str);
 
         $('#page_6').removeClass('d-none');
-        $('#page_5').addClass('d-none');        
+        $('#page_5').addClass('d-none');   
+        
     })
+    $('#page_6 .item button.info').click(function() {
+        console.log('show modal', $('#send_email_modal').html())
+        $('#send_email_modal').modal({backdrop : 'static'});
+    })
+    $('#send_email_modal_btn').on('click', function (e) {
+        console.log('close btn')
+        $('#send_email_modal').modal('hide');
+    });
     /******** page 7  */
     $('#prev_page_5').click(function () {
         $('#page_5').removeClass('d-none');

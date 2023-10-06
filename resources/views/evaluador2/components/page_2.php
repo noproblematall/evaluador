@@ -13,7 +13,7 @@
     </div>
     <div class='card mt-2 p-3'>
         <div class='item-selector-box d-flex justify-content-center align-items-center py-3'>
-            <div class='image-item bebes col d-flex justify-content-between flex-column'>
+            <div data-item='bebes' class='image-item  col d-flex justify-content-between flex-column'>
                 <div class='text-center number-content'>
                     <span class='number'>0</span>
                     <span>x</span>
@@ -23,7 +23,7 @@
                     <img class='activated' src='https://z-eval.s3.amazonaws.com/pers/baby+a.png' alt='Bebes' />
                 </div>
             </div>
-            <div class='image-item ninos col d-flex justify-content-between flex-column'>
+            <div data-item='ninos' class='image-item  col d-flex justify-content-between flex-column'>
                 <div class='text-center number-content'>
                     <span class='number'>0</span>
                     <span>x</span>
@@ -33,7 +33,7 @@
                     <img class='activated' src='https://z-eval.s3.amazonaws.com/pers/child+a.png' alt='Ninos' />
                 </div>
             </div>
-            <div class='image-item adolescentes col d-flex justify-content-between flex-column'>
+            <div data-item='adolescentes' class='image-item  col d-flex justify-content-between flex-column'>
                 <div class='text-center number-content'>
                     <span class='number'>0</span>
                     <span>x</span>
@@ -43,7 +43,7 @@
                     <img class='activated' src='https://z-eval.s3.amazonaws.com/pers/teen+a.png' alt='Adolescentes' />
                 </div>
             </div>
-            <div class='image-item adultos col d-flex justify-content-between flex-column'>
+            <div data-item='adultos' class='image-item  col d-flex justify-content-between flex-column'>
                 <div class='text-center number-content'>
                     <span class='number'>0</span>
                     <span>x</span>
@@ -56,7 +56,7 @@
         </div>
         <hr />
         <div class='items-container mt-4'>
-            <div class='item bebes d-flex justify-content-between align-items-center mt-1'>
+            <div data-item='bebes'  class='item  d-flex justify-content-between align-items-center mt-1'>
                 <div>
                     <div class='item-title'>Bebés</div>
                     <p class='item-description'>Hasta 2 años</p>
@@ -72,10 +72,10 @@
                     </div>
                 </div>
             </div>
-            <div class='item ninos d-flex justify-content-between align-items-center mt-1'>
+            <div data-item='ninos'  class='item  d-flex justify-content-between align-items-center mt-1'>
                 <div>
                     <div class='item-title'>Niños</div>
-                    <p class='item-description'>3 a 11 años</p>
+                    <p class='item-description'>2 a 11 años</p>
                 </div>
                 <div class='d-flex justify-content-center align-items-center'>
                     <input type='hidden' name='ninos' value='0' id='ninos' />
@@ -88,7 +88,7 @@
                     </div>
                 </div>
             </div>
-            <div class='item adolescentes d-flex justify-content-between align-items-center mt-1'>
+            <div data-item='adolescentes'  class='item  d-flex justify-content-between align-items-center mt-1'>
                 <div>
                     <div class='item-title'>Adolescentes</div>
                     <p class='item-description'>12 a 18 años</p>
@@ -104,10 +104,10 @@
                     </div>
                 </div>
             </div>
-            <div class='item adultos d-flex justify-content-between align-items-center'>
+            <div data-item='adultos'  class='item adultos d-flex justify-content-between align-items-center'>
                 <div>
                     <div class='item-title'>Adultos</div>
-                    <p class='item-description'>19 o más años</p>
+                    <p class='item-description'>18 o más años</p>
                 </div>
                 <div class='d-flex justify-content-center align-items-center'>
                     <input type='hidden' name='adultos' value='0' id='adultos' />

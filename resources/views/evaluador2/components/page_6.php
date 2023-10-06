@@ -24,18 +24,18 @@
                         <div class='item-title lh-1'>Zurich Options</div>
                         <p class='item-description'>Seguro de vida con beneficios adicionales</p>
                     </div>
-                    <a href='https://www.zurich.com.ar/-/media/project/zwp/argentina/docs/vida-2021/zurich-options-dic201.pdf' alt='Pdf' target='_blank' class='info'>
+                    <button class='info'>
                         Saber más
-                    </a>
+                    </button>
                 </div>
                 <div class='item d-flex justify-content-between align-items-center mb-3'>
                     <div class='content'>
                         <div class='item-title lh-1'>Zurich Invest Future</div>
                         <p class='item-description'>Seguro de vida con beneficios adicionales</p>
                     </div>
-                    <a href='https://www.zurich.com.ar/-/media/project/zwp/argentina/docs/vida-2021/zurich-invest-university-dic203.pdf' alt='Pdf' target='_blank' class='info'>
+                    <button class='info'>
                         Saber más
-                    </a>
+                    </button>
                 </div>
             </div>
         </div>
