@@ -54,7 +54,7 @@
                         <button type="button" class="btn 
                                 btn--primary-custom
                                 btn--sm
-                                mb-x
+                                mb-5
                                 " id="send_email_modal_btn">
                             Continuar
                         </button>

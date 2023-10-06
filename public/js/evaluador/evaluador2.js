@@ -252,16 +252,16 @@ $(document).ready(function () {
     $('#page_6 .items-container .items').html(str);
     $('#page_6').removeClass('d-none');
     $('#page_5').addClass('d-none');
-  });
-  $('#page_6 .item button.info').click(function () {
-    console.log('show modal', $('#send_email_modal').html());
-    $('#send_email_modal').modal({
-      backdrop: 'static'
+    $('#page_6 .item button.info').click(function () {
+      console.log('show modal', $('#send_email_modal').html());
+      $('#send_email_modal').modal({
+        backdrop: 'static'
+      });
     });
-  });
-  $('#send_email_modal_btn').on('click', function (e) {
-    console.log('close btn');
-    $('#send_email_modal').modal('hide');
+    $('#send_email_modal_btn').on('click', function (e) {
+      console.log('close btn');
+      $('#send_email_modal').modal('hide');
+    });
   });
   /******** page 7  */
   $('#prev_page_5').click(function () {

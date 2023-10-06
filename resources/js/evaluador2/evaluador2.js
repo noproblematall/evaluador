@@ -9,7 +9,7 @@ $(document).ready(function () {
         let name1 = $('#name').val();
         let age1 = $('#age').val();
         character1 = $('#page_1 input[type="radio"]:checked').val();
-        console.log('character', character1, name1, age1); 
+        console.log('character', character1, name1, age1);
         if (!character1) {
             return $('#page_1 .error').text('Por favor seleccioná un personaje')
         }
@@ -30,7 +30,7 @@ $(document).ready(function () {
         $('#page_2').removeClass('d-none');
         console.log('selected Image', selectedImage)
     })
-    $('#page_1 input[type="radio"]').change(function() {
+    $('#page_1 input[type="radio"]').change(function () {
         $('#page_1 label img.activated').removeClass('d-none')
         $('#page_1 label img.deactivated').removeClass('d-none')
         $('#page_1 label img.activated').addClass('d-none')
@@ -76,7 +76,7 @@ $(document).ready(function () {
         $(`#page_2 .item[data-item=${input_name}]`).addClass('activated');
         member[input_name] = val;
     })
-    $('#page_2 .image-item').click(function(){
+    $('#page_2 .image-item').click(function () {
         let input_name = $(this).data('item');
         console.log('item', input_name)
         $(`#page_2 .item[data-item=${input_name}] .plus-btn`).trigger('click');
@@ -118,21 +118,21 @@ $(document).ready(function () {
         $('#page_3').removeClass('d-none');
         $('#page_4').addClass('d-none');
     });
-    $('#page_4 input[type="checkbox"]').change(function(){
+    $('#page_4 input[type="checkbox"]').change(function () {
         let id = $(this).attr('id');
         let checked = $(this).prop('checked');
         if (id != 'todo-5') {
-            $('#page_4 input#todo-5').prop('checked', false);  
+            $('#page_4 input#todo-5').prop('checked', false);
             if (!!checked) $(`#page_4 .image-container .${id}`).addClass('activated');
             else $(`#page_4 .image-container .${id}`).removeClass('activated');
         } else {
-            $('#page_4 .image-container img').each(function(){
+            $('#page_4 .image-container img').each(function () {
                 $(this).removeClass('activated');
-            })          
-        }       
+            })
+        }
         $('#page_4 .error').html(' &nbsp;');
     })
-    $('#page_4 #todo-5').change(function(){
+    $('#page_4 #todo-5').change(function () {
         let checked = $(this).prop('checked');
         console.log('checked', checked)
         if (!!checked) {
@@ -156,7 +156,7 @@ $(document).ready(function () {
         } else {
             return $('#page_4 .error').text('por favor seleccione artículos');
         }
-        $('#page_4 input[type="checkbox"]:checked').each(function(){
+        $('#page_4 input[type="checkbox"]:checked').each(function () {
             todo.push($(this).val());
         });
         console.log('todo', todo);
@@ -170,21 +170,21 @@ $(document).ready(function () {
         $('#page_4').removeClass('d-none');
         $('#page_5').addClass('d-none');
     });
-    $('#page_5 input[type="checkbox"]').change(function(){
+    $('#page_5 input[type="checkbox"]').change(function () {
         let id = $(this).attr('id');
         let checked = $(this).prop('checked');
         if (id != 'plan-5') {
-            $('#page_5 input#plan-5').prop('checked', false);  
+            $('#page_5 input#plan-5').prop('checked', false);
             if (!!checked) $(`#page_5 .image-container .${id}`).addClass('activated');
             else $(`#page_5 .image-container .${id}`).removeClass('activated');
         } else {
-            $('#page_5 .image-container img').each(function(){
+            $('#page_5 .image-container img').each(function () {
                 $(this).removeClass('activated');
-            })          
-        }       
+            })
+        }
         $('#page_5 .error').html(' &nbsp;');
     })
-    $('#page_5 #plan-5').change(function(){
+    $('#page_5 #plan-5').change(function () {
         let checked = $(this).prop('checked');
         console.log('checked', checked)
         if (!!checked) {
@@ -208,49 +208,49 @@ $(document).ready(function () {
         } else {
             return $('#page_5 .error').text('por favor seleccione artículos');
         }
-        $('#page_5 input[type="checkbox"]:checked').each(function(){
+        $('#page_5 input[type="checkbox"]:checked').each(function () {
             plan.push($(this).val());
         });
         console.log('plan', plan);
         $('#page_6 .selected-image').attr('src', selectedImage);
         let products = [
             {
-                selected : 0,
-                title : 'Zurich Options',
-                subtitle : 'Seguro de vida con beneficios adicionales',
-                btn_link : 'https://www.zurich.com.ar/-/media/project/zwp/argentina/docs/vida-2021/zurich-options-dic201.pdf'
+                selected: 0,
+                title: 'Zurich Options',
+                subtitle: 'Seguro de vida con beneficios adicionales',
+                btn_link: 'https://www.zurich.com.ar/-/media/project/zwp/argentina/docs/vida-2021/zurich-options-dic201.pdf'
             },
             {
-                selected : 0,
-                title : 'Zurich University',
-                subtitle : 'Seguro de vida con beneficios adicionales',
-                btn_link : 'https://www.zurich.com.ar/-/media/project/zwp/argentina/docs/vida-2021/zurich-invest-university-dic203.pdf'
+                selected: 0,
+                title: 'Zurich University',
+                subtitle: 'Seguro de vida con beneficios adicionales',
+                btn_link: 'https://www.zurich.com.ar/-/media/project/zwp/argentina/docs/vida-2021/zurich-invest-university-dic203.pdf'
             },
             {
-                selected : 0,
-                title : 'Zurich Invest Future',
-                subtitle : 'Seguro de vida con beneficios adicionales',
-                btn_link : 'https://www.zurich.com.ar/-/media/project/zwp/argentina/docs/vida-2021/zurich-invest-future-dic202.pdf'
+                selected: 0,
+                title: 'Zurich Invest Future',
+                subtitle: 'Seguro de vida con beneficios adicionales',
+                btn_link: 'https://www.zurich.com.ar/-/media/project/zwp/argentina/docs/vida-2021/zurich-invest-future-dic202.pdf'
             },
             {
-                selected : 0,
-                title : 'Zurich Invest Advance',
-                subtitle : 'Seguro de vida con beneficios adicionales',
-                btn_link : 'https://www.zurich.com.ar/-/media/project/zwp/argentina/docs/vida/2023/zurich-invest-advanced-marzo-2023.pdf'
+                selected: 0,
+                title: 'Zurich Invest Advance',
+                subtitle: 'Seguro de vida con beneficios adicionales',
+                btn_link: 'https://www.zurich.com.ar/-/media/project/zwp/argentina/docs/vida/2023/zurich-invest-advanced-marzo-2023.pdf'
             }
         ];
-        $('#page_5 input[type="checkbox"]:checked').each(function(){
+        $('#page_5 input[type="checkbox"]:checked').each(function () {
             let val = $(this).val();
-            if (val == 0) { products[2].selected += 1;  products[3].selected += 1; }
+            if (val == 0) { products[2].selected += 1; products[3].selected += 1; }
             else if (val == 1) { products[0].selected += 1; products[1].selected += 1; }
-            else if (val == 2) { products[2].selected += 1;  }
+            else if (val == 2) { products[2].selected += 1; }
             else if (val == 3) { products[0].selected += 1; products[2].selected += 1; }
             else if (val == 4) { products[0].selected += 1; }
         })
         $('#page_6 .items-container .items').html('');
         let i = 0; let str = '';
         products.map((p, index) => {
-            if (p.selected > 0 && i < 2 ) {
+            if (p.selected > 0 && i < 2) {
                 str += `
                 <div class='item d-flex justify-content-between align-items-center mb-3'>
                     <div class='content'>
@@ -260,25 +260,25 @@ $(document).ready(function () {
                     <button class='info'>
                         Saber más
                     </button>
-                </div>`;   
-                if (i > 0) $('#page_6 .consider-description').text('Los planes que mejor se adaptan a tu caso:');             
+                </div>`;
+                if (i > 0) $('#page_6 .consider-description').text('Los planes que mejor se adaptan a tu caso:');
                 i++;
             }
         })
         $('#page_6 .items-container .items').html(str);
 
         $('#page_6').removeClass('d-none');
-        $('#page_5').addClass('d-none');   
-        
+        $('#page_5').addClass('d-none');
+
+        $('#page_6 .item button.info').click(function () {
+            console.log('show modal', $('#send_email_modal').html())
+            $('#send_email_modal').modal({ backdrop: 'static' });
+        })
+        $('#send_email_modal_btn').on('click', function (e) {
+            console.log('close btn')
+            $('#send_email_modal').modal('hide');
+        });
     })
-    $('#page_6 .item button.info').click(function() {
-        console.log('show modal', $('#send_email_modal').html())
-        $('#send_email_modal').modal({backdrop : 'static'});
-    })
-    $('#send_email_modal_btn').on('click', function (e) {
-        console.log('close btn')
-        $('#send_email_modal').modal('hide');
-    });
     /******** page 7  */
     $('#prev_page_5').click(function () {
         $('#page_5').removeClass('d-none');
