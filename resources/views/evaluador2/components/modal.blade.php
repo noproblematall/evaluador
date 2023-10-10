@@ -10,6 +10,7 @@
 
             <!-- Modal body -->
             <div class="modal-body">
+                <p class="large_title mt-4">Recibí esta información detallada en tu Whatsapp, y un enlace para que vuelvas a ver esta página con tus datos cuando vos quieras.</p>
                 <form action="#" id="personal_info_modal">
                     <div class="textfield  ">
                         <span class="icon icon--pencil_24_outline"></span>

@@ -9,6 +9,11 @@ $(document).ready(function () {
   var name = '';
   var age = '';
 
+  /******** page 0  */
+  $('#page_0 .box').click(function () {
+    $('#page_1').removeClass('d-none');
+    $('#page_0').addClass('d-none');
+  });
   /*********   page 1  ************/
   $('#to_page_2').click(function () {
     var name1 = $('#name').val();
@@ -96,7 +101,9 @@ $(document).ready(function () {
     $('#page_2').addClass('d-none');
     $('#page_3').removeClass('d-none');
     $('#page_3 .title').text("\xBFEst\xE1s trabajando, ".concat(name, "?"));
-    $('#page_3 .selected-image').attr('src', selectedImage);
+    var selectedImage1 = selectedImage;
+    if (character == 'hombre') selectedImage1 = 'https://z-eval.s3.amazonaws.com/pers/PruebaAnimacion.gif';
+    $('#page_3 .selected-image').attr('src', selectedImage1);
     console.log('member', member, selectedImage);
   });
   /******** page 3  */
@@ -200,7 +207,9 @@ $(document).ready(function () {
       plan.push($(this).val());
     });
     console.log('plan', plan);
-    $('#page_6 .selected-image').attr('src', selectedImage);
+    var selectedImage1 = selectedImage;
+    if (character == 'hombre') selectedImage1 = 'https://z-eval.s3.amazonaws.com/pers/Animacion+pensando.gif';
+    $('#page_6 .selected-image').attr('src', selectedImage1);
     var products = [{
       selected: 0,
       title: 'Zurich Options',

@@ -34,6 +34,23 @@ body .card {
     color: #23366F !important;
 }
 
+#page_0 {
+    background-image: url(https://z-eval.s3.amazonaws.com/Zurich+Pantalla+Inicio.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+#page_0 .box {
+    position: absolute;
+    top: 15vh;
+    width: 70%;
+    left: 15%;
+    height: 38vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 #page_1 .plan {
     font-family: 'ZurichSans-Regular', Arial, sans-serif;
 }
