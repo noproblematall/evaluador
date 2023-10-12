@@ -11,7 +11,7 @@ body .card {
 }
 
 .page-container {
-    max-width: 420px;
+    max-width: 450px;
     height: 100%;
     margin: auto;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .19);
@@ -35,34 +35,20 @@ body .card {
 }
 
 #page_0 {
-    background-image: url(https://z-eval.s3.amazonaws.com/Zurich+Pantalla+Inicio.png);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
     position: relative;
 }
-
+#page_0.page-content {
+    padding : 0;
+}
 #page_0 .box {
     position: absolute;
-    top: 15vh;
+    top: min(20vw, 130px);
     width: 70%;
     left: 15%;
     height: 38vh;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-@media screen and (max-width : 400px) {
-    #page_0 {
-        background-image: url(https://z-eval.s3.amazonaws.com/console+iphone.png);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        position: relative;
-    }
-    #page_0 .box {
-        top: 10vh;
-    }
 }
 #page_1 .plan {
     font-family: 'ZurichSans-Regular', Arial, sans-serif;
