@@ -14,10 +14,10 @@ $(document).ready(function () {
     $('#page_1').removeClass('d-none');
     $('#page_0').addClass('d-none');
   });
-  setTimeout(function () {
-    $('#page_1').removeClass('d-none');
-    if (!$('#page_0').hasClass('d-none')) $('#page_0').addClass('d-none');
-  }, 9000);
+  // setTimeout(() => {
+  //     $('#page_1').removeClass('d-none');
+  //     if (!$('#page_0').hasClass('d-none')) $('#page_0').addClass('d-none');
+  // }, 9000);
   /*********   page 1  ************/
   $('#to_page_2').click(function () {
     var name1 = $('#name').val();
