@@ -9,10 +9,10 @@ $(document).ready(function () {
         $('#page_1').removeClass('d-none');
         $('#page_0').addClass('d-none');
     });
-    setTimeout(() => {
-        $('#page_1').removeClass('d-none');
-        if (!$('#page_0').hasClass('d-none')) $('#page_0').addClass('d-none');
-    }, 6000);
+    // setTimeout(() => {
+    //     $('#page_1').removeClass('d-none');
+    //     if (!$('#page_0').hasClass('d-none')) $('#page_0').addClass('d-none');
+    // }, 6000);
     /*********   page 1  ************/
     $('#to_page_2').click(function () {
         let name1 = $('#name').val();

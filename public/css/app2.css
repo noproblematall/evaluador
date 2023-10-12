@@ -11,7 +11,8 @@ body .card {
 }
 
 .page-container {
-    max-width: 450px;
+    max-width: min(100%, 450px);
+    width : 50vh;
     height: 100%;
     margin: auto;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .19);
@@ -42,7 +43,7 @@ body .card {
 }
 #page_0 .box {
     position: absolute;
-    top: min(20vw, 130px);
+    top: min(20vw, 100px);
     width: 70%;
     left: 15%;
     height: 38vh;
