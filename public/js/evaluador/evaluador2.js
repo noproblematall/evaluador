@@ -1,1 +1,296 @@
-$(document).ready((function(){var e="",a="",t="";$("#page_0 .box").click((function(){$("#page_1").removeClass("d-none"),$("#page_0").addClass("d-none")})),setTimeout((function(){$("#page_1").removeClass("d-none"),$("#page_0").hasClass("d-none")||$("#page_0").addClass("d-none")}),6e3),$("#to_page_2").click((function(){var n=$("#name").val(),c=$("#age").val();return character1=$('#page_1 input[type="radio"]:checked').val(),console.log("character",character1,n,c),character1?n?($("#name").parent().removeClass("has-error"),c?($("#page_1 .error").html("&nbsp;"),$("#age").parent().removeClass("has-error"),t=n,e=character1,a=$('#page_1 input[type="radio"]:checked').parent().siblings().filter("label").find("img.activated").attr("src"),$("#page_1").addClass("d-none"),$("#page_2").removeClass("d-none"),void console.log("selected Image",a)):($("#age").parent().addClass("has-error"),$("#page_1 .error").text("Por favor completá tus datos"))):($("#name").parent().addClass("has-error"),$("#page_1 .error").text("Por favor completá tus datos")):$("#page_1 .error").text("Por favor seleccioná un personaje")})),$('#page_1 input[type="radio"]').change((function(){$("#page_1 label img.activated").removeClass("d-none"),$("#page_1 label img.deactivated").removeClass("d-none"),$("#page_1 label img.activated").addClass("d-none");var e=$(this);e.parent().siblings().filter("label").find("img.activated").removeClass("d-none"),e.parent().siblings().filter("label").find("img.deactivated").addClass("d-none")}));var n={adultos:0,adolescentes:0,ninos:0,bebes:0};$("#page_2 .minus-btn").click((function(){var e=$(this).siblings().filter("input"),a=e.attr("id"),t=parseInt(e.val());if(t>0){var c=t-1;e.val(c),$("#page_2 .image-item[data-item=".concat(a,"] .number")).text(c),$("#page_2 .item[data-item=".concat(a,"] .item-value")).text(c),c>0?($("#page_2 .image-item[data-item=".concat(a,"]")).addClass("activated"),$("#page_2 .item[data-item=".concat(a,"]")).addClass("activated")):($("#page_2 .image-item[data-item=".concat(a,"]")).removeClass("activated"),$("#page_2 .item[data-item=".concat(a,"]")).removeClass("activated")),n[a]=c}})),$("#page_2 .plus-btn").click((function(){var e=$(this).siblings().filter("input"),a=e.attr("id"),t=parseInt(e.val())+1;e.val(t),$("#page_2 .image-item[data-item=".concat(a,"] .number")).text(t),$("#page_2 .item[data-item=".concat(a,"] .item-value")).text(t),$("#page_2 .image-item[data-item=".concat(a,"]")).addClass("activated"),$("#page_2 .item[data-item=".concat(a,"]")).addClass("activated"),n[a]=t})),$("#page_2 .image-item").click((function(){var e=$(this).data("item");console.log("item",e),$("#page_2 .item[data-item=".concat(e,"] .plus-btn")).trigger("click")})),$("#prev_page_1").click((function(){$("#page_1").removeClass("d-none"),$("#page_2").addClass("d-none")})),$("#to_page_3").click((function(){$("#page_2").addClass("d-none"),$("#page_3").removeClass("d-none"),$("#page_3 .title").text("¿Estás trabajando, ".concat(t,"?"));var c=a;"hombre"==e&&(c="https://z-eval.s3.amazonaws.com/pers/PruebaAnimacion.gif"),$("#page_3 .selected-image").attr("src",c),console.log("member",n,a)})),$("#prev_page_2").click((function(){$("#page_2").removeClass("d-none"),$("#page_3").addClass("d-none")}));var c="";$("#to_page_4").click((function(){var e=$('#page_3 input[type="radio"]:checked');if(!(e.length>0))return $("#page_3 .error").text("por favor seleccione un elemento");$("#page_3 .error").html("&nbsp;"),c=e.siblings().filter("label").find("p").text(),$("#page_4 .selected-image").attr("src",a),$("#page_4").removeClass("d-none"),$("#page_3").addClass("d-none"),console.log("job",c)})),$("#prev_page_3").click((function(){$("#page_3").removeClass("d-none"),$("#page_4").addClass("d-none")})),$('#page_4 input[type="checkbox"]').change((function(){var e=$(this).attr("id"),a=$(this).prop("checked");"todo-5"!=e?($("#page_4 input#todo-5").prop("checked",!1),a?$("#page_4 .image-container .".concat(e)).addClass("activated"):$("#page_4 .image-container .".concat(e)).removeClass("activated")):$("#page_4 .image-container img").each((function(){$(this).removeClass("activated")})),$("#page_4 .error").html(" &nbsp;")})),$("#page_4 #todo-5").change((function(){var e=$(this).prop("checked");console.log("checked",e),e&&($('#page_4 input[type="checkbox"]').prop("checked",!1),$("#page_4 input#todo-5").prop("checked",!0))}));var i=[];$("#to_page_5").click((function(){if(!($('#page_4 input[type="checkbox"]:checked').length>0))return $("#page_4 .error").text("por favor seleccione artículos");$("#page_4 .error").html("&nbsp; "),$('#page_4 input[type="checkbox"]:checked').each((function(){i.push($(this).val())})),console.log("todo",i),$("#page_5 .selected-image").attr("src",a),$("#page_5").removeClass("d-none"),$("#page_4").addClass("d-none")})),$("#prev_page_4").click((function(){$("#page_4").removeClass("d-none"),$("#page_5").addClass("d-none")})),$('#page_5 input[type="checkbox"]').change((function(){var e=$(this).attr("id"),a=$(this).prop("checked");"plan-5"!=e?($("#page_5 input#plan-5").prop("checked",!1),a?$("#page_5 .image-container .".concat(e)).addClass("activated"):$("#page_5 .image-container .".concat(e)).removeClass("activated")):$("#page_5 .image-container img").each((function(){$(this).removeClass("activated")})),$("#page_5 .error").html(" &nbsp;")})),$("#page_5 #plan-5").change((function(){var e=$(this).prop("checked");console.log("checked",e),e&&($('#page_5 input[type="checkbox"]').prop("checked",!1),$("#page_5 input#plan-5").prop("checked",!0))}));var o=[];$("#to_page_6").click((function(){if(!($('#page_5 input[type="checkbox"]:checked').length>0))return $("#page_5 .error").text("por favor seleccione artículos");$("#page_5 .error").html("&nbsp; "),$('#page_5 input[type="checkbox"]:checked').each((function(){o.push($(this).val())})),console.log("plan",o);var t=a;"hombre"==e&&(t="https://z-eval.s3.amazonaws.com/pers/Animacion+pensando.gif"),$("#page_6 .selected-image").attr("src",t);var n=[{selected:0,title:"Zurich Options",subtitle:"Seguro de vida con beneficios adicionales",btn_link:"https://www.zurich.com.ar/-/media/project/zwp/argentina/docs/vida-2021/zurich-options-dic201.pdf"},{selected:0,title:"Zurich University",subtitle:"Seguro de vida con beneficios adicionales",btn_link:"https://www.zurich.com.ar/-/media/project/zwp/argentina/docs/vida-2021/zurich-invest-university-dic203.pdf"},{selected:0,title:"Zurich Invest Future",subtitle:"Seguro de vida con beneficios adicionales",btn_link:"https://www.zurich.com.ar/-/media/project/zwp/argentina/docs/vida-2021/zurich-invest-future-dic202.pdf"},{selected:0,title:"Zurich Invest Advance",subtitle:"Seguro de vida con beneficios adicionales",btn_link:"https://www.zurich.com.ar/-/media/project/zwp/argentina/docs/vida/2023/zurich-invest-advanced-marzo-2023.pdf"}];$('#page_5 input[type="checkbox"]:checked').each((function(){var e=$(this).val();0==e?(n[2].selected+=1,n[3].selected+=1):1==e?(n[0].selected+=1,n[1].selected+=1):2==e?n[2].selected+=1:3==e?(n[0].selected+=1,n[2].selected+=1):4==e&&(n[0].selected+=1)})),$("#page_6 .items-container .items").html("");var c=0,i="";n.map((function(e,a){e.selected>0&&c<2&&(i+="\n                <div class='item d-flex justify-content-between align-items-center mb-3'>\n                    <div class='content'>\n                        <div class='item-title lh-1'>".concat(e.title,"</div>\n                        <p class='item-description'>").concat(e.subtitle,"</p>\n                    </div>\n                    <button class='info'>\n                        Saber más\n                    </button>\n                </div>"),c>0&&$("#page_6 .consider-description").text("Los planes que mejor se adaptan a tu caso:"),c++)})),$("#page_6 .items-container .items").html(i),$("#page_6").removeClass("d-none"),$("#page_5").addClass("d-none"),$("#page_6 .item button.info").click((function(){console.log("show modal",$("#send_email_modal").html()),$("#send_email_modal").modal({backdrop:"static"})})),$("#send_email_modal_btn").on("click",(function(e){console.log("close btn"),$("#send_email_modal").modal("hide")}))})),$("#prev_page_5").click((function(){$("#page_5").removeClass("d-none"),$("#page_6").addClass("d-none")}))}));
+/******/ (() => { // webpackBootstrap
+var __webpack_exports__ = {};
+/*!***********************************************!*\
+  !*** ./resources/js/evaluador2/evaluador2.js ***!
+  \***********************************************/
+$(document).ready(function () {
+  var character = '';
+  var selectedImage = '';
+  var name = '';
+  var age = '';
+
+  /******** page 0  */
+  $('#page_0 .box').click(function () {
+    $('#page_1').removeClass('d-none');
+    $('#page_0').addClass('d-none');
+  });
+  $('#to_page_1').click(function () {
+    $('#page_1').removeClass('d-none');
+    $('#page_0').addClass('d-none');
+  });
+  // setTimeout(() => {
+  //     $('#page_1').removeClass('d-none');
+  //     if (!$('#page_0').hasClass('d-none')) $('#page_0').addClass('d-none');
+  // }, 6000);
+  setTimeout(function () {
+    $('#to_page_1').removeClass('hide');
+  }, 3500);
+  /*********   page 1  ************/
+  $('#to_page_2').click(function () {
+    var name1 = $('#name').val();
+    var age1 = $('#age').val();
+    character1 = $('#page_1 input[type="radio"]:checked').val();
+    console.log('character', character1, name1, age1);
+    if (!character1) {
+      return $('#page_1 .error').text('Por favor seleccioná un personaje');
+    }
+    if (!name1) {
+      $('#name').parent().addClass('has-error');
+      return $('#page_1 .error').text('Por favor completá tus datos');
+    }
+    $('#name').parent().removeClass('has-error');
+    if (!age1) {
+      $('#age').parent().addClass('has-error');
+      return $('#page_1 .error').text('Por favor completá tus datos');
+    }
+    $('#page_1 .error').html('&nbsp;');
+    $('#age').parent().removeClass('has-error');
+    name = name1;
+    age = age1;
+    character = character1;
+    selectedImage = $('#page_1 input[type="radio"]:checked').parent().siblings().filter('label').find('img.activated').attr('src');
+    $('#page_1').addClass('d-none');
+    $('#page_2').removeClass('d-none');
+    console.log('selected Image', selectedImage);
+  });
+  $('#page_1 input[type="radio"]').change(function () {
+    $('#page_1 label img.activated').removeClass('d-none');
+    $('#page_1 label img.deactivated').removeClass('d-none');
+    $('#page_1 label img.activated').addClass('d-none');
+    var elem = $(this);
+    elem.parent().siblings().filter('label').find('img.activated').removeClass('d-none');
+    elem.parent().siblings().filter('label').find('img.deactivated').addClass('d-none');
+    $('#page_1 img').css({
+      'animation': 'unset'
+    });
+  });
+  /*********   page 2  ************/
+  var member = {
+    adultos: 0,
+    adolescentes: 0,
+    ninos: 0,
+    bebes: 0
+  };
+  $('#page_2 .minus-btn').click(function () {
+    var input_elem = $(this).siblings().filter('input');
+    var input_name = input_elem.attr('id');
+    var input_value = parseInt(input_elem.val());
+    if (input_value > 0) {
+      var val = input_value - 1;
+      input_elem.val(val);
+      $("#page_2 .image-item[data-item=".concat(input_name, "] .number")).text(val);
+      $("#page_2 .item[data-item=".concat(input_name, "] .item-value")).text(val);
+      if (val > 0) {
+        $("#page_2 .image-item[data-item=".concat(input_name, "]")).addClass('activated');
+        $("#page_2 .item[data-item=".concat(input_name, "]")).addClass('activated');
+      } else {
+        $("#page_2 .image-item[data-item=".concat(input_name, "]")).removeClass('activated');
+        $("#page_2 .item[data-item=".concat(input_name, "]")).removeClass('activated');
+      }
+      member[input_name] = val;
+    }
+  });
+  $('#page_2 .plus-btn').click(function () {
+    var input_elem = $(this).siblings().filter('input');
+    var input_name = input_elem.attr('id');
+    var input_value = parseInt(input_elem.val());
+    var val = input_value + 1;
+    input_elem.val(val);
+    $("#page_2 .image-item[data-item=".concat(input_name, "] .number")).text(val);
+    $("#page_2 .item[data-item=".concat(input_name, "] .item-value")).text(val);
+    $("#page_2 .image-item[data-item=".concat(input_name, "]")).addClass('activated');
+    $("#page_2 .item[data-item=".concat(input_name, "]")).addClass('activated');
+    member[input_name] = val;
+  });
+  $('#page_2 .image-item').click(function () {
+    var input_name = $(this).data('item');
+    console.log('item', input_name);
+    $("#page_2 .item[data-item=".concat(input_name, "] .plus-btn")).trigger('click');
+  });
+  $('#prev_page_1').click(function () {
+    $('#page_1').removeClass('d-none');
+    $('#page_2').addClass('d-none');
+  });
+  $('#to_page_3').click(function () {
+    $('#page_2').addClass('d-none');
+    $('#page_3').removeClass('d-none');
+    $('#page_3 .title').text("\xBFEst\xE1s trabajando, ".concat(name, "?"));
+    var selectedImage1 = selectedImage;
+    if (character == 'hombre') selectedImage1 = 'https://z-eval.s3.amazonaws.com/pers/PruebaAnimacion.gif';
+    $('#page_3 .selected-image').attr('src', selectedImage1);
+    console.log('member', member, selectedImage);
+  });
+  /******** page 3  */
+  $('#prev_page_2').click(function () {
+    $('#page_2').removeClass('d-none');
+    $('#page_3').addClass('d-none');
+  });
+  var job = '';
+  $('#to_page_4').click(function () {
+    var elem = $('#page_3 input[type="radio"]:checked');
+    if (elem.length > 0) {
+      $('#page_3 .error').html('&nbsp;');
+    } else {
+      return $('#page_3 .error').text('por favor seleccione un elemento');
+    }
+    job = elem.siblings().filter('label').find('p').text();
+    $('#page_4 .selected-image').attr('src', selectedImage);
+    $('#page_4').removeClass('d-none');
+    $('#page_3').addClass('d-none');
+    console.log('job', job);
+  });
+  /******** page 4  */
+  $('#prev_page_3').click(function () {
+    $('#page_3').removeClass('d-none');
+    $('#page_4').addClass('d-none');
+  });
+  $('#page_4 input[type="checkbox"]').change(function () {
+    var id = $(this).attr('id');
+    var checked = $(this).prop('checked');
+    if (id != 'todo-5') {
+      $('#page_4 input#todo-5').prop('checked', false);
+      if (!!checked) $("#page_4 .image-container .".concat(id)).addClass('activated');else $("#page_4 .image-container .".concat(id)).removeClass('activated');
+    } else {
+      $('#page_4 .image-container img').each(function () {
+        $(this).removeClass('activated');
+      });
+    }
+    $('#page_4 .error').html(' &nbsp;');
+  });
+  $('#page_4 #todo-5').change(function () {
+    var checked = $(this).prop('checked');
+    console.log('checked', checked);
+    if (!!checked) {
+      $('#page_4 input[type="checkbox"]').prop('checked', false);
+      $('#page_4 input#todo-5').prop('checked', true);
+    }
+  });
+  var todo = [];
+  var todo_str_arr = ['Comprar un auto', 'Comprar una casa', 'Viajar todos los años', 'Emprender un proyecto', 'generar un ahorro rentable', 'Ninguno de los anteriores'];
+  $('#to_page_5').click(function () {
+    var elem = $('#page_4 input[type="checkbox"]:checked');
+    if (elem.length > 0) {
+      $('#page_4 .error').html('&nbsp; ');
+    } else {
+      return $('#page_4 .error').text('por favor seleccione artículos');
+    }
+    $('#page_4 input[type="checkbox"]:checked').each(function () {
+      todo.push($(this).val());
+    });
+    console.log('todo', todo);
+    $('#page_5 .selected-image').attr('src', selectedImage);
+    $('#page_5').removeClass('d-none');
+    $('#page_4').addClass('d-none');
+  });
+  /******** page 5  */
+  $('#prev_page_4').click(function () {
+    $('#page_4').removeClass('d-none');
+    $('#page_5').addClass('d-none');
+  });
+  $('#page_5 input[type="checkbox"]').change(function () {
+    var id = $(this).attr('id');
+    var checked = $(this).prop('checked');
+    if (id != 'plan-5') {
+      $('#page_5 input#plan-5').prop('checked', false);
+      if (!!checked) $("#page_5 .image-container .".concat(id)).addClass('activated');else $("#page_5 .image-container .".concat(id)).removeClass('activated');
+    } else {
+      $('#page_5 .image-container img').each(function () {
+        $(this).removeClass('activated');
+      });
+    }
+    $('#page_5 .error').html(' &nbsp;');
+  });
+  $('#page_5 #plan-5').change(function () {
+    var checked = $(this).prop('checked');
+    console.log('checked', checked);
+    if (!!checked) {
+      $('#page_5 input[type="checkbox"]').prop('checked', false);
+      $('#page_5 input#plan-5').prop('checked', true);
+    }
+  });
+  var plan = [];
+  var plan_str_arr = ['Rentabilizar mis ahorros', 'Educación de alto nivel para mis hijos', 'Conservar mi nivel de vida en el retiro', 'La continuidad de mi empresa o proyecto', 'Tener un fondo para emergencias', 'No tengo planes'];
+  $('#to_page_6').click(function () {
+    var elem = $('#page_5 input[type="checkbox"]:checked');
+    if (elem.length > 0) {
+      $('#page_5 .error').html('&nbsp; ');
+    } else {
+      return $('#page_5 .error').text('por favor seleccione artículos');
+    }
+    $('#page_5 input[type="checkbox"]:checked').each(function () {
+      plan.push($(this).val());
+    });
+    console.log('plan', plan);
+    var selectedImage1 = selectedImage;
+    if (character == 'hombre') selectedImage1 = 'https://z-eval.s3.amazonaws.com/pers/Animacion+pensando.gif';
+    $('#page_6 .selected-image').attr('src', selectedImage1);
+    var products = [{
+      selected: 0,
+      title: 'Zurich Options',
+      subtitle: 'Seguro de vida con beneficios adicionales',
+      btn_link: 'https://www.zurich.com.ar/-/media/project/zwp/argentina/docs/vida-2021/zurich-options-dic201.pdf'
+    }, {
+      selected: 0,
+      title: 'Zurich University',
+      subtitle: 'Seguro de vida con beneficios adicionales',
+      btn_link: 'https://www.zurich.com.ar/-/media/project/zwp/argentina/docs/vida-2021/zurich-invest-university-dic203.pdf'
+    }, {
+      selected: 0,
+      title: 'Zurich Invest Future',
+      subtitle: 'Seguro de vida con beneficios adicionales',
+      btn_link: 'https://www.zurich.com.ar/-/media/project/zwp/argentina/docs/vida-2021/zurich-invest-future-dic202.pdf'
+    }, {
+      selected: 0,
+      title: 'Zurich Invest Advance',
+      subtitle: 'Seguro de vida con beneficios adicionales',
+      btn_link: 'https://www.zurich.com.ar/-/media/project/zwp/argentina/docs/vida/2023/zurich-invest-advanced-marzo-2023.pdf'
+    }];
+    $('#page_5 input[type="checkbox"]:checked').each(function () {
+      var val = $(this).val();
+      if (val == 0) {
+        products[2].selected += 1;
+        products[3].selected += 1;
+      } else if (val == 1) {
+        products[0].selected += 1;
+        products[1].selected += 1;
+      } else if (val == 2) {
+        products[2].selected += 1;
+      } else if (val == 3) {
+        products[0].selected += 1;
+        products[2].selected += 1;
+      } else if (val == 4) {
+        products[0].selected += 1;
+      }
+    });
+    $('#page_6 .items-container .items').html('');
+    var i = 0;
+    var str = '';
+    products.map(function (p, index) {
+      if (p.selected > 0 && i < 2) {
+        str += "\n                <div class='item d-flex justify-content-between align-items-center mb-3'>\n                    <div class='content'>\n                        <div class='item-title lh-1'>".concat(p.title, "</div>\n                        <p class='item-description'>").concat(p.subtitle, "</p>\n                    </div>\n                    <button class='info'>\n                        Saber m\xE1s\n                    </button>\n                </div>");
+        if (i > 0) $('#page_6 .consider-description').text('Los planes que mejor se adaptan a tu caso:');
+        i++;
+      }
+    });
+    $('#page_6 .items-container .items').html(str);
+    $('#page_6').removeClass('d-none');
+    $('#page_5').addClass('d-none');
+    $('#page_6 .item button.info').click(function () {
+      console.log('show modal', $('#send_email_modal').html());
+      $('#send_email_modal').modal({
+        backdrop: 'static'
+      });
+    });
+    $('#send_email_modal_btn').on('click', function (e) {
+      console.log('close btn');
+      $('#send_email_modal').modal('hide');
+    });
+  });
+  /******** page 7  */
+  $('#prev_page_5').click(function () {
+    $('#page_5').removeClass('d-none');
+    $('#page_6').addClass('d-none');
+  });
+});
+/******/ })()
+;

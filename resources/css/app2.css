@@ -50,6 +50,14 @@ body .card {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+}
+#to_page_1.hide {
+    opacity : 0;
+}
+#to_page_1 {
+    opacity : 1;
+    transition: opacity 3.5s 0.3s;
 }
 #page_1 .plan {
     font-family: 'ZurichSans-Regular', Arial, sans-serif;

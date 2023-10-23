@@ -9,10 +9,17 @@ $(document).ready(function () {
         $('#page_1').removeClass('d-none');
         $('#page_0').addClass('d-none');
     });
-    setTimeout(() => {
+    $('#to_page_1').click(function() {
         $('#page_1').removeClass('d-none');
-        if (!$('#page_0').hasClass('d-none')) $('#page_0').addClass('d-none');
-    }, 6000);
+        $('#page_0').addClass('d-none');        
+    })
+    // setTimeout(() => {
+    //     $('#page_1').removeClass('d-none');
+    //     if (!$('#page_0').hasClass('d-none')) $('#page_0').addClass('d-none');
+    // }, 6000);
+    setTimeout(() => {
+        $('#to_page_1').removeClass('hide');
+    }, 3500);
     /*********   page 1  ************/
     $('#to_page_2').click(function () {
         let name1 = $('#name').val();
@@ -46,6 +53,10 @@ $(document).ready(function () {
         let elem = $(this);
         elem.parent().siblings().filter('label').find('img.activated').removeClass('d-none')
         elem.parent().siblings().filter('label').find('img.deactivated').addClass('d-none')
+
+        $('#page_1 img').css({
+            'animation':'unset'
+        });
     })
     /*********   page 2  ************/
     let member = {
