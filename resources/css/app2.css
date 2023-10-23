@@ -57,7 +57,7 @@ body .card {
 }
 #to_page_1 {
     opacity : 1;
-    transition: opacity 0.5s 2s;
+    transition: opacity 0.5s 3s;
 }
 #page_1 .plan {
     font-family: 'ZurichSans-Regular', Arial, sans-serif;
