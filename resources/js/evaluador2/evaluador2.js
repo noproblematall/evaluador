@@ -5,21 +5,19 @@ $(document).ready(function () {
     let age = '';
 
     /******** page 0  */
-    $('#page_0 .box').click(function () {
-        $('#page_1').removeClass('d-none');
-        $('#page_0').addClass('d-none');
-    });
     $('#to_page_1').click(function() {
         $('#page_1').removeClass('d-none');
         $('#page_0').addClass('d-none');        
     })
-    // setTimeout(() => {
-    //     $('#page_1').removeClass('d-none');
-    //     if (!$('#page_0').hasClass('d-none')) $('#page_0').addClass('d-none');
-    // }, 6000);
+    setTimeout(() => {
+        $('#page_0').click(function() {
+            $('#page_1').removeClass('d-none');
+            $('#page_0').addClass('d-none');        
+        })
+    }, 2000);
     setTimeout(() => {
         $('#to_page_1').removeClass('hide');
-    }, 3500);
+    }, 2000);
     /*********   page 1  ************/
     $('#to_page_2').click(function () {
         let name1 = $('#name').val();
@@ -61,7 +59,7 @@ $(document).ready(function () {
     /*********   page 2  ************/
     let member = {
         adultos: 0,
-        adolescentes: 0,
+        jovenes: 0,
         ninos: 0,
         bebes: 0
     };
@@ -88,13 +86,15 @@ $(document).ready(function () {
         let input_elem = $(this).siblings().filter('input');
         let input_name = input_elem.attr('id');
         let input_value = parseInt(input_elem.val());
-        let val = input_value + 1;
-        input_elem.val(val);
-        $(`#page_2 .image-item[data-item=${input_name}] .number`).text(val);
-        $(`#page_2 .item[data-item=${input_name}] .item-value`).text(val);
-        $(`#page_2 .image-item[data-item=${input_name}]`).addClass('activated');
-        $(`#page_2 .item[data-item=${input_name}]`).addClass('activated');
-        member[input_name] = val;
+        if (input_value <= 7) {
+            let val = input_value + 1;
+            input_elem.val(val);
+            $(`#page_2 .image-item[data-item=${input_name}] .number`).text(val);
+            $(`#page_2 .item[data-item=${input_name}] .item-value`).text(val);
+            $(`#page_2 .image-item[data-item=${input_name}]`).addClass('activated');
+            $(`#page_2 .item[data-item=${input_name}]`).addClass('activated');
+            member[input_name] = val;
+        }
     })
     $('#page_2 .image-item').click(function () {
         let input_name = $(this).data('item');
@@ -271,41 +271,38 @@ $(document).ready(function () {
             else if (val == 3) { products[0].selected += 1; products[2].selected += 1; }
             else if (val == 4) { products[0].selected += 1; }
         })
-        $('#page_6 .items-container .items').html('');
-        let i = 0; let str = '';
-        products.map((p, index) => {
-            if (p.selected > 0 && i < 2) {
-                str += `
-                <div class='item d-flex justify-content-between align-items-center mb-3'>
-                    <div class='content'>
-                        <div class='item-title lh-1'>${p.title}</div>
-                        <p class='item-description'>${p.subtitle}</p>
-                    </div>
-                    <button class='info'>
-                        Saber más
-                    </button>
-                </div>`;
-                if (i > 0) $('#page_6 .consider-description').text('Los planes que mejor se adaptan a tu caso:');
-                i++;
-            }
-        })
-        $('#page_6 .items-container .items').html(str);
 
         $('#page_6').removeClass('d-none');
         $('#page_5').addClass('d-none');
 
-        $('#page_6 .item button.info').click(function () {
-            console.log('show modal', $('#send_email_modal').html())
-            $('#send_email_modal').modal({ backdrop: 'static' });
-        })
-        $('#send_email_modal_btn').on('click', function (e) {
-            console.log('close btn')
-            $('#send_email_modal').modal('hide');
-        });
     })
-    /******** page 7  */
+    $('#page_6 #to_whatsapp').click(function () {
+        $('#send_email_modal .large_title:first-child').text('Recibí esta información detallada en tu WhatsApp. Completá por favor la siguiente información.')
+        $('#send_email_modal').modal({ backdrop: 'static' });
+    })
+    $('#page_6 #to_contact').click(function () {
+        $('#send_email_modal .large_title:first-child').text('Completá por favor la siguiente información y un asesor acreditado en Zurich International Life Sucursal Argentina te contactará en breve.')
+        $('#send_email_modal').modal({ backdrop: 'static' });
+    })
+    $('#send_email_modal_btn').on('click', function (e) {
+        console.log('close btn')
+        $('#send_email_modal').modal('hide');
+    });
     $('#prev_page_5').click(function () {
         $('#page_5').removeClass('d-none');
         $('#page_6').addClass('d-none');
+    });
+    $('#to_page_7').click(function () {
+        $('#page_7').removeClass('d-none');
+        $('#page_6').addClass('d-none');
+    });
+    $('#page_6 .plan-esencial').click(function() {
+        $('#plan_card_modal').modal({ backdrop: 'static' });
+    });
+    $('#page_6 .plan-extendido').click(function() {
+        $('#plan_card_modal').modal({ backdrop: 'static' });
+    });
+    $('#plan_card_modal .btn-regresar').click(function() {
+        $('#plan_card_modal').modal('hide');
     });
 })

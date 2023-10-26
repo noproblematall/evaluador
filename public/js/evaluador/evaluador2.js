@@ -10,21 +10,19 @@ $(document).ready(function () {
   var age = '';
 
   /******** page 0  */
-  $('#page_0 .box').click(function () {
-    $('#page_1').removeClass('d-none');
-    $('#page_0').addClass('d-none');
-  });
   $('#to_page_1').click(function () {
     $('#page_1').removeClass('d-none');
     $('#page_0').addClass('d-none');
   });
-  // setTimeout(() => {
-  //     $('#page_1').removeClass('d-none');
-  //     if (!$('#page_0').hasClass('d-none')) $('#page_0').addClass('d-none');
-  // }, 6000);
+  setTimeout(function () {
+    $('#page_0').click(function () {
+      $('#page_1').removeClass('d-none');
+      $('#page_0').addClass('d-none');
+    });
+  }, 2000);
   setTimeout(function () {
     $('#to_page_1').removeClass('hide');
-  }, 3500);
+  }, 2000);
   /*********   page 1  ************/
   $('#to_page_2').click(function () {
     var name1 = $('#name').val();
@@ -67,7 +65,7 @@ $(document).ready(function () {
   /*********   page 2  ************/
   var member = {
     adultos: 0,
-    adolescentes: 0,
+    jovenes: 0,
     ninos: 0,
     bebes: 0
   };
@@ -94,13 +92,15 @@ $(document).ready(function () {
     var input_elem = $(this).siblings().filter('input');
     var input_name = input_elem.attr('id');
     var input_value = parseInt(input_elem.val());
-    var val = input_value + 1;
-    input_elem.val(val);
-    $("#page_2 .image-item[data-item=".concat(input_name, "] .number")).text(val);
-    $("#page_2 .item[data-item=".concat(input_name, "] .item-value")).text(val);
-    $("#page_2 .image-item[data-item=".concat(input_name, "]")).addClass('activated');
-    $("#page_2 .item[data-item=".concat(input_name, "]")).addClass('activated');
-    member[input_name] = val;
+    if (input_value <= 7) {
+      var val = input_value + 1;
+      input_elem.val(val);
+      $("#page_2 .image-item[data-item=".concat(input_name, "] .number")).text(val);
+      $("#page_2 .item[data-item=".concat(input_name, "] .item-value")).text(val);
+      $("#page_2 .image-item[data-item=".concat(input_name, "]")).addClass('activated');
+      $("#page_2 .item[data-item=".concat(input_name, "]")).addClass('activated');
+      member[input_name] = val;
+    }
   });
   $('#page_2 .image-item').click(function () {
     var input_name = $(this).data('item');
@@ -262,34 +262,45 @@ $(document).ready(function () {
         products[0].selected += 1;
       }
     });
-    $('#page_6 .items-container .items').html('');
-    var i = 0;
-    var str = '';
-    products.map(function (p, index) {
-      if (p.selected > 0 && i < 2) {
-        str += "\n                <div class='item d-flex justify-content-between align-items-center mb-3'>\n                    <div class='content'>\n                        <div class='item-title lh-1'>".concat(p.title, "</div>\n                        <p class='item-description'>").concat(p.subtitle, "</p>\n                    </div>\n                    <button class='info'>\n                        Saber m\xE1s\n                    </button>\n                </div>");
-        if (i > 0) $('#page_6 .consider-description').text('Los planes que mejor se adaptan a tu caso:');
-        i++;
-      }
-    });
-    $('#page_6 .items-container .items').html(str);
     $('#page_6').removeClass('d-none');
     $('#page_5').addClass('d-none');
-    $('#page_6 .item button.info').click(function () {
-      console.log('show modal', $('#send_email_modal').html());
-      $('#send_email_modal').modal({
-        backdrop: 'static'
-      });
-    });
-    $('#send_email_modal_btn').on('click', function (e) {
-      console.log('close btn');
-      $('#send_email_modal').modal('hide');
+  });
+  $('#page_6 #to_whatsapp').click(function () {
+    $('#send_email_modal .large_title:first-child').text('Recibí esta información detallada en tu WhatsApp. Completá por favor la siguiente información.');
+    $('#send_email_modal').modal({
+      backdrop: 'static'
     });
   });
-  /******** page 7  */
+  $('#page_6 #to_contact').click(function () {
+    $('#send_email_modal .large_title:first-child').text('Completá por favor la siguiente información y un asesor acreditado en Zurich International Life Sucursal Argentina te contactará en breve.');
+    $('#send_email_modal').modal({
+      backdrop: 'static'
+    });
+  });
+  $('#send_email_modal_btn').on('click', function (e) {
+    console.log('close btn');
+    $('#send_email_modal').modal('hide');
+  });
   $('#prev_page_5').click(function () {
     $('#page_5').removeClass('d-none');
     $('#page_6').addClass('d-none');
+  });
+  $('#to_page_7').click(function () {
+    $('#page_7').removeClass('d-none');
+    $('#page_6').addClass('d-none');
+  });
+  $('#page_6 .plan-esencial').click(function () {
+    $('#plan_card_modal').modal({
+      backdrop: 'static'
+    });
+  });
+  $('#page_6 .plan-extendido').click(function () {
+    $('#plan_card_modal').modal({
+      backdrop: 'static'
+    });
+  });
+  $('#plan_card_modal .btn-regresar').click(function () {
+    $('#plan_card_modal').modal('hide');
   });
 });
 /******/ })()

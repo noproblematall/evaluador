@@ -1,5 +1,5 @@
-<section id="page_6" class="page-content animate__animated animate__fadeIn d-none">
-<!-- <section id="page_6" class="page-content animate__animated animate__fadeIn "> -->
+<!-- <section id="page_6" class="page-content animate__animated animate__fadeIn d-none"> -->
+<section id="page_6" class="page-content animate__animated animate__fadeIn ">
     <div class='d-flex justify-content-between align-items-center mb-4'>
         <p class='prev_link mt-2 mb-1' id='prev_page_5'>
             <span class="icon icon--arrow-long-left_24"></span>
@@ -17,7 +17,7 @@
         </div>
         <hr />
         <div class='items-container mt-2 row px-0'>
-            <p class='consider-description text-center mt-3'>El plan que mejor se adaptan a tu caso:</p>
+            <!-- <p class='consider-description text-center mt-3'>El plan que mejor se adaptan a tu caso:</p>
             <div class='items mt-2 mb-1 px-0'>
                 <div class='item d-flex justify-content-between align-items-center mb-3'>
                     <div class='content'>
@@ -37,9 +37,18 @@
                         Saber más
                     </button>
                 </div>
-            </div>
+            </div> -->
+            <img class='plan-esencial col-6 pe-2 ps-0 pointer' 
+                src='https://z-eval.s3.amazonaws.com/misc/plan+esencial.gif'
+                alt='plan + esencial' />
+            <img class='plan-extendido col-6 ps-2 pe-0 pointer' 
+                src='https://z-eval.s3.amazonaws.com/misc/plan+extendido.gif'
+                alt='plan + extendido' />
         </div>
-        <div class='decide-money text-center mt-5 mb-3'>Continuemos para determinar las sumas que necesitás</div>
-        <button class='continue_btn mx-auto mb-4' id='to_page_7'>Continuar</button>
+        <div class='button-group my-4'>
+            <button class='continue_btn mx-auto my-2' id='to_whatsapp'>Enviar esta información a mi WhatsApp</button>
+            <button class='continue_btn mx-auto my-2' id='to_contact'>Quiero que me contacten para asesorarme</button>
+            <button class='continue_btn mx-auto my-2' id='to_page_7'>Continuar con mi perfil de inversor</button>
+        </div>
     </div>
 </section>

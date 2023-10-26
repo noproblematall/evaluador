@@ -33,14 +33,14 @@
                     <img class='activated' src='https://z-eval.s3.amazonaws.com/pers/child+a.png' alt='Ninos' />
                 </div>
             </div>
-            <div data-item='adolescentes' class='image-item  col d-flex justify-content-between flex-column'>
+            <div data-item='jovenes' class='image-item  col d-flex justify-content-between flex-column'>
                 <div class='text-center number-content'>
                     <span class='number'>0</span>
                     <span>x</span>
                 </div>
                 <div class='image-content d-flex justify-content-center'>
-                    <img class='inactivated' src='https://z-eval.s3.amazonaws.com/pers/teen+b.png' alt='Adolescentes' />
-                    <img class='activated' src='https://z-eval.s3.amazonaws.com/pers/teen+a.png' alt='Adolescentes' />
+                    <img class='inactivated' src='https://z-eval.s3.amazonaws.com/pers/teen+b.png' alt='Jóvenes' />
+                    <img class='activated' src='https://z-eval.s3.amazonaws.com/pers/teen+a.png' alt='Jóvenes' />
                 </div>
             </div>
             <div data-item='adultos' class='image-item  col d-flex justify-content-between flex-column'>
@@ -88,18 +88,18 @@
                     </div>
                 </div>
             </div>
-            <div data-item='adolescentes'  class='item  d-flex justify-content-between align-items-center mt-1'>
+            <div data-item='jovenes'  class='item  d-flex justify-content-between align-items-center mt-1'>
                 <div>
-                    <div class='item-title'>Adolescentes</div>
-                    <p class='item-description'>12 a 18 años</p>
+                    <div class='item-title'>Jóvenes</div>
+                    <p class='item-description'>12 a 25 años</p>
                 </div>
                 <div class='d-flex justify-content-center align-items-center'>
-                    <input type='hidden' name='adolescentes' value='0' id='adolescentes' />
-                    <div class='adolescentes minus-btn d-inline-block'>
+                    <input type='hidden' name='jovenes' value='0' id='jovenes' />
+                    <div class='jovenes minus-btn d-inline-block'>
                         <span class="icon icon--minus_24"></span>
                     </div>
-                    <span class='adolescentes item-value'>0</span>
-                    <div class='adolescentes plus-btn d-inline-block'>
+                    <span class='jovenes item-value'>0</span>
+                    <div class='jovenes plus-btn d-inline-block'>
                         <span class="icon icon--plus_24"></span>
                     </div>
                 </div>
@@ -107,7 +107,7 @@
             <div data-item='adultos'  class='item adultos d-flex justify-content-between align-items-center'>
                 <div>
                     <div class='item-title'>Adultos</div>
-                    <p class='item-description'>18 o más años</p>
+                    <p class='item-description'>26 o más años</p>
                 </div>
                 <div class='d-flex justify-content-center align-items-center'>
                     <input type='hidden' name='adultos' value='0' id='adultos' />

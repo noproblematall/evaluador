@@ -65,3 +65,33 @@
         </div>
     </div>
 </div>
+<div class="modal" id="plan_card_modal">
+    <div class="modal-dialog animate__animated animate__fadeIn modal-dialog-centered">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h5 class="modal-title"><button type="button" class="" data-dismiss="modal">Cerrar</button></h5>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <p class="subtitle mt-2">Porque querés mantener tu nivel de vida en tu retiro:</p>
+                <h4 class='title my-4 text-center' >Seguro de Vida con Ahorro</h4> 
+                <ul class='main-text ps-3'>
+                    <li>Podés pagar con tu tarjeta de crédito todos los meses o elegir otra frecuencia de pago.</li>
+                    <li>Los planes te cubren de 5 a 35 años (o incluso la vida entera!).</li>
+                    <li>Protegé el valor de tu dinero en el tiempo (los fondos de Zurich alcanzaron 5% de rendimiento anual en dólares promedio durante los últimos 20 años)</li>
+                    <li>Obtené una adminitración experta de tu dinero con activos locales e internacionales en tus fondos.</li>
+                    <li>Podes cambiar los fondos donde están tus ahorros cuando quieras, y también podes llevarte parte de tu dinero cuando lo necesites sin alterar tu plan.</li>
+                    <li>Podés elegir cambiar incrementando o reduciendo los aportes a tu plan, y también hacer aportes extraordinarios incrementando aún más tus ahorros.</li>
+                    <li>Tu vida está asegurada desde el primer día.</li>
+                </ul>
+                <button class='btn-regresar continue_btn mt-4 mb-2'>
+                    Regresar
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

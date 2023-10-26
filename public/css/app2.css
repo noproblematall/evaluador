@@ -52,6 +52,16 @@ body .card {
     justify-content: center;
     flex-direction: column;
 }
+#page_0 .continue_btn {
+    background-color : #1FB1E6;
+}
+#page_0 .console-bottom {
+    position: absolute;
+    width : 100%;
+    --screen-width : min(60vh, 100%, 450px);    
+    bottom : calc(50vh - 1.18 * var(--screen-width)/2);
+    transform : translateY(50%);
+}
 #to_page_1.hide {
     opacity : 0;
 }
@@ -139,10 +149,11 @@ body .card {
 .continue_btn {
     color: white;
     padding: 8px 30px 10px;
-    background-color: #2167AE;
+    background-color: #5495CF;
     border-radius: 50px;
     text-decoration: none;
     font-size: 16px;
+    width : 100%;
 }
 
 .error {
@@ -562,32 +573,23 @@ body .card {
     margin-right: auto;
 }
 
-#page_6 .item .item-title {
-    color: #1FB1E6;
-    font-size: 16px;
+#page_6 .continue_btn {
     font-family: 'ZurichSans-Medium', Arial, sans-serif;
+    font-size : 15px;
+    padding-left : 10px;
+    padding-right : 10px;
+}
+@media screen and (max-width : 400px) {
+    #page_6 .continue_btn {
+        font-size : 14px;
+    }
 }
 
-#page_6 .item .item-description {
-    color: #215193;
-    font-size: 12px;
-    font-family: 'ZurichSans-Medium', Arial, sans-serif;
+#to_whatsapp {
+    background-color : #19BAB6;
 }
-
-#page_6 .item .info {
-    color: white;
-    padding: 4px 10px 6px;
-    background-color: #1FB1E6;
-    border-radius: 50px;
-    text-decoration: none;
-    font-size: 12px;
-    text-decoration: none;
-}
-
-#page_6 .decide-money {
-    font-family: 'ZurichSans-Regular', Arial, sans-serif;
-    color: #215193;
-    font-size: 12px;
+#to_contact {
+    background-color : #2167AE;;
 }
 
 .modal-header {
@@ -744,3 +746,25 @@ h6 {
     height: 40px;    
     padding: 0 18px;
 }
+
+#plan_card_modal .subtitle {
+    font-family: 'ZurichSans-Regular', Arial, sans-serif;
+    color : #1FB1E6;
+    font-size : 14px;
+}
+#plan_card_modal .title {
+    font-family: 'ZurichSans-Medium', Arial, sans-serif;
+    color : #2167AE;
+    font-size : 20px;
+}
+#plan_card_modal .main-text li{
+    font-family: 'ZurichSans-Regular', Arial, sans-serif;
+    font-size : 14px;
+}
+#plan_card_modal .btn-regresar {
+    font-family: 'ZurichSans-Regular', Arial, sans-serif;
+    width : 100%;
+    font-size : 16px;
+    padding : 10px;
+}
+
