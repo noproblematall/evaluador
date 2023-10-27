@@ -289,18 +289,8 @@ $(document).ready(function () {
     $('#page_7').removeClass('d-none');
     $('#page_6').addClass('d-none');
   });
-  $('#page_6 .plan-esencial').click(function () {
-    $('#plan_card_modal').modal({
-      backdrop: 'static'
-    });
-  });
-  $('#page_6 .plan-extendido').click(function () {
-    $('#plan_card_modal').modal({
-      backdrop: 'static'
-    });
-  });
-  $('#plan_card_modal .btn-regresar').click(function () {
-    $('#plan_card_modal').modal('hide');
+  $('#page_6 .flip_card').click(function () {
+    $(this).toggleClass('flipped');
   });
 });
 /******/ })()

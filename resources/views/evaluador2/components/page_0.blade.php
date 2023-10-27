@@ -1,5 +1,5 @@
-<section id="page_0" class="page-content animate__animated animate__fadeIn ">
-<!-- <section id="page_0" class="page-content animate__animated animate__fadeIn d-none"> -->
+<!-- <section id="page_0" class="page-content animate__animated animate__fadeIn "> -->
+<section id="page_0" class="page-content animate__animated animate__fadeIn d-none">
     <img class='position-absolute w-100 bottom-0' src='/img/console+bottom+bg.png' alt='bottom' />
     <img class='position-absolute w-100 top-0' src='/img/console+top.png' alt='top' />
     <img class='console-bottom' src='/img/console+bottom.png' alt='bottom' />
