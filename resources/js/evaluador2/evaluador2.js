@@ -318,6 +318,9 @@ $(document).ready(function () {
     // $('#page_6 .flip_card').click(function() {
     //     $(this).toggleClass('flipped')
     // });
+    $('#page_6 .flip_card').click(function() {
+        $('#plan_card_modal').modal({ backdrop: 'static' });
+    });
     $('#to_page_7').click(function () {
         let selectedImage1 = selectedImage;
         if (character == 'hombre') selectedImage1 = character_image_group_1[0];

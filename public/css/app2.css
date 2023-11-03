@@ -611,6 +611,7 @@ img.selected-image {
     .page-title {
         font-size: 13.5px;
     }
+    #page_13 .item-btn * {font-size : 13px; }
 }
 
 #to_whatsapp {
