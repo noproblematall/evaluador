@@ -14,6 +14,7 @@ body .card {
     max-width: 450px;
     width : 100%;
     height: 100%;
+    overflow:hidden;
     margin: auto;
     --screen-width : min(100%, 450px);  
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .19);
@@ -25,6 +26,7 @@ body .card {
     background-color: #EBEFF0;
     padding: 10px;
     overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .bg-blue {
