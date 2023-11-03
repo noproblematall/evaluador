@@ -546,12 +546,12 @@ $(document).ready(function () {
         else if (tolerancia_al_riesgo >= 22 && tolerancia_al_riesgo <= 26) $('#page_14 .second-line .content').text('Moderado');
         else if (tolerancia_al_riesgo >= 27 && tolerancia_al_riesgo <= 31) $('#page_14 .second-line .content').text('Algo Arriesgado');
         else $('#page_14 .second-line .content').text('Arriesgado');
-        $('#confetti-video').removeClass('d-none');
-        const video = document.getElementById('confetti-video');
-        video.play();
-        setTimeout(() => {
-            $('#confetti-video').addClass('d-none');
-        }, 2500)
+        // $('#confetti-video').removeClass('d-none');
+        // const video = document.getElementById('confetti-video');
+        // video.play();
+        // setTimeout(() => {
+        //     $('#confetti-video').addClass('d-none');
+        // }, 2500)
     })
     /******** page 14  */
     $('#prev_page_13').click(function () {
