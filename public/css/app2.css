@@ -609,6 +609,9 @@ img.selected-image {
 #page_12 .page-title { font-size : 14.5px; }
 #page_12 .subtitle { font-size : 13px; }
 @media screen and (max-width : 400px) {
+    .page-container {
+        width : 100vw;
+    }
     #page_6 .continue_btn, #page_14 .continue_btn {
         font-size : 14px;
     }
