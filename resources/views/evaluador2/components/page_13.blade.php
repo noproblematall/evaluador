@@ -17,30 +17,30 @@
         </div>
         <hr />
         <p class='text-center mt-3 mb-0 subtitle mx-3'>¿Cuál de estos escenarios elegirías?</p>
-        <p class='text-center mb-2 subtitle-1 mx-3 mt-0'>(cada uno de ellos tiene oportunidades y riesgos)</p>
+        <p class='text-center mb-2 subtitle-1 mt-0'>(cada uno de ellos tiene oportunidades y riesgos)</p>
         <div class='items-container mt-2 row'>
             <div class='col-6 item-btn mt-2 mb-1 px-2'>
                 <input type='radio' name='tolerancia_al_riesgo_4' id='tolerancia_al_riesgo_4-0' value='0'>
                 <label for='tolerancia_al_riesgo_4-0' class='item-label d-flex justify-content-center align-items-center px-1'>
-                    <p class='text-center px-2'>Rendimiento de 6% (max 15%, min -5%)</p>
+                    <p class='text-center px-2'>Rendimiento de 6% <br />(max 15%, min -5%)</p>
                 </label>
             </div>
             <div class='col-6 item-btn mt-2 mb-1 px-2'>
                 <input type='radio' name='tolerancia_al_riesgo_4' id='tolerancia_al_riesgo_4-1' value='2'>
                 <label for='tolerancia_al_riesgo_4-1' class='item-label d-flex justify-content-center  align-items-center px-1'>
-                    <p class='text-center px-2'>Rendimiento de 8% (max 20%, min -10%)</p>
+                    <p class='text-center px-2'>Rendimiento de 8% <br />(max 20%, min -10%)</p>
                 </label>
             </div>
             <div class='col-6 item-btn mt-2 mb-1 px-2'>
                 <input type='radio' name='tolerancia_al_riesgo_4' id='tolerancia_al_riesgo_4-2' value='5'>
                 <label for='tolerancia_al_riesgo_4-2' class='item-label d-flex justify-content-center  align-items-center px-1'>
-                    <p class='text-center px-2'>Rendimiento de 10% (max 30%, min -15%)</p>
+                    <p class='text-center px-2'>Rendimiento de 10% <br />(max 30%, min -15%)</p>
                 </label>
             </div>
             <div class='col-6 item-btn mt-2 mb-1 px-2'>
                 <input type='radio' name='tolerancia_al_riesgo_4' id='tolerancia_al_riesgo_4-3' value='8'>
                 <label for='tolerancia_al_riesgo_4-3' class='item-label d-flex justify-content-center  align-items-center px-1'>
-                    <p class='text-center px-2'>Rendimiento de12% (max 40%, min -20%)</p>
+                    <p class='text-center px-2'>Rendimiento de12% <br />(max 40%, min -20%)</p>
                 </label>
             </div>
         </div>
