@@ -298,6 +298,7 @@ $(document).ready(function () {
         $('#page_6').removeClass('d-none');
         $('#page_5').addClass('d-none');
 
+        $("html, body").animate({ scrollTop: 0 }, "slow");
     })
     $('#page_6 #to_whatsapp').click(function () {
         $('#send_email_modal .large_title:first-child').text('Recibí esta información detallada en tu WhatsApp. Completá por favor la siguiente información.')
@@ -315,15 +316,15 @@ $(document).ready(function () {
         $('#page_5').removeClass('d-none');
         $('#page_6').addClass('d-none');
     });
-    // $('#page_6 .flip_card').click(function() {
-    //     $(this).toggleClass('flipped')
-    // });
     $('#page_6 .flip_card').click(function() {
-        $('#plan_card_modal').modal({ backdrop: 'static' });
+        $(this).toggleClass('flipped')
     });
-    $('#plan_card_modal .btn-regresar').click(function() {
-        $('#plan_card_modal').modal('hide');
-    });
+    // $('#page_6 .flip_card').click(function() {
+    //     $('#plan_card_modal').modal({ backdrop: 'static' });
+    // });
+    // $('#plan_card_modal .btn-regresar').click(function() {
+    //     $('#plan_card_modal').modal('hide');
+    // });
     $('#to_page_7').click(function () {
         let selectedImage1 = selectedImage;
         if (character == 'hombre') selectedImage1 = character_image_group_1[0];
