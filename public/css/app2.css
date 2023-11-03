@@ -26,7 +26,6 @@ body .card {
     background-color: #EBEFF0;
     padding: 10px;
     overflow-y: auto;
-    overflow-x: hidden;
 }
 
 .bg-blue {
