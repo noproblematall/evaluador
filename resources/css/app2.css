@@ -11,11 +11,11 @@ body .card {
 }
 
 .page-container {
-    max-width: min(100%, 450px);
-    width : 60vh;
+    max-width: 450px;
+    width : 100%;
     height: 100%;
     margin: auto;
-    --screen-width : min(60vh, 100%, 450px);  
+    --screen-width : min(100%, 450px);  
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .19);
 }
 
@@ -276,6 +276,7 @@ body .card {
 img.selected-image {
     width: 15vw;
     max-width: 66px;
+    z-index : 1;
 }
 
 .item-btn input[type='radio'], .item-btn input[type='checkbox'] {
@@ -582,6 +583,9 @@ img.selected-image {
     font-family: 'ZurichSans-Medium', Arial, sans-serif;
     font-size: 15px;
     color: #215193;
+}
+#page_13 .page-title {
+    font-size : 14.5px;
 }
 
 .subtitle {

@@ -1,6 +1,6 @@
 <!-- <section id="page_14" class="page-content animate__animated animate__fadeIn"> -->
-<section id="page_14" class="page-content animate__animated animate__fadeIn d-none ">
-    <div class='d-flex justify-content-between align-items-center mb-4'>
+    <section id="page_14" class="page-content animate__animated animate__fadeIn d-none ">
+    <div class='d-flex justify-content-between align-items-center mb-4 '>
         <p class='prev_link mt-2 mb-1' id='prev_page_13'>
             <span class="icon icon--arrow-long-left_24"></span>
             Regresar a la página anterior
@@ -12,8 +12,13 @@
         <p class='color-blue px-2 page-title'>Conocer mi perfil de inversor: resultados</p>
     </div>
     <div class='card mt-2 p-3'>
-        <div class='d-flex justify-content-center align-items-center mt-4'>
-            <img src='https://z-eval.s3.amazonaws.com/pers/Nobi+a.png' alt='selected' class='selected-image' />
+        <div class='d-flex justify-content-center align-items-center mt-4 position-relative'>
+            <video id="confetti-video"  class="position-absolute w-100" autoplay name='media'>
+                <source src="/confetti.mp4" type="video/mp4">
+                <source src="/confetti.ogg" type="video/ogg">
+                Your browser does not support the video tag.
+            </video>
+            <img src=' https://z-eval.s3.amazonaws.com/pers/Nobi+a.png' alt='selected' class='selected-image' />
         </div>
         <hr />
         <p class='text-center mt-3 mb-0 subtitle mx-3'>¡Felicitaciones!</p>

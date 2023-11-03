@@ -494,6 +494,12 @@ $(document).ready(function () {
     console.log('tolerancia_al_riesgo', tolerancia_al_riesgo, tolerancia_al_riesgo_0, tolerancia_al_riesgo_1, tolerancia_al_riesgo_2, tolerancia_al_riesgo_3, tolerancia_al_riesgo_4);
     if (horizonte_temporal < 3) $('#page_14 .first-line .content').text("Corto Plazo");else if (horizonte_temporal >= 3 && horizonte_temporal <= 7) $('#page_14 .first-line .content').text("Mediano Plazo");else $('#page_14 .first-line .content').text("Largo Plazo");
     if (tolerancia_al_riesgo < 16) $('#page_14 .second-line .content').text('Conservador');else if (tolerancia_al_riesgo >= 16 && tolerancia_al_riesgo <= 21) $('#page_14 .second-line .content').text('Algo Conservador');else if (tolerancia_al_riesgo >= 22 && tolerancia_al_riesgo <= 26) $('#page_14 .second-line .content').text('Moderado');else if (tolerancia_al_riesgo >= 27 && tolerancia_al_riesgo <= 31) $('#page_14 .second-line .content').text('Algo Arriesgado');else $('#page_14 .second-line .content').text('Arriesgado');
+    $('#confetti-video').removeClass('d-none');
+    var video = document.getElementById('confetti-video');
+    video.play();
+    setTimeout(function () {
+      $('#confetti-video').addClass('d-none');
+    }, 2500);
   });
   /******** page 14  */
   $('#prev_page_13').click(function () {
