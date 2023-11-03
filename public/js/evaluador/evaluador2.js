@@ -50,6 +50,10 @@ $(document).ready(function () {
     $('#page_1').addClass('d-none');
     $('#page_2').removeClass('d-none');
     console.log('selected Image', selectedImage);
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   });
   $('#page_1 input[type="radio"]').change(function () {
     $('#page_1 label img.activated').removeClass('d-none');
