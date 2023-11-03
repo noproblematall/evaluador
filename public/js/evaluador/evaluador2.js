@@ -269,9 +269,10 @@ $(document).ready(function () {
     });
     $('#page_6').removeClass('d-none');
     $('#page_5').addClass('d-none');
-    $("html, body").animate({
-      scrollTop: 0
-    }, "slow");
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   });
   $('#page_6 #to_whatsapp').click(function () {
     $('#send_email_modal .large_title:first-child').text('Recibí esta información detallada en tu WhatsApp. Completá por favor la siguiente información.');
