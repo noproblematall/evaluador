@@ -55,6 +55,7 @@ body .card {
 }
 #page_0 .continue_btn {
     background-color : #1FB1E6;
+    width : 90%;
 }
 #page_0 .console-bottom {
     position: absolute;
@@ -272,16 +273,16 @@ body .card {
     color: #215193;
 }
 
-#page_3 img.selected-image {
+img.selected-image {
     width: 15vw;
     max-width: 66px;
 }
 
-#page_3 .item input[type='radio'] {
+.item-btn input[type='radio'], .item-btn input[type='checkbox'] {
     display: none;
 }
 
-#page_3 .item label {
+.item-btn label {
     width: 100%;
     height: 50px;
     border-radius: 8px;
@@ -293,7 +294,7 @@ body .card {
     cursor: pointer;
 }
 
-#page_3 .item input[type='radio']:checked+label {
+.item-btn input[type='radio']:checked+label {
     background-color: #A6E9AB;
     color: #215193;
 }
@@ -309,23 +310,7 @@ body .card {
     }
 }
 
-#page_4 .item input[type='checkbox'] {
-    display: none;
-}
-
-#page_4 .item label {
-    width: 100%;
-    height: 50px;
-    border-radius: 8px;
-    background-color: #D9D9D9;
-    color: #545454;
-    font-family: 'ZurichSans-Medium', Arial, sans-serif;
-    font-size: 14px;
-    line-height: 1;
-    cursor: pointer;
-}
-
-#page_4 .item input[type='checkbox']:checked+label {
+.item-btn input[type='checkbox']:checked+label {
     background-color: #A6E9AB;
     color: #215193;
 }
@@ -338,8 +323,8 @@ body .card {
 
 #page_4 .todo-image-container {
     position: relative;
-    height: 55vw;
-    max-height: 200px;
+    height: 60vw;
+    max-height: 230px;
     overflow: hidden;
     margin-left: -16px;
     margin-right: -16px;
@@ -439,8 +424,8 @@ body .card {
 /* ************** page 6 */
 #page_5 .plan-image-container {
     position: relative;
-    height: 60vw;
-    max-height: 250px;
+    height: 68vw;
+    max-height: 270px;
     overflow: hidden;
     margin-left: -16px;
     margin-right: -16px;
@@ -459,27 +444,6 @@ body .card {
     width: 18vw;
     max-width: 70px;
     transform: translateX(-50%);
-}
-
-#page_5 .item input[type='checkbox'] {
-    display: none;
-}
-
-#page_5 .item label {
-    width: 100%;
-    height: 50px;
-    border-radius: 8px;
-    background-color: #D9D9D9;
-    color: #545454;
-    font-family: 'ZurichSans-Medium', Arial, sans-serif;
-    font-size: 14px;
-    line-height: 1;
-    cursor: pointer;
-}
-
-#page_5 .item input[type='checkbox']:checked+label {
-    background-color: #A6E9AB;
-    color: #215193;
 }
 
 #page_5 .plan-description {
@@ -556,11 +520,6 @@ body .card {
     transition: opacity 1s;
 }
 
-#page_6 .selected-image {
-    width: 15vw;
-    max-width: 66px;
-}
-
 #page_6 .consider-description {
     color: #215193;
     font-size: 14px;
@@ -573,7 +532,7 @@ body .card {
     margin-right: auto;
 }
 
-#page_6 .continue_btn {
+#page_6 .continue_btn, #page_14 .continue_btn {
     font-family: 'ZurichSans-Medium', Arial, sans-serif;
     font-size : 15px;
     padding-left : 10px;
@@ -619,10 +578,38 @@ body .card {
   border-radius : 20px;
   z-index : 1;
 }
+.page-title {
+    font-family: 'ZurichSans-Medium', Arial, sans-serif;
+    font-size: 15px;
+    color: #215193;
+}
 
+.subtitle {
+    font-family: 'ZurichSans-Medium', Arial, sans-serif;
+    font-size: 14px;
+    color: #215193;
+}
+.subtitle-1 {
+    font-family: 'ZurichSans-Medium', Arial, sans-serif;
+    color: #215193;
+    font-size : 13px;
+}
+#page_14 .first-line, #page_14 .second-line {
+    font-family: 'ZurichSans-Medium', Arial, sans-serif;
+    color: #215193;
+    font-size : 13px;
+}
+#page_14 .content {
+    color : #1FB1E6;
+}
+#page_12 .page-title { font-size : 14.5px; }
+#page_12 .subtitle { font-size : 13px; }
 @media screen and (max-width : 400px) {
-    #page_6 .continue_btn {
+    #page_6 .continue_btn, #page_14 .continue_btn {
         font-size : 14px;
+    }
+    .page-title {
+        font-size: 13.5px;
     }
 }
 

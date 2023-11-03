@@ -25,37 +25,37 @@
         <hr />
         <div class='items-container mt-2 row'>
             <p class='todo-description text-center mt-1 mb-3'>Podés elegir varias opciones</p>
-            <div class='col-6 item  mt-2 mb-1 px-2'>
+            <div class='col-6 item-btn mt-2 mb-1 px-2'>
                 <input type='checkbox' name='todo' id='todo-0' value='0'>
                 <label for='todo-0' class='item-label d-flex justify-content-center align-items-center px-1'>
                     <p class='text-center'>Comprar un auto</p>
                 </label>
             </div>
-            <div class='col-6 item  mt-2 mb-1 px-2'>
+            <div class='col-6 item-btn mt-2 mb-1 px-2'>
                 <input type='checkbox' name='todo' id='todo-1' value='1'>
                 <label for='todo-1' class='item-label d-flex justify-content-center align-items-center px-1'>
                     <p class='text-center'>Comprar una casa</p>
                 </label>
             </div>
-            <div class='col-6 item mt-2 mb-1 px-2'>
+            <div class='col-6 item-btn mt-2 mb-1 px-2'>
                 <input type='checkbox' name='todo' id='todo-2' value='2'>
                 <label for='todo-2' class='item-label d-flex justify-content-center align-items-center px-1'>
                     <p class='text-center'>Viajar todos los años</p>
                 </label>
             </div>
-            <div class='col-6 item  mt-2 mb-1 px-2'>
+            <div class='col-6 item-btn mt-2 mb-1 px-2'>
                 <input type='checkbox' name='todo' id='todo-3' value='3'>
                 <label for='todo-3' class='item-label d-flex justify-content-center align-items-center px-1'>
                     <p class='text-center'>Emprender un proyecto</p>
                 </label>
             </div>
-            <div class='col-6 item  mt-2 mb-1 px-2'>
+            <div class='col-6 item-btn mt-2 mb-1 px-2'>
                 <input type='checkbox' name='todo' id='todo-4' value='4'>
                 <label for='todo-4' class='item-label d-flex justify-content-center align-items-center px-1'>
                     <p class='text-center'>generar un ahorro rentable</p>
                 </label>
             </div>
-            <div class='col-6 item  mt-2 mb-1 px-2'>
+            <div class='col-6 item-btn mt-2 mb-1 px-2'>
                 <input type='checkbox' name='todo' id='todo-5' value='5'>
                 <label for='todo-5' class='item-label d-flex justify-content-center align-items-center px-1'>
                     <p class='text-center'>Ninguno de los anteriores</p>

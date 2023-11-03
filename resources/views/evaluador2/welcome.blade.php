@@ -31,6 +31,14 @@
         @include('evaluador2.components.page_4')
         @include('evaluador2.components.page_5')
         @include('evaluador2.components.page_6')
+        @include('evaluador2.components.page_7')
+        @include('evaluador2.components.page_8')
+        @include('evaluador2.components.page_9')
+        @include('evaluador2.components.page_10')
+        @include('evaluador2.components.page_11')
+        @include('evaluador2.components.page_12')
+        @include('evaluador2.components.page_13')
+        @include('evaluador2.components.page_14')
 
         @include('evaluador2.components.modal')
     </div>

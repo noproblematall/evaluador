@@ -82,6 +82,17 @@ $(document).ready(function () {
             member[input_name] = val;
         }
     })
+    character_image_group_1 = [
+        "https://z-eval.s3.amazonaws.com/pers/Hombre+Idle.gif",
+        "https://z-eval.s3.amazonaws.com/pers/Mujer+Idle.gif",
+        "https://z-eval.s3.amazonaws.com/pers/Nobi+Idle.gif"
+    ],
+    character_image_group_2 = [
+        "https://z-eval.s3.amazonaws.com/pers/Hombre+Pensando.gif",
+        "https://z-eval.s3.amazonaws.com/pers/Mujer+Pensando.gif",
+        "https://z-eval.s3.amazonaws.com/pers/Nobi+Pensando.gif"
+    ];
+
     $('#page_2 .plus-btn').click(function () {
         let input_elem = $(this).siblings().filter('input');
         let input_name = input_elem.attr('id');
@@ -111,7 +122,9 @@ $(document).ready(function () {
 
         $('#page_3 .title').text(`¿Estás trabajando, ${name}?`);
         let selectedImage1 = selectedImage;
-        if (character == 'hombre') selectedImage1 = 'https://z-eval.s3.amazonaws.com/pers/PruebaAnimacion.gif'
+        if (character == 'hombre') selectedImage1 = character_image_group_1[0];
+        else if (character == 'mujer') selectedImage1 = character_image_group_1[1];
+        else  selectedImage1 = character_image_group_1[2];
         $('#page_3 .selected-image').attr('src', selectedImage1);
         console.log('member', member, selectedImage)
     })
@@ -130,7 +143,11 @@ $(document).ready(function () {
         }
         job = elem.siblings().filter('label').find('p').text();
 
-        $('#page_4 .selected-image').attr('src', selectedImage);
+        let selectedImage1 = selectedImage;
+        if (character == 'hombre') selectedImage1 = character_image_group_2[0];
+        else if (character == 'mujer') selectedImage1 = character_image_group_2[1];
+        else  selectedImage1 = character_image_group_2[2];
+        $('#page_4 .selected-image').attr('src', selectedImage1);
         $('#page_4').removeClass('d-none');
         $('#page_3').addClass('d-none');
         console.log('job', job);
@@ -182,7 +199,11 @@ $(document).ready(function () {
             todo.push($(this).val());
         });
         console.log('todo', todo);
-        $('#page_5 .selected-image').attr('src', selectedImage);
+        let selectedImage1 = selectedImage;
+        if (character == 'hombre') selectedImage1 = character_image_group_1[0];
+        else if (character == 'mujer') selectedImage1 = character_image_group_1[1];
+        else  selectedImage1 = character_image_group_1[2];
+        $('#page_5 .selected-image').attr('src', selectedImage1);
 
         $('#page_5').removeClass('d-none');
         $('#page_4').addClass('d-none');
@@ -235,7 +256,9 @@ $(document).ready(function () {
         });
         console.log('plan', plan);
         let selectedImage1 = selectedImage;
-        if (character == 'hombre') selectedImage1 = 'https://z-eval.s3.amazonaws.com/pers/Animacion+pensando.gif'
+        if (character == 'hombre') selectedImage1 = character_image_group_2[0];
+        else if (character == 'mujer') selectedImage1 = character_image_group_2[1];
+        else  selectedImage1 = character_image_group_2[2];
         $('#page_6 .selected-image').attr('src', selectedImage1);
         let products = [
             {
@@ -292,11 +315,243 @@ $(document).ready(function () {
         $('#page_5').removeClass('d-none');
         $('#page_6').addClass('d-none');
     });
+    // $('#page_6 .flip_card').click(function() {
+    //     $(this).toggleClass('flipped')
+    // });
     $('#to_page_7').click(function () {
+        let selectedImage1 = selectedImage;
+        if (character == 'hombre') selectedImage1 = character_image_group_1[0];
+        else if (character == 'mujer') selectedImage1 = character_image_group_1[1];
+        else  selectedImage1 = character_image_group_1[2];
+        $('#page_7 .selected-image').attr('src', selectedImage1);
+        console.log('member', member, selectedImage1)
         $('#page_7').removeClass('d-none');
         $('#page_6').addClass('d-none');
     });
-    $('#page_6 .flip_card').click(function() {
-        $(this).toggleClass('flipped')
+    /****************   page 7  */
+    $('#prev_page_6').click(function () {
+        $('#page_6').removeClass('d-none');
+        $('#page_7').addClass('d-none');
     });
+    let horizonte_temporal = 0;
+    let horizonte_temporal_0 = 0;
+    $('#page_7 input[type="radio"]').change(function () {        
+        $('#page_7 .error').html('&nbsp;');
+    });
+    $('#to_page_8').click(function () {
+        let elem = $('#page_7 input[type="radio"]:checked');
+        if (elem.length > 0) {
+            $('#page_7 .error').html('&nbsp;');
+        } else {
+            return $('#page_7 .error').text('Seleccionar una opción');
+        }
+        horizonte_temporal_0 = parseInt(elem.val());
+
+        let selectedImage1 = selectedImage;
+        if (character == 'hombre') selectedImage1 = character_image_group_2[0];
+        else if (character == 'mujer') selectedImage1 = character_image_group_2[1];
+        else  selectedImage1 = character_image_group_2[2];
+        $('#page_8 .selected-image').attr('src', selectedImage1);
+        $('#page_8').removeClass('d-none');
+        $('#page_7').addClass('d-none');
+        console.log('horizonte_temporal_0', horizonte_temporal_0);
+    })
+    /******** page 8  */
+    $('#prev_page_7').click(function () {
+        $('#page_7').removeClass('d-none');
+        $('#page_8').addClass('d-none');
+    });
+    let horizonte_temporal_1 = 0;
+    $('#page_8 input[type="radio"]').change(function () {        
+        $('#page_8 .error').html('&nbsp;');
+    });
+    $('#to_page_9').click(function () {
+        let elem = $('#page_8 input[type="radio"]:checked');
+        if (elem.length > 0) {
+            $('#page_8 .error').html('&nbsp;');
+        } else {
+            return $('#page_8 .error').text('Seleccionar una opción');
+        }
+        horizonte_temporal_1 = parseInt(elem.val());
+
+        let selectedImage1 = selectedImage;
+        if (character == 'hombre') selectedImage1 = character_image_group_1[0];
+        else if (character == 'mujer') selectedImage1 = character_image_group_1[1];
+        else  selectedImage1 = character_image_group_1[2];
+        $('#page_9 .selected-image').attr('src', selectedImage1);
+        $('#page_9').removeClass('d-none');
+        $('#page_8').addClass('d-none');
+        console.log('horizonte_temporal_1', horizonte_temporal_1);
+    })
+    /******** page 9  */
+    $('#prev_page_8').click(function () {
+        $('#page_8').removeClass('d-none');
+        $('#page_9').addClass('d-none');
+    });
+    let tolerancia_al_riesgo = 0;
+    let tolerancia_al_riesgo_0 = 0;
+    $('#page_9 input[type="radio"]').change(function () {        
+        $('#page_9 .error').html('&nbsp;');
+    });
+    $('#to_page_10').click(function () {
+        let elem = $('#page_9 input[type="radio"]:checked');
+        if (elem.length > 0) {
+            $('#page_9 .error').html('&nbsp;');
+        } else {
+            return $('#page_9 .error').text('Seleccionar una opción');
+        }
+        tolerancia_al_riesgo_0 = parseInt(elem.val());
+
+        let selectedImage1 = selectedImage;
+        if (character == 'hombre') selectedImage1 = character_image_group_2[0];
+        else if (character == 'mujer') selectedImage1 = character_image_group_2[1];
+        else  selectedImage1 = character_image_group_2[2];
+        $('#page_10 .selected-image').attr('src', selectedImage1);
+        $('#page_10').removeClass('d-none');
+        $('#page_9').addClass('d-none');
+        console.log('tolerancia_al_riesgo_0', tolerancia_al_riesgo_0);
+    })
+    /******** page 10  */
+    $('#prev_page_9').click(function () {
+        $('#page_9').removeClass('d-none');
+        $('#page_10').addClass('d-none');
+    });
+    let tolerancia_al_riesgo_1 = 0;
+    $('#page_10 input[type="radio"]').change(function () {        
+        $('#page_10 .error').html('&nbsp;');
+    });
+    $('#to_page_11').click(function () {
+        let elem = $('#page_10 input[type="radio"]:checked');
+        if (elem.length > 0) {
+            $('#page_10 .error').html('&nbsp;');
+        } else {
+            return $('#page_10 .error').text('Seleccionar una opción');
+        }
+        tolerancia_al_riesgo_1 = parseInt(elem.val());
+
+        let selectedImage1 = selectedImage;
+        if (character == 'hombre') selectedImage1 = character_image_group_1[0];
+        else if (character == 'mujer') selectedImage1 = character_image_group_1[1];
+        else  selectedImage1 = character_image_group_1[2];
+        $('#page_11 .selected-image').attr('src', selectedImage1);
+        $('#page_11').removeClass('d-none');
+        $('#page_10').addClass('d-none');
+        console.log('tolerancia_al_riesgo_1', tolerancia_al_riesgo_1);
+    })
+    /******** page 11  */
+    $('#prev_page_10').click(function () {
+        $('#page_10').removeClass('d-none');
+        $('#page_11').addClass('d-none');
+    });
+    let tolerancia_al_riesgo_2 = [];
+    $('#page_11 input[type="checkbox"]').change(function () {    
+        let elem = $('#page_11 input[type="checkbox"]:checked');
+        if (elem.length > 0) {
+            $('#page_11 .error').html('&nbsp; ');
+        } else {
+            return $('#page_11 .error').text('por favor seleccione artículos');
+        }
+    });
+    $('#to_page_12').click(function () {
+        tolerancia_al_riesgo_2 = [];
+        let elems = $('#page_11 input[type="checkbox"]:checked');
+        if (elems.length > 0) {
+            $('#page_11 .error').html('&nbsp; ');
+        } else {
+            return $('#page_11 .error').text('por favor seleccione artículos');
+        }
+        $('#page_11 input[type="checkbox"]:checked').each(function () {
+            tolerancia_al_riesgo_2.push(parseInt($(this).val()));
+        });
+        console.log('tolerancia_al_riesgo_2', tolerancia_al_riesgo_2);
+        let selectedImage1 = selectedImage;
+        if (character == 'hombre') selectedImage1 = character_image_group_2[0];
+        else if (character == 'mujer') selectedImage1 = character_image_group_2[1];
+        else  selectedImage1 = character_image_group_2[2];
+        $('#page_12 .selected-image').attr('src', selectedImage1);
+
+        $('#page_12').removeClass('d-none');
+        $('#page_11').addClass('d-none');
+    })
+    /******** page 12  */
+    $('#prev_page_11').click(function () {
+        $('#page_11').removeClass('d-none');
+        $('#page_12').addClass('d-none');
+    });
+    let tolerancia_al_riesgo_3 = 0;
+    $('#page_12 input[type="radio"]').change(function () {        
+        $('#page_12 .error').html('&nbsp;');
+    });
+    $('#to_page_13').click(function () {
+        let elem = $('#page_12 input[type="radio"]:checked');
+        if (elem.length > 0) {
+            $('#page_12 .error').html('&nbsp;');
+        } else {
+            return $('#page_12 .error').text('Seleccionar una opción');
+        }
+        tolerancia_al_riesgo_3 = parseInt(elem.val());
+
+        let selectedImage1 = selectedImage;
+        if (character == 'hombre') selectedImage1 = character_image_group_1[0];
+        else if (character == 'mujer') selectedImage1 = character_image_group_1[1];
+        else  selectedImage1 = character_image_group_1[2];
+        $('#page_13 .selected-image').attr('src', selectedImage1);
+        $('#page_13').removeClass('d-none');
+        $('#page_12').addClass('d-none');
+        console.log('tolerancia_al_riesgo_3', tolerancia_al_riesgo_3);
+    })
+    /******** page 13  */
+    $('#prev_page_12').click(function () {
+        $('#page_12').removeClass('d-none');
+        $('#page_13').addClass('d-none');
+    });
+    let tolerancia_al_riesgo_4 = 0;
+    $('#page_13 input[type="radio"]').change(function () {        
+        $('#page_13 .error').html('&nbsp;');
+    });
+    $('#to_page_14').click(function () {
+        let elem = $('#page_13 input[type="radio"]:checked');
+        if (elem.length > 0) {
+            $('#page_13 .error').html('&nbsp;');
+        } else {
+            return $('#page_13 .error').text('Seleccionar una opción');
+        }
+        tolerancia_al_riesgo_4 = parseInt(elem.val());
+
+        let selectedImage1 = selectedImage;
+        if (character == 'hombre') selectedImage1 = character_image_group_1[0];
+        else if (character == 'mujer') selectedImage1 = character_image_group_1[1];
+        else  selectedImage1 = character_image_group_1[2];
+        $('#page_14 .selected-image').attr('src', selectedImage1);
+        $('#page_14').removeClass('d-none');
+        $('#page_13').addClass('d-none');
+        console.log('tolerancia_al_riesgo_4', tolerancia_al_riesgo_4);
+        horizonte_temporal = horizonte_temporal_0 + horizonte_temporal_1;
+        console.log('horizontal_tempore', horizonte_temporal,horizonte_temporal_0, horizonte_temporal_1);
+        tolerancia_al_riesgo = tolerancia_al_riesgo_0 + tolerancia_al_riesgo_1 + tolerancia_al_riesgo_2.reduce((total, num) => total + num, 0) + tolerancia_al_riesgo_3 + tolerancia_al_riesgo_4;
+        console.log('tolerancia_al_riesgo', tolerancia_al_riesgo, tolerancia_al_riesgo_0, tolerancia_al_riesgo_1, tolerancia_al_riesgo_2, tolerancia_al_riesgo_3, tolerancia_al_riesgo_4);
+        
+        if (horizonte_temporal < 3) $('#page_14 .first-line .content').text("Corto Plazo");
+        else if (horizonte_temporal >= 3 && horizonte_temporal <= 7) $('#page_14 .first-line .content').text("Mediano Plazo");
+        else $('#page_14 .first-line .content').text("Largo Plazo");
+
+        if (tolerancia_al_riesgo < 16) $('#page_14 .second-line .content').text('Conservador');
+        else if (tolerancia_al_riesgo >= 16 && tolerancia_al_riesgo <= 21) $('#page_14 .second-line .content').text('Algo Conservador');
+        else if (tolerancia_al_riesgo >= 22 && tolerancia_al_riesgo <= 26) $('#page_14 .second-line .content').text('Moderado');
+        else if (tolerancia_al_riesgo >= 27 && tolerancia_al_riesgo <= 31) $('#page_14 .second-line .content').text('Algo Arriesgado');
+        else $('#page_14 .second-line .content').text('Arriesgado');
+    })
+    /******** page 14  */
+    $('#prev_page_13').click(function () {
+        $('#page_13').removeClass('d-none');
+        $('#page_14').addClass('d-none');
+    });
+    $('#page_14 #to_whatsapp').click(function () {
+        $('#send_email_modal .large_title:first-child').text('Recibí esta información detallada en tu WhatsApp. Completá por favor la siguiente información.')
+        $('#send_email_modal').modal({ backdrop: 'static' });
+    })
+    $('#page_14 #to_contact').click(function () {
+        $('#send_email_modal .large_title:first-child').text('Completá por favor la siguiente información y un asesor acreditado en Zurich International Life Sucursal Argentina te contactará en breve.')
+        $('#send_email_modal').modal({ backdrop: 'static' });
+    })
 })
