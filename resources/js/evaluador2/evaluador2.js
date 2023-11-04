@@ -296,10 +296,10 @@ $(document).ready(function () {
             else if (val == 4) { products[0].selected += 1; }
         })
 
-        $('#page_6').removeClass('d-none');
         $('#page_5').addClass('d-none');
-
-        // window.scrollTo({top: 0, behavior: 'smooth'});
+        setTimeout(() => {            
+            $('#page_6').removeClass('d-none');
+        }, 100);
         window.scrollTo(0,0);
     })
     $('#page_6 #to_whatsapp').click(function () {
