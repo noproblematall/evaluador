@@ -274,7 +274,7 @@ $(document).ready(function () {
     $('#page_5').addClass('d-none');
     setTimeout(function () {
       $('#page_6').removeClass('d-none');
-    }, 100);
+    }, 10000);
     window.scrollTo(0, 0);
   });
   $('#page_6 #to_whatsapp').click(function () {
