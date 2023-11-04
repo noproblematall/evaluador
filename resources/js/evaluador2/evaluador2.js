@@ -299,8 +299,8 @@ $(document).ready(function () {
         $('#page_6').removeClass('d-none');
         $('#page_5').addClass('d-none');
 
-        window.scrollTo({top: 0, behavior: 'smooth'});
-        document.documentElement.scrollTop = 0;
+        // window.scrollTo({top: 0, behavior: 'smooth'});
+        window.scrollTo(0,0);
     })
     $('#page_6 #to_whatsapp').click(function () {
         $('#send_email_modal .large_title:first-child').text('Recibí esta información detallada en tu WhatsApp. Completá por favor la siguiente información.')
