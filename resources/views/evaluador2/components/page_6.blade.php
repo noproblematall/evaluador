@@ -46,7 +46,7 @@
                     src='/img/card_back.png'
                     alt='card_back' />
             </div>
-            <div class='flip_card col-6 pe-2 ps-0 pointer'>
+            <div class='flip_card col-6 pe-0 ps-2 pointer'>
                 <img class='plan-extendido card_front' 
                     src='https://z-eval.s3.amazonaws.com/misc/plan+extendido.gif'
                     alt='plan + extendido' />
