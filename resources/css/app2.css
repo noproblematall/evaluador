@@ -1,6 +1,5 @@
 body {
-    max-height : 90vh;
-    position : absolute;
+    width : 100%;
 }
 body .card {
     border-radius: 16px !important;
