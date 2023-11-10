@@ -320,6 +320,8 @@ $(document).ready(function () {
     });
     $('#page_6 .flip_card').click(function() {
         $(this).toggleClass('flipped')
+        $('#page_6 .selected-image ').toggleClass('opacity-0');
+        $('#page_6 .flip_card img:first-child').toggleClass('opacity-0');
     });
     // $('#page_6 .flip_card').click(function() {
     //     $('#plan_card_modal').modal({ backdrop: 'static' });
@@ -549,11 +551,10 @@ $(document).ready(function () {
         else if (tolerancia_al_riesgo >= 22 && tolerancia_al_riesgo <= 26) $('#page_14 .second-line .content').text('Moderado');
         else if (tolerancia_al_riesgo >= 27 && tolerancia_al_riesgo <= 31) $('#page_14 .second-line .content').text('Algo Arriesgado');
         else $('#page_14 .second-line .content').text('Arriesgado');
-        $('#confetti-video').removeClass('d-none');
-        const video = document.getElementById('confetti-video');
-        video.play();
+
+        $('#confetti-image').removeClass('d-none');
         setTimeout(() => {
-            $('#confetti-video').addClass('d-none');
+            $('#confetti-image').addClass('d-none');
         }, 2500)
     })
     /******** page 14  */
