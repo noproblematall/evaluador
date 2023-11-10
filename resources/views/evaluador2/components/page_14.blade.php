@@ -13,11 +13,11 @@
     </div>
     <div class='card mt-2 p-3'>
         <div class='d-flex justify-content-center align-items-center mt-4 position-relative'>
-            <!-- <video id="confetti-video"  class="position-absolute w-100" autoplay name='media'>
+            <video id="confetti-video"  class="position-absolute w-100" autoplay name='media'>
                 <source src="/confetti.mp4" type="video/mp4">
                 <source src="/confetti.ogg" type="video/ogg">
                 Your browser does not support the video tag.
-            </video> -->
+            </video>
             <img src=' https://z-eval.s3.amazonaws.com/pers/Nobi+a.png' alt='selected' class='selected-image' />
         </div>
         <hr />

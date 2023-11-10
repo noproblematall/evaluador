@@ -318,15 +318,15 @@ $(document).ready(function () {
         $('#page_5').removeClass('d-none');
         $('#page_6').addClass('d-none');
     });
-    // $('#page_6 .flip_card').click(function() {
-    //     $(this).toggleClass('flipped')
-    // });
     $('#page_6 .flip_card').click(function() {
-        $('#plan_card_modal').modal({ backdrop: 'static' });
+        $(this).toggleClass('flipped')
     });
-    $('#plan_card_modal .btn-regresar').click(function() {
-        $('#plan_card_modal').modal('hide');
-    });
+    // $('#page_6 .flip_card').click(function() {
+    //     $('#plan_card_modal').modal({ backdrop: 'static' });
+    // });
+    // $('#plan_card_modal .btn-regresar').click(function() {
+    //     $('#plan_card_modal').modal('hide');
+    // });
     $('#to_page_7').click(function () {
         let selectedImage1 = selectedImage;
         if (character == 'hombre') selectedImage1 = character_image_group_1[0];
@@ -549,12 +549,12 @@ $(document).ready(function () {
         else if (tolerancia_al_riesgo >= 22 && tolerancia_al_riesgo <= 26) $('#page_14 .second-line .content').text('Moderado');
         else if (tolerancia_al_riesgo >= 27 && tolerancia_al_riesgo <= 31) $('#page_14 .second-line .content').text('Algo Arriesgado');
         else $('#page_14 .second-line .content').text('Arriesgado');
-        // $('#confetti-video').removeClass('d-none');
-        // const video = document.getElementById('confetti-video');
-        // video.play();
-        // setTimeout(() => {
-        //     $('#confetti-video').addClass('d-none');
-        // }, 2500)
+        $('#confetti-video').removeClass('d-none');
+        const video = document.getElementById('confetti-video');
+        video.play();
+        setTimeout(() => {
+            $('#confetti-video').addClass('d-none');
+        }, 2500)
     })
     /******** page 14  */
     $('#prev_page_13').click(function () {
