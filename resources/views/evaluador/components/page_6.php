@@ -25,7 +25,7 @@
             </div>
         </div>
         <div class='items-container mt-2 row'>
-            <p class='plan-description text-center my-1'>Quiero planificar para mi futuro…</p>
+            <p class='plan-description text-center my-1'>Podés elegir varias opciones</p>
             <div class='col-6 item-btn mt-2 mb-1 px-2'>
                 <input type='checkbox' name='plan' id='plan-0' value='0' >
                 <label for='plan-0' class='item-label d-flex justify-content-center align-items-center px-1'>
