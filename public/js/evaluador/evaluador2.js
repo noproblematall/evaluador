@@ -119,7 +119,8 @@ $(document).ready(function () {
   $('#to_page_3').click(function () {
     $('#page_2').addClass('d-none');
     $('#page_3').removeClass('d-none');
-    $('#page_3 .title').text("\xBFEst\xE1s trabajando, ".concat(name, "?"));
+    $('#page_3 .title').text("Contanos sobre vos");
+    $('#page_3 .todo-description').text("\xBFEst\xE1s trabajando, ".concat(name));
     var selectedImage1 = selectedImage;
     if (character == 'hombre') selectedImage1 = character_image_group_1[0];else if (character == 'mujer') selectedImage1 = character_image_group_1[1];else selectedImage1 = character_image_group_1[2];
     $('#page_3 .selected-image').attr('src', selectedImage1);
@@ -179,7 +180,7 @@ $(document).ready(function () {
     if (elem.length > 0) {
       $('#page_4 .error').html('&nbsp; ');
     } else {
-      return $('#page_4 .error').text('por favor seleccione artículos');
+      return $('#page_4 .error').text('Por favor, seleccioná una opción');
     }
     $('#page_4 input[type="checkbox"]:checked').each(function () {
       todo.push($(this).val());
@@ -224,7 +225,7 @@ $(document).ready(function () {
     if (elem.length > 0) {
       $('#page_5 .error').html('&nbsp; ');
     } else {
-      return $('#page_5 .error').text('por favor seleccione artículos');
+      return $('#page_5 .error').text('Por favor, seleccioná una opción');
     }
     $('#page_5 input[type="checkbox"]:checked').each(function () {
       plan.push($(this).val());
@@ -426,7 +427,7 @@ $(document).ready(function () {
     if (elem.length > 0) {
       $('#page_11 .error').html('&nbsp; ');
     } else {
-      return $('#page_11 .error').text('por favor seleccione artículos');
+      return $('#page_11 .error').text('Por favor, seleccioná una opción');
     }
   });
   $('#to_page_12').click(function () {
@@ -435,7 +436,7 @@ $(document).ready(function () {
     if (elems.length > 0) {
       $('#page_11 .error').html('&nbsp; ');
     } else {
-      return $('#page_11 .error').text('por favor seleccione artículos');
+      return $('#page_11 .error').text('Por favor, seleccioná una opción');
     }
     $('#page_11 input[type="checkbox"]:checked').each(function () {
       tolerancia_al_riesgo_2.push(parseInt($(this).val()));
@@ -500,12 +501,39 @@ $(document).ready(function () {
       return total + num;
     }, 0) + tolerancia_al_riesgo_3 + tolerancia_al_riesgo_4;
     console.log('tolerancia_al_riesgo', tolerancia_al_riesgo, tolerancia_al_riesgo_0, tolerancia_al_riesgo_1, tolerancia_al_riesgo_2, tolerancia_al_riesgo_3, tolerancia_al_riesgo_4);
-    if (horizonte_temporal < 3) $('#page_14 .first-line .content').text("Corto Plazo");else if (horizonte_temporal >= 3 && horizonte_temporal <= 7) $('#page_14 .first-line .content').text("Mediano Plazo");else $('#page_14 .first-line .content').text("Largo Plazo");
-    if (tolerancia_al_riesgo < 16) $('#page_14 .second-line .content').text('Conservador');else if (tolerancia_al_riesgo >= 16 && tolerancia_al_riesgo <= 21) $('#page_14 .second-line .content').text('Algo Conservador');else if (tolerancia_al_riesgo >= 22 && tolerancia_al_riesgo <= 26) $('#page_14 .second-line .content').text('Moderado');else if (tolerancia_al_riesgo >= 27 && tolerancia_al_riesgo <= 31) $('#page_14 .second-line .content').text('Algo Arriesgado');else $('#page_14 .second-line .content').text('Arriesgado');
+    var icon_horizonte = ['https://z-eval.s3.amazonaws.com/misc/1-3.png', 'https://z-eval.s3.amazonaws.com/misc/2-3.png', 'https://z-eval.s3.amazonaws.com/misc/3-3.png'];
+    if (horizonte_temporal < 3) {
+      $('#page_14 .first-line .content').text("Corto Plazo");
+      $('#page_14 .icon-horizonte').attr('src', icon_horizonte[0]);
+    } else if (horizonte_temporal >= 3 && horizonte_temporal <= 7) {
+      $('#page_14 .first-line .content').text("Mediano Plazo");
+      $('#page_14 .icon-horizonte').attr('src', icon_horizonte[1]);
+    } else {
+      $('#page_14 .first-line .content').text("Largo Plazo");
+      $('#page_14 .icon-horizonte').attr('src', icon_horizonte[2]);
+    }
+    var icon_tolerancia = ['https://z-eval.s3.amazonaws.com/misc/1-5.png', 'https://z-eval.s3.amazonaws.com/misc/2-5.png', 'https://z-eval.s3.amazonaws.com/misc/3-5.png', 'https://z-eval.s3.amazonaws.com/misc/4-5.png', 'https://z-eval.s3.amazonaws.com/misc/5-5.png'];
+    if (tolerancia_al_riesgo < 16) {
+      $('#page_14 .second-line .content').text('Conservador');
+      $('#page_14 .icon-tolerancia').attr('src', icon_tolerancia[0]);
+    } else if (tolerancia_al_riesgo >= 16 && tolerancia_al_riesgo <= 21) {
+      $('#page_14 .second-line .content').text('Algo Conservador');
+      $('#page_14 .icon-tolerancia').attr('src', icon_tolerancia[1]);
+    } else if (tolerancia_al_riesgo >= 22 && tolerancia_al_riesgo <= 26) {
+      $('#page_14 .second-line .content').text('Moderado');
+      $('#page_14 .icon-tolerancia').attr('src', icon_tolerancia[2]);
+    } else if (tolerancia_al_riesgo >= 27 && tolerancia_al_riesgo <= 31) {
+      $('#page_14 .second-line .content').text('Algo Arriesgado');
+      $('#page_14 .icon-tolerancia').attr('src', icon_tolerancia[3]);
+    } else {
+      $('#page_14 .second-line .content').text('Arriesgado');
+      $('#page_14 .icon-tolerancia').attr('src', icon_tolerancia[4]);
+    }
     $('#confetti-image').removeClass('d-none');
     setTimeout(function () {
       $('#confetti-image').addClass('d-none');
     }, 2500);
+    $('#page_14 .subtitle:first-child').text("\xA1Felicitaciones ".concat(name, "!"));
   });
   /******** page 14  */
   $('#prev_page_13').click(function () {

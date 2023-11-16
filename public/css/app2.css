@@ -314,7 +314,7 @@ img.selected-image {
     color: #215193;
 }
 
-#page_4 .todo-description {
+#page_3 .todo-description, #page_4 .todo-description {
     color: #215193;
     font-size: 14px;
     font-family: 'ZurichSans-Medium', Arial, sans-serif;

@@ -86,7 +86,7 @@ $(document).ready(function () {
         $('#page_3').addClass('d-none');
         $('#page_4').removeClass('d-none');
 
-        $('#page_4 .title').text(`¿Estás trabajando, ${name}?`);
+        $('#page_4 .title').text(`Contanos sobre vos`);
         $('#page_4 .selected-image').attr('src', selectedImage);
         console.log('member', member, selectedImage)
     })
@@ -150,7 +150,7 @@ $(document).ready(function () {
         if (elem.length > 0) {
             $('#page_5 .error').html('&nbsp; ');
         } else {
-            return $('#page_5 .error').text('por favor seleccione artículos');
+            return $('#page_5 .error').text('Por favor, seleccioná una opción');
         }
         $('#page_5 input[type="checkbox"]:checked').each(function(){
             todo.push($(this).val());
@@ -202,7 +202,7 @@ $(document).ready(function () {
         if (elem.length > 0) {
             $('#page_6 .error').html('&nbsp; ');
         } else {
-            return $('#page_6 .error').text('por favor seleccione artículos');
+            return $('#page_6 .error').text('Por favor, seleccioná una opción');
         }
         $('#page_6 input[type="checkbox"]:checked').each(function(){
             plan.push($(this).val());

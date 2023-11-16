@@ -9,7 +9,7 @@
     </div>
     <div class='d-flex  align-items-center'>
         <img src='https://z-eval.s3.amazonaws.com/misc/work.png' alt='img' width='18' />
-        <p class='color-blue px-2 title'>¿Estás trabajando, ${name}?</p>
+        <p class='color-blue px-2 title'>Contanos sobre vos</p>
     </div>
     <div class='card mt-2 p-3'>
         <div class='d-flex justify-content-center align-items-center mt-4'>
@@ -17,6 +17,7 @@
         </div>
         <hr />
         <div class='items-container mt-4 row'>
+            <p class="todo-description text-center mt-1 mb-3">¿Estás trabajando, user name</p>
             <div class='col-6 item-btn mt-2 mb-1 px-2'>
                 <input type='radio' name='job' id='job-0' value='0'>
                 <label for='job-0' class='item-label d-flex justify-content-center align-items-center px-1'>

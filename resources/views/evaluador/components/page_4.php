@@ -10,7 +10,7 @@
         <div class='inner'>
             <div class='console-small-container'>
                 <div class='title-container'>
-                    <p class='title'>¿Estás trabajando, ${name}?</p>
+                    <p class='title'>Contanos sobre vos</p>
                 </div>
                 <div class='item-selector-box'>
                     <img src='https://z-eval.s3.amazonaws.com/pers/Nobi+a.png' alt='selected' class='selected-image' />
