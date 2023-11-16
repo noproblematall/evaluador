@@ -56,9 +56,9 @@
             </div>
         </div>
         <div class='button-group my-4'>
-            <button class='continue_btn mx-auto my-2' id='to_whatsapp'>Enviar esta información a mi WhatsApp</button>
-            <button class='continue_btn mx-auto my-2' id='to_contact'>Quiero que me contacten para asesorarme</button>
-            <button class='continue_btn mx-auto my-2' id='to_page_7'>Continuar con mi perfil de inversor</button>
+            <button class='continue_btn mx-auto my-2' id='to_whatsapp'>Enviar por Whastapp</button>
+            <button class='continue_btn mx-auto my-2' id='to_contact'>Quiero que me contacten</button>
+            <button class='continue_btn mx-auto my-2' id='to_page_7'>Continuar</button>
         </div>
     </div>
 </section>

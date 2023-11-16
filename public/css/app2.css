@@ -621,10 +621,14 @@ img.selected-image {
 }
 
 #to_whatsapp {
-    background-color : #19BAB6;
+    background-color : transparent;
+    border : 2px solid  #19BAB6;
+    color : #215193;
 }
 #to_contact {
-    background-color : #2167AE;;
+    background-color : transparent;
+    border : 2px solid  #5495CF;
+    color : #215193;
 }
 
 .modal-header {

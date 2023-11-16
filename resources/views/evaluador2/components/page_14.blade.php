@@ -29,8 +29,8 @@
             <div class='col-5 content text-center'>Algo Arriesgado</div>
         </div>
         <div class='button-group my-4'>
-            <button class='continue_btn mx-auto my-2' id='to_whatsapp'>Enviar esta información a mi WhatsApp</button>
-            <button class='continue_btn mx-auto my-2' id='to_contact'>Quiero que me contacten para asesorarme</button>
+            <button class='continue_btn mx-auto my-2' id='to_whatsapp'>Enviar por Whastapp</button>
+            <button class='continue_btn mx-auto my-2' id='to_contact'>Quiero que me contacten</button>
         </div>
     </div>
 </section>
