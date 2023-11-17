@@ -20,19 +20,19 @@
         <hr />
         <p class='text-center mt-3 mb-0 subtitle mx-3'>¡Felicitaciones!</p>
         <p class='text-center mb-2 mt-0 subtitle'>Completaste el perfil de inversor</p>
-        <div class='row first-line mt-4 mb-2'>
-            <div class='col-6 subject '>Tu horizonte temporal es:</div>
-            <div class='col-1 text-center px-0'>
-                <img src="" width="16" alt="horizonte" class="icon-horizonte" />
-            </div>
-            <div class='col-5 content text-center'>Mediano Plazo</div>
-        </div>
-        <div class='row second-line my-2'>
-            <div class='col-6 subject '>Tu tolerancia al riesgo es:</div>
+        <div class='row tolerancia my-2'>
+            <div class='col-6 subject '>Tolerancia al riesgo</div>
             <div class='col-1 text-center px-0'>
                 <img src="" width="16" alt="tolerancia" class="icon-tolerancia" />
             </div>
             <div class='col-5 content text-center'>Algo Arriesgado</div>
+        </div>
+        <div class='row horizonte mt-4 mb-2'>
+            <div class='col-6 subject '>Horizonte temporal</div>
+            <div class='col-1 text-center px-0'>
+                <img src="" width="16" alt="horizonte" class="icon-horizonte" />
+            </div>
+            <div class='col-5 content text-center'>Mediano Plazo</div>
         </div>
         <div class='button-group my-4'>
             <button class='continue_btn mx-auto my-2' id='to_whatsapp'>Enviar por Whastapp</button>

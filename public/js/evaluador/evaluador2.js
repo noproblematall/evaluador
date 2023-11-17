@@ -503,30 +503,30 @@ $(document).ready(function () {
     console.log('tolerancia_al_riesgo', tolerancia_al_riesgo, tolerancia_al_riesgo_0, tolerancia_al_riesgo_1, tolerancia_al_riesgo_2, tolerancia_al_riesgo_3, tolerancia_al_riesgo_4);
     var icon_horizonte = ['https://z-eval.s3.amazonaws.com/misc/1-3.png', 'https://z-eval.s3.amazonaws.com/misc/2-3.png', 'https://z-eval.s3.amazonaws.com/misc/3-3.png'];
     if (horizonte_temporal < 3) {
-      $('#page_14 .first-line .content').text("Corto Plazo");
+      $('#page_14 .horizonte .content').text("Corto Plazo");
       $('#page_14 .icon-horizonte').attr('src', icon_horizonte[0]);
     } else if (horizonte_temporal >= 3 && horizonte_temporal <= 7) {
-      $('#page_14 .first-line .content').text("Mediano Plazo");
+      $('#page_14 .horizonte .content').text("Mediano Plazo");
       $('#page_14 .icon-horizonte').attr('src', icon_horizonte[1]);
     } else {
-      $('#page_14 .first-line .content').text("Largo Plazo");
+      $('#page_14 .horizonte .content').text("Largo Plazo");
       $('#page_14 .icon-horizonte').attr('src', icon_horizonte[2]);
     }
     var icon_tolerancia = ['https://z-eval.s3.amazonaws.com/misc/1-5.png', 'https://z-eval.s3.amazonaws.com/misc/2-5.png', 'https://z-eval.s3.amazonaws.com/misc/3-5.png', 'https://z-eval.s3.amazonaws.com/misc/4-5.png', 'https://z-eval.s3.amazonaws.com/misc/5-5.png'];
     if (tolerancia_al_riesgo < 16) {
-      $('#page_14 .second-line .content').text('Conservador');
+      $('#page_14 .tolerancia .content').text('Conservador');
       $('#page_14 .icon-tolerancia').attr('src', icon_tolerancia[0]);
     } else if (tolerancia_al_riesgo >= 16 && tolerancia_al_riesgo <= 21) {
-      $('#page_14 .second-line .content').text('Algo Conservador');
+      $('#page_14 .tolerancia .content').text('Algo Conservador');
       $('#page_14 .icon-tolerancia').attr('src', icon_tolerancia[1]);
     } else if (tolerancia_al_riesgo >= 22 && tolerancia_al_riesgo <= 26) {
-      $('#page_14 .second-line .content').text('Moderado');
+      $('#page_14 .tolerancia .content').text('Moderado');
       $('#page_14 .icon-tolerancia').attr('src', icon_tolerancia[2]);
     } else if (tolerancia_al_riesgo >= 27 && tolerancia_al_riesgo <= 31) {
-      $('#page_14 .second-line .content').text('Algo Arriesgado');
+      $('#page_14 .tolerancia .content').text('Algo Arriesgado');
       $('#page_14 .icon-tolerancia').attr('src', icon_tolerancia[3]);
     } else {
-      $('#page_14 .second-line .content').text('Arriesgado');
+      $('#page_14 .tolerancia .content').text('Arriesgado');
       $('#page_14 .icon-tolerancia').attr('src', icon_tolerancia[4]);
     }
     $('#confetti-image').removeClass('d-none');

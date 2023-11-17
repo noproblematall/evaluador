@@ -550,13 +550,13 @@ $(document).ready(function () {
             'https://z-eval.s3.amazonaws.com/misc/3-3.png'
         ]
         if (horizonte_temporal < 3) {
-            $('#page_14 .first-line .content').text("Corto Plazo");
+            $('#page_14 .horizonte .content').text("Corto Plazo");
             $('#page_14 .icon-horizonte').attr('src', icon_horizonte[0]);
         } else if (horizonte_temporal >= 3 && horizonte_temporal <= 7) {
-            $('#page_14 .first-line .content').text("Mediano Plazo");
+            $('#page_14 .horizonte .content').text("Mediano Plazo");
             $('#page_14 .icon-horizonte').attr('src', icon_horizonte[1]);
         } else {
-            $('#page_14 .first-line .content').text("Largo Plazo");
+            $('#page_14 .horizonte .content').text("Largo Plazo");
             $('#page_14 .icon-horizonte').attr('src', icon_horizonte[2]);
         }
 
@@ -568,19 +568,19 @@ $(document).ready(function () {
             'https://z-eval.s3.amazonaws.com/misc/5-5.png'
         ]
         if (tolerancia_al_riesgo < 16) {
-            $('#page_14 .second-line .content').text('Conservador');
+            $('#page_14 .tolerancia .content').text('Conservador');
             $('#page_14 .icon-tolerancia').attr('src', icon_tolerancia[0]);
         } else if (tolerancia_al_riesgo >= 16 && tolerancia_al_riesgo <= 21) {
-            $('#page_14 .second-line .content').text('Algo Conservador');
+            $('#page_14 .tolerancia .content').text('Algo Conservador');
             $('#page_14 .icon-tolerancia').attr('src', icon_tolerancia[1]);
         } else if (tolerancia_al_riesgo >= 22 && tolerancia_al_riesgo <= 26) {
-            $('#page_14 .second-line .content').text('Moderado');
+            $('#page_14 .tolerancia .content').text('Moderado');
             $('#page_14 .icon-tolerancia').attr('src', icon_tolerancia[2]);
         } else if (tolerancia_al_riesgo >= 27 && tolerancia_al_riesgo <= 31) {
-            $('#page_14 .second-line .content').text('Algo Arriesgado');
+            $('#page_14 .tolerancia .content').text('Algo Arriesgado');
             $('#page_14 .icon-tolerancia').attr('src', icon_tolerancia[3]);
         } else {
-            $('#page_14 .second-line .content').text('Arriesgado');
+            $('#page_14 .tolerancia .content').text('Arriesgado');
             $('#page_14 .icon-tolerancia').attr('src', icon_tolerancia[4]);
         } 
 
