@@ -588,7 +588,7 @@ $(document).ready(function () {
         setTimeout(() => {
             $('#confetti-image').addClass('d-none');
         }, 2500)
-        $('#page_14 .subtitle:first-child').text(`¡Felicitaciones ${name}!`)
+        $('#page_14 .subtitle:first-of-type').text(`¡Felicitaciones ${name}!`)
     })
     /******** page 14  */
     $('#prev_page_13').click(function () {
