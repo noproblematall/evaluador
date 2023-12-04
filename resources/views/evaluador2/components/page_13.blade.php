@@ -40,7 +40,7 @@
             <div class='col-6 item-btn mt-2 mb-1 px-2'>
                 <input type='radio' name='tolerancia_al_riesgo_4' id='tolerancia_al_riesgo_4-3' value='8'>
                 <label for='tolerancia_al_riesgo_4-3' class='item-label d-flex justify-content-center  align-items-center px-1'>
-                    <p class='text-center px-2'>Rendimiento de12% <br />(max 40%, min -20%)</p>
+                    <p class='text-center px-2'>Rendimiento de 12% <br />(max 40%, min -20%)</p>
                 </label>
             </div>
         </div>

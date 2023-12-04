@@ -122,7 +122,7 @@ $(document).ready(function () {
         $('#page_3').removeClass('d-none');
 
         $('#page_3 .title').text(`Contanos sobre vos`);
-        $('#page_3 .todo-description').text(`¿Estás trabajando, ${name}`);
+        $('#page_3 .todo-description').text(`¿Estás trabajando, ${name}?`);
         let selectedImage1 = selectedImage;
         if (character == 'hombre') selectedImage1 = character_image_group_1[0];
         else if (character == 'mujer') selectedImage1 = character_image_group_1[1];
