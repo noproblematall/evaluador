@@ -14,7 +14,7 @@
     <div class='card mt-2 p-3'>
         <div class="row px-3 pt-3 pb-5">
             <div class="col-3" >
-                <img class="final_img col-3 w-100"  src="https://z-eval.s3.amazonaws.com/pers/Perfil+H.png" />
+                <img class="final-img col-3 w-100"  src="https://z-eval.s3.amazonaws.com/pers/Perfil+H.png" />
             </div>
             <div class="col-9 d-flex flex-column justify-content-center">
                 <p class='text-center mb-0 subtitle mx-3'>¡Felicitaciones!</p>
