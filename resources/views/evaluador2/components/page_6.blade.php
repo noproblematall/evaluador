@@ -17,27 +17,6 @@
         </div>
         <hr />
         <div class='items-container mt-2 row px-0'>
-            <!-- <p class='consider-description text-center mt-3'>El plan que mejor se adaptan a tu caso:</p>
-            <div class='items mt-2 mb-1 px-0'>
-                <div class='item d-flex justify-content-between align-items-center mb-3'>
-                    <div class='content'>
-                        <div class='item-title lh-1'>Zurich Options</div>
-                        <p class='item-description'>Seguro de vida con beneficios adicionales</p>
-                    </div>
-                    <button class='info'>
-                        Saber más
-                    </button>
-                </div>
-                <div class='item d-flex justify-content-between align-items-center mb-3'>
-                    <div class='content'>
-                        <div class='item-title lh-1'>Zurich Invest Future</div>
-                        <p class='item-description'>Seguro de vida con beneficios adicionales</p>
-                    </div>
-                    <button class='info'>
-                        Saber más
-                    </button>
-                </div>
-            </div> -->
             <div class='flip_card col-6 pe-2 ps-0 pointer'>
                 <img class='plan-esencial card_front' 
                     src='https://z-eval.s3.amazonaws.com/misc/plan+esencial.gif'

@@ -27,7 +27,7 @@ $(document).ready(function () {
   $('#to_page_2').click(function () {
     var name1 = $('#name').val();
     var age1 = $('#age').val();
-    character1 = $('#page_1 input[type="radio"]:checked').val();
+    var character1 = $('#page_1 input[type="radio"]:checked').val();
     console.log('character', character1, name1, age1);
     if (!character1) {
       return $('#page_1 .error').text('Por favor seleccioná un personaje');
@@ -139,7 +139,7 @@ $(document).ready(function () {
     } else {
       return $('#page_3 .error').text('por favor seleccione un elemento');
     }
-    job = elem.siblings().filter('label').find('p').text();
+    job = elem.val();
     var selectedImage1 = selectedImage;
     if (character == 'hombre') selectedImage1 = character_image_group_2[0];else if (character == 'mujer') selectedImage1 = character_image_group_2[1];else selectedImage1 = character_image_group_2[2];
     $('#page_4 .selected-image').attr('src', selectedImage1);
@@ -176,6 +176,7 @@ $(document).ready(function () {
   var todo = [];
   var todo_str_arr = ['Comprar un auto', 'Comprar una casa', 'Viajar todos los años', 'Emprender un proyecto', 'generar un ahorro rentable', 'Ninguno de los anteriores'];
   $('#to_page_5').click(function () {
+    todo = [];
     var elem = $('#page_4 input[type="checkbox"]:checked');
     if (elem.length > 0) {
       $('#page_4 .error').html('&nbsp; ');
@@ -220,7 +221,11 @@ $(document).ready(function () {
   });
   var plan = [];
   var plan_str_arr = ['Rentabilizar mis ahorros', 'Educación de alto nivel para mis hijos', 'Conservar mi nivel de vida en el retiro', 'La continuidad de mi empresa o proyecto', 'Tener un fondo para emergencias', 'No tengo planes'];
+  var cardImgsArr = [['https://z-eval.s3.amazonaws.com/cards/card_front_1_seg_vida.gif', 'https://z-eval.s3.amazonaws.com/cards/card_back_1_seg_vida.png'], ['https://z-eval.s3.amazonaws.com/cards/card_front_2_seg_vida_enf_grav.gif', 'https://z-eval.s3.amazonaws.com/cards/card_back_2_seg_vida_enf_grav.png'], ['https://z-eval.s3.amazonaws.com/cards/card_front_3_seg_vida_ah.gif', 'https://z-eval.s3.amazonaws.com/cards/card_back_3_seg_vida_ah.png'], ['https://z-eval.s3.amazonaws.com/cards/card_front_4_seg_vida_inv.gif', 'https://z-eval.s3.amazonaws.com/cards/card_back_4_seg_vida_inv.png']];
+  var selectedCardImgsArr = [];
   $('#to_page_6').click(function () {
+    plan = [];
+    selectedCardImgsArr = [];
     var elem = $('#page_5 input[type="checkbox"]:checked');
     if (elem.length > 0) {
       $('#page_5 .error').html('&nbsp; ');
@@ -234,44 +239,29 @@ $(document).ready(function () {
     var selectedImage1 = selectedImage;
     if (character == 'hombre') selectedImage1 = character_image_group_2[0];else if (character == 'mujer') selectedImage1 = character_image_group_2[1];else selectedImage1 = character_image_group_2[2];
     $('#page_6 .selected-image').attr('src', selectedImage1);
-    var products = [{
-      selected: 0,
-      title: 'Zurich Options',
-      subtitle: 'Seguro de vida con beneficios adicionales',
-      btn_link: 'https://www.zurich.com.ar/-/media/project/zwp/argentina/docs/vida-2021/zurich-options-dic201.pdf'
-    }, {
-      selected: 0,
-      title: 'Zurich University',
-      subtitle: 'Seguro de vida con beneficios adicionales',
-      btn_link: 'https://www.zurich.com.ar/-/media/project/zwp/argentina/docs/vida-2021/zurich-invest-university-dic203.pdf'
-    }, {
-      selected: 0,
-      title: 'Zurich Invest Future',
-      subtitle: 'Seguro de vida con beneficios adicionales',
-      btn_link: 'https://www.zurich.com.ar/-/media/project/zwp/argentina/docs/vida-2021/zurich-invest-future-dic202.pdf'
-    }, {
-      selected: 0,
-      title: 'Zurich Invest Advance',
-      subtitle: 'Seguro de vida con beneficios adicionales',
-      btn_link: 'https://www.zurich.com.ar/-/media/project/zwp/argentina/docs/vida/2023/zurich-invest-advanced-marzo-2023.pdf'
-    }];
-    $('#page_5 input[type="checkbox"]:checked').each(function () {
-      var val = $(this).val();
-      if (val == 0) {
-        products[2].selected += 1;
-        products[3].selected += 1;
-      } else if (val == 1) {
-        products[0].selected += 1;
-        products[1].selected += 1;
-      } else if (val == 2) {
-        products[2].selected += 1;
-      } else if (val == 3) {
-        products[0].selected += 1;
-        products[2].selected += 1;
-      } else if (val == 4) {
-        products[0].selected += 1;
-      }
+    //find card images
+    var temp = [];
+    var flag = false;
+    Object.values(member).forEach(function (val) {
+      if (val > 0) flag = true;
     });
+    if (!!flag) temp.push(cardImgsArr[0]);
+    if (job == 1) {
+      //Si, independiente/en mi negocio
+      temp.push(cardImgsArr[1]);
+    }
+    temp.push(cardImgsArr[2]);
+    temp.push(cardImgsArr[3]);
+    selectedCardImgsArr = temp.slice(0, 2);
+    console.log('selectedCardImgsArr', selectedCardImgsArr);
+    $('#page_6 .plan-esencial.card_front').attr("src", selectedCardImgsArr[0][0]);
+    $('#page_6 .plan-esencial + .card_back').attr("src", selectedCardImgsArr[0][1]);
+    $('#page_6 .plan-extendido.card_front').attr("src", selectedCardImgsArr[1][0]);
+    $('#page_6 .plan-extendido + .card_back').attr("src", selectedCardImgsArr[1][1]);
+    $('#page_14 .plan-esencial.card_front').attr("src", selectedCardImgsArr[0][0]);
+    $('#page_14 .plan-esencial + .card_back').attr("src", selectedCardImgsArr[0][1]);
+    $('#page_14 .plan-extendido.card_front').attr("src", selectedCardImgsArr[1][0]);
+    $('#page_14 .plan-extendido + .card_back').attr("src", selectedCardImgsArr[1][1]);
     $('#page_5').addClass('d-none');
     setTimeout(function () {
       $('#page_6').removeClass('d-none');
@@ -304,6 +294,9 @@ $(document).ready(function () {
     $('#page_6 .selected-image ').toggleClass('opacity-0');
     $('#page_6 .flip_card img:first-child').toggleClass('opacity-0');
   });
+  $('#page_14 .flip_card').click(function () {
+    $(this).toggleClass('flipped');
+  });
   // $('#page_6 .flip_card').click(function() {
   //     $('#plan_card_modal').modal({ backdrop: 'static' });
   // });
@@ -314,7 +307,6 @@ $(document).ready(function () {
     var selectedImage1 = selectedImage;
     if (character == 'hombre') selectedImage1 = character_image_group_1[0];else if (character == 'mujer') selectedImage1 = character_image_group_1[1];else selectedImage1 = character_image_group_1[2];
     $('#page_7 .selected-image').attr('src', selectedImage1);
-    console.log('member', member, selectedImage1);
     $('#page_7').removeClass('d-none');
     $('#page_6').addClass('d-none');
   });

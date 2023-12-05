@@ -1,5 +1,5 @@
 <!-- <section id="page_14" class="page-content animate__animated animate__fadeIn"> -->
-    <section id="page_14" class="page-content animate__animated animate__fadeIn d-none ">
+<section id="page_14" class="page-content animate__animated animate__fadeIn d-none ">
     <div class='d-flex justify-content-between align-items-center mb-4 '>
         <p class='prev_link mt-2 mb-1' id='prev_page_13'>
             <span class="icon icon--arrow-long-left_24"></span>
@@ -12,14 +12,15 @@
         <p class='color-blue px-2 page-title'>Conocer mi perfil de inversor: resultados</p>
     </div>
     <div class='card mt-2 p-3'>
-        <div class='d-flex justify-content-center align-items-center mt-4 position-relative'>
-            <img src='/img/confetti-image.gif' alt='img' 
-                class="position-absolute w-100 d-none" id="confetti-image" />
-            <img src=' https://z-eval.s3.amazonaws.com/pers/Nobi+a.png' alt='selected' class='selected-image' />
+        <div class="row px-3 pt-3 pb-5">
+            <div class="col-3" >
+                <img class="final_img col-3 w-100"  src="https://z-eval.s3.amazonaws.com/pers/Perfil+H.png" />
+            </div>
+            <div class="col-9 d-flex flex-column justify-content-center">
+                <p class='text-center mb-0 subtitle mx-3'>¡Felicitaciones!</p>
+                <p class='text-center subtitle'>Completaste el perfil de inversor</p>
+            </div>
         </div>
-        <hr />
-        <p class='text-center mt-3 mb-0 subtitle mx-3'>¡Felicitaciones!</p>
-        <p class='text-center mb-2 mt-0 subtitle'>Completaste el perfil de inversor</p>
         <div class='row tolerancia my-2'>
             <div class='col-6 subject '>Tolerancia al riesgo</div>
             <div class='col-1 text-center px-0'>
@@ -27,12 +28,31 @@
             </div>
             <div class='col-5 content text-center'>Algo Arriesgado</div>
         </div>
-        <div class='row horizonte mt-4 mb-2'>
+        <div class='row horizonte mt-2 mb-2'>
             <div class='col-6 subject '>Horizonte temporal</div>
             <div class='col-1 text-center px-0'>
                 <img src="" width="16" alt="horizonte" class="icon-horizonte" />
             </div>
             <div class='col-5 content text-center'>Mediano Plazo</div>
+        </div>
+        <p class="card-title mt-3">Tus planes recomendados:</p>
+        <div class='items-container mt-2 row'>
+            <div class='flip_card col-6 pe-2 pointer'>
+                <img class='plan-esencial card_front' 
+                    src='https://z-eval.s3.amazonaws.com/misc/plan+esencial.gif'
+                    alt='plan + esencial' />
+                <img class='card_back' 
+                    src='/img/card_back.png'
+                    alt='card_back' />
+            </div>
+            <div class='flip_card col-6 ps-2 pointer'>
+                <img class='plan-extendido card_front' 
+                    src='https://z-eval.s3.amazonaws.com/misc/plan+extendido.gif'
+                    alt='plan + extendido' />
+                <img class='card_back' 
+                    src='/img/card_back.png'
+                    alt='card_back' />
+            </div>
         </div>
         <div class='button-group my-4'>
             <button class='continue_btn mx-auto my-2' id='to_whatsapp'>Enviar por Whastapp</button>

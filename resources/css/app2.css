@@ -597,6 +597,8 @@ img.selected-image {
     color: #215193;
     font-size : 13px;
 }
+#page_12 .page-title { font-size : 14.5px; }
+#page_12 .subtitle { font-size : 13px; }
 #page_14 .tolerancia, #page_14 .horizonte {
     font-family: 'ZurichSans-Medium', Arial, sans-serif;
     color: #215193;
@@ -605,8 +607,11 @@ img.selected-image {
 #page_14 .content {
     color : #1FB1E6;
 }
-#page_12 .page-title { font-size : 14.5px; }
-#page_12 .subtitle { font-size : 13px; }
+#page_14 .card-title {
+    font-family: 'ZurichSans-Medium', Arial, sans-serif;
+    font-size : 14px;
+    color : #1FB1E6;
+}
 @media screen and (max-width : 400px) {
     .page-container {
         width : 100vw;
