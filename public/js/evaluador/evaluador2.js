@@ -481,7 +481,7 @@ $(document).ready(function () {
       return $('#page_13 .error').text('Seleccionar una opción');
     }
     tolerancia_al_riesgo_4 = parseInt(elem.val());
-    var character_image_group_3 = ['https://z-eval.s3.amazonaws.com/pers/Perfil+H.png', 'https://z-eval.s3.amazonaws.com/pers/Perfil+W.png', 'https://z-eval.s3.amazonaws.com/pers/Perfil+Nobi.png'];
+    var character_image_group_3 = ['https://z-eval.s3.amazonaws.com/pers/Perfil+H.png', 'https://z-eval.s3.amazonaws.com/pers/Perfil+M.png', 'https://z-eval.s3.amazonaws.com/pers/Perfil+Nobi.png'];
     var selectedImage1 = selectedImage;
     if (character == 'hombre') selectedImage1 = character_image_group_3[0];else if (character == 'mujer') selectedImage1 = character_image_group_3[1];else selectedImage1 = character_image_group_3[2];
     $('#page_14 .final-img').attr('src', selectedImage1);

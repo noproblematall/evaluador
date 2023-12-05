@@ -543,7 +543,7 @@ $(document).ready(function () {
 
         let character_image_group_3 = [
             'https://z-eval.s3.amazonaws.com/pers/Perfil+H.png',
-            'https://z-eval.s3.amazonaws.com/pers/Perfil+W.png',
+            'https://z-eval.s3.amazonaws.com/pers/Perfil+M.png',
             'https://z-eval.s3.amazonaws.com/pers/Perfil+Nobi.png'
         ];
         let selectedImage1 = selectedImage;
