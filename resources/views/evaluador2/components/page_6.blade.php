@@ -1,5 +1,5 @@
-<section id="page_6" class="page-content animate__animated animate__fadeIn d-none">
-<!-- <section id="page_6" class="page-content animate__animated animate__fadeIn "> -->
+<!-- <section id="page_6" class="page-content animate__animated animate__fadeIn d-none"> -->
+<section id="page_6" class="page-content animate__animated animate__fadeIn ">
     <div class='d-flex justify-content-between align-items-center mb-4'>
         <p class='prev_link mt-2 mb-1' id='prev_page_5'>
             <span class="icon icon--arrow-long-left_24"></span>
@@ -9,7 +9,7 @@
     </div>
     <div class='d-flex  align-items-center'>
         <img src='https://z-eval.s3.amazonaws.com/misc/idea.png' alt='img' width='18' />
-        <p class='color-blue px-2 title'>¿Qué planes se adaptan mejor a tu caso?</p>
+        <p class='color-blue px-2 title'>Planes que se adaptan para tu caso</p>
     </div>
     <div class='card mt-2 px-3 p-3'>
         <div class='d-flex justify-content-center align-items-center mt-4'>

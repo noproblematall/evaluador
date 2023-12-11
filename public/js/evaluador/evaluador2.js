@@ -221,7 +221,7 @@ $(document).ready(function () {
   });
   var plan = [];
   var plan_str_arr = ['Rentabilizar mis ahorros', 'Educación de alto nivel para mis hijos', 'Conservar mi nivel de vida en el retiro', 'La continuidad de mi empresa o proyecto', 'Tener un fondo para emergencias', 'No tengo planes'];
-  var cardImgsArr = [['https://z-eval.s3.amazonaws.com/cards/card_front_1_seg_vida.gif', 'https://z-eval.s3.amazonaws.com/cards/card_back_1_seg_vida.png'], ['https://z-eval.s3.amazonaws.com/cards/card_front_2_seg_vida_enf_grav.gif', 'https://z-eval.s3.amazonaws.com/cards/card_back_2_seg_vida_enf_grav.png'], ['https://z-eval.s3.amazonaws.com/cards/card_front_3_seg_vida_ah.gif', 'https://z-eval.s3.amazonaws.com/cards/card_back_3_seg_vida_ah.png'], ['https://z-eval.s3.amazonaws.com/cards/card_front_4_seg_vida_inv.gif', 'https://z-eval.s3.amazonaws.com/cards/card_back_4_seg_vida_inv.png']];
+  var cardImgsArr = [['https://z-eval.s3.amazonaws.com/cards/card_front_1_seg_vida.gif', 'https://z-eval.s3.amazonaws.com/cards/card_back_1_seg_vida.png'], ['https://z-eval.s3.amazonaws.com/cards/card_front_2_seg_vida_enf_grav.gif', 'https://z-eval.s3.amazonaws.com/cards/card_back_2_seg_vida_enf_grav.png'], ['https://z-eval.s3.amazonaws.com/cards/card_front_3_seg_vida_ah.gif', 'https://z-eval.s3.amazonaws.com/cards/card_back_3_seg_vida_ah.png'], ['https://z-eval.s3.amazonaws.com/cards/card_front_4_seg_vida_inv.gif', 'https://z-eval.s3.amazonaws.com/cards/card_back_4_seg_vida_inv.png'], ['https://z-eval.s3.amazonaws.com/cards/card_front_5_seg_vida_enf_grav_family.gif', 'https://z-eval.s3.amazonaws.com/cards/card_back_5_seg_vida_enf_grav_family.png']];
   var selectedCardImgsArr = [];
   $('#to_page_6').click(function () {
     plan = [];
@@ -245,10 +245,15 @@ $(document).ready(function () {
     Object.values(member).forEach(function (val) {
       if (val > 0) flag = true;
     });
-    if (!!flag) temp.push(cardImgsArr[0]);
-    if (job == 1) {
-      //Si, independiente/en mi negocio
-      temp.push(cardImgsArr[1]);
+    if (!!flag && job == 1) {
+      temp.push(cardImgsArr[4]);
+      temp.push(cardImgsArr[2]);
+    } else {
+      if (!!flag) temp.push(cardImgsArr[0]);
+      if (job == 1) {
+        //Si, independiente/en mi negocio
+        temp.push(cardImgsArr[1]);
+      }
     }
     temp.push(cardImgsArr[2]);
     temp.push(cardImgsArr[3]);
@@ -369,6 +374,12 @@ $(document).ready(function () {
   $('#page_9 input[type="radio"]').change(function () {
     $('#page_9 .error').html('&nbsp;');
   });
+  $('#page_9 input[type="radio"]').on('change', function () {
+    elem = $('#page_9 input[type="radio"]:checked');
+    var val = elem.val();
+    $('#page_9 .item-img').removeClass('selected-item');
+    if (val == 0) $('#page_9 .item-img:nth-of-type(1)').addClass('selected-item');else if (val == 2) $('#page_9 .item-img:nth-of-type(2)').addClass('selected-item');else if (val == 4) $('#page_9 .item-img:nth-of-type(3)').addClass('selected-item');else $('#page_9 .item-img:nth-of-type(4)').addClass('selected-item');
+  });
   $('#to_page_10').click(function () {
     var elem = $('#page_9 input[type="radio"]:checked');
     if (elem.length > 0) {
@@ -392,6 +403,12 @@ $(document).ready(function () {
   var tolerancia_al_riesgo_1 = 0;
   $('#page_10 input[type="radio"]').change(function () {
     $('#page_10 .error').html('&nbsp;');
+  });
+  $('#page_10 input[type="radio"]').on('change', function () {
+    elem = $('#page_10 input[type="radio"]:checked');
+    var val = elem.val();
+    $('#page_10 .item-img').removeClass('selected-item');
+    if (val == 0) $('#page_10 .item-img:nth-of-type(1)').addClass('selected-item');else if (val == 4) $('#page_10 .item-img:nth-of-type(2)').addClass('selected-item');else $('#page_10 .item-img:nth-of-type(3)').addClass('selected-item');
   });
   $('#to_page_11').click(function () {
     var elem = $('#page_10 input[type="radio"]:checked');

@@ -9,7 +9,7 @@
     </div>
     <div class='d-flex  align-items-center'>
         <img src='https://z-eval.s3.amazonaws.com/misc/people.png' alt='img' width='18' />
-        <p class='color-blue px-2'>¿Cuántas personas tenés a cargo?</p>
+        <p class='color-blue px-2'>Personas a cargo</p>
     </div>
     <div class='card mt-2 p-3'>
         <div class='item-selector-box d-flex justify-content-center align-items-center py-3'>
@@ -55,7 +55,8 @@
             </div>
         </div>
         <hr />
-        <div class='items-container mt-4'>
+        <div class='items-container mt-2'>
+            <p class="todo-description text-center mt-1 mb-3">¿Cuántas personas tenés a cargo?</p>
             <div data-item='bebes'  class='item  d-flex justify-content-between align-items-center mt-1'>
                 <div>
                     <div class='item-title'>Bebés</div>

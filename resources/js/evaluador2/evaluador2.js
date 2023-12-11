@@ -263,6 +263,10 @@ $(document).ready(function () {
         [
             'https://z-eval.s3.amazonaws.com/cards/card_front_4_seg_vida_inv.gif',
             'https://z-eval.s3.amazonaws.com/cards/card_back_4_seg_vida_inv.png'
+        ],
+        [
+            'https://z-eval.s3.amazonaws.com/cards/card_front_5_seg_vida_enf_grav_family.gif',
+            'https://z-eval.s3.amazonaws.com/cards/card_back_5_seg_vida_enf_grav_family.png'
         ]
     ];
     var selectedCardImgsArr = [];
@@ -290,10 +294,15 @@ $(document).ready(function () {
         Object.values(member).forEach((val) => {
             if (val > 0) flag = true;
         })
-        if (!!flag) temp.push(cardImgsArr[0]);
-        if (job == 1) { //Si, independiente/en mi negocio
-            temp.push(cardImgsArr[1]);
-        }
+        if (!!flag && job == 1) {
+            temp.push(cardImgsArr[4]);
+            temp.push(cardImgsArr[2]);
+        } else {
+            if (!!flag) temp.push(cardImgsArr[0]);
+            if (job == 1) { //Si, independiente/en mi negocio
+                temp.push(cardImgsArr[1]);
+            }
+        } 
         temp.push(cardImgsArr[2]);
         temp.push(cardImgsArr[3]);
         selectedCardImgsArr = temp.slice(0,2);
@@ -416,6 +425,15 @@ $(document).ready(function () {
     $('#page_9 input[type="radio"]').change(function () {        
         $('#page_9 .error').html('&nbsp;');
     });
+    $('#page_9 input[type="radio"]').on('change', function() {
+        elem = $('#page_9 input[type="radio"]:checked');
+        let val = elem.val();
+        $('#page_9 .item-img').removeClass('selected-item');
+        if (val == 0) $('#page_9 .item-img:nth-of-type(1)').addClass('selected-item');
+        else if (val == 2) $('#page_9 .item-img:nth-of-type(2)').addClass('selected-item');
+        else if (val == 4) $('#page_9 .item-img:nth-of-type(3)').addClass('selected-item');
+        else $('#page_9 .item-img:nth-of-type(4)').addClass('selected-item');
+    })
     $('#to_page_10').click(function () {
         let elem = $('#page_9 input[type="radio"]:checked');
         if (elem.length > 0) {
@@ -443,6 +461,14 @@ $(document).ready(function () {
     $('#page_10 input[type="radio"]').change(function () {        
         $('#page_10 .error').html('&nbsp;');
     });
+    $('#page_10 input[type="radio"]').on('change', function() {
+        elem = $('#page_10 input[type="radio"]:checked');
+        let val = elem.val();
+        $('#page_10 .item-img').removeClass('selected-item');
+        if (val == 0) $('#page_10 .item-img:nth-of-type(1)').addClass('selected-item');
+        else if (val == 4) $('#page_10 .item-img:nth-of-type(2)').addClass('selected-item');
+        else $('#page_10 .item-img:nth-of-type(3)').addClass('selected-item');
+    })
     $('#to_page_11').click(function () {
         let elem = $('#page_10 input[type="radio"]:checked');
         if (elem.length > 0) {

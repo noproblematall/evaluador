@@ -13,7 +13,7 @@ body .card {
     width : 100%;
     overflow-y: auto;
     margin: auto;
-    --screen-width : min(100%, 450px);  
+    --screen-width : min(100%, 100vw, 450px);  
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .19);
 }
 
@@ -37,15 +37,15 @@ body .card {
 #page_0 {
     position: relative;
 }
-#page_0.page-content {
+/* #page_0.page-content {
     padding : 0;
-}
+} */
 #page_0 .box {
     position: absolute;
-    top: min(20vw, 100px);
+    top: calc(45px + var(--screen-width) * 0.30);
     width: 70%;
     left: 15%;
-    height: 38vh;
+    height : calc(var(--screen-width) * 0.55);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -79,7 +79,7 @@ body .card {
 }
 
 #page_1 .character-selector {
-    height: 65vw;
+    height: 70vw;
     max-height: 255px;
     width: 100%;
 }
@@ -314,7 +314,7 @@ img.selected-image {
     color: #215193;
 }
 
-#page_3 .todo-description, #page_4 .todo-description {
+.todo-description {
     color: #215193;
     font-size: 14px;
     font-family: 'ZurichSans-Medium', Arial, sans-serif;
@@ -577,6 +577,77 @@ img.selected-image {
   box-shadow: 0 0 60px rgba(0,0,0,0.65);
   border-radius : 20px;
   z-index: 100;
+}
+#page_7 .plant-image {
+    position: absolute;
+    left : 15%;
+    width : 15%;
+    bottom : 0;
+}
+#page_8 .calendar-image {
+    position : absolute;
+    width : 20%;
+    right : 10%;
+    top : 50%;
+    transform : translateY(-50%);
+    animation : fade-in 2s linear 0s 1;
+}
+@keyframes fade-in {
+    0% { opacity : 0; }
+    100% { opacity : 1; }
+}
+#page_9 .item-img {
+    position: absolute;
+    width : 20%;
+    left : 10%;
+    bottom : 0;
+    animation : fade-in 1s linear 0s 1;
+    display : none;
+}
+#page_9 .item-img.selected-item {
+    display : block;
+}
+#page_10 .item-img:nth-of-type(1) {
+    position: absolute;
+    width : 25%;
+    left : 10%;
+    bottom : 15%;
+    animation : fade-in 1s linear 0s 1;
+    display : none;
+}
+#page_10 .item-img:nth-of-type(2) {
+    position: absolute;
+    width : 25%;
+    right : 10%;
+    bottom : 15%;
+    animation : fade-in 1s linear 0s 1;
+    display : none;
+}
+#page_10 .item-img:nth-of-type(3) {
+    position: absolute;
+    width : 25%;
+    left : 10%;
+    top : -15%;
+    animation : fade-in 1s linear 0s 1;
+    display : none;
+}
+#page_10 .item-img.selected-item {
+    display : block;
+}
+#page_11 .clock-image {
+    position : absolute;
+    width : 15%;
+    left : 20%;
+    bottom : 50%;
+    transform : translateY(50%);
+    animation : fade-in 2s linear 0s 1;
+}
+#page_13 .calculator-image {
+    position : absolute;
+    width : 12%;
+    bottom : 0;
+    left : 20%;
+    animation: fade-in 2s linear 0s 1; 
 }
 .page-title {
     font-family: 'ZurichSans-Medium', Arial, sans-serif;

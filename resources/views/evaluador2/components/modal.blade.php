@@ -24,7 +24,7 @@
                     </div>
                     <div class="textfield   ">
                         <span class="icon icon--pencil_24_outline"></span>
-                        <input id="user_email_modal" name="user_email_modal" class="textfield-control" value="" type="email" placeholder="Correo electrónico (para recibir tu póliza)" />
+                        <input id="user_email_modal" name="user_email_modal" class="textfield-control" value="" type="email" placeholder="Correo electrónico" />
                         <label class="textfield-label" for="user_email"></label>
                     </div>
                     <h6>Teléfono celular</h6>

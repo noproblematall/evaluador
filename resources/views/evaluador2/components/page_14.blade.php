@@ -35,7 +35,8 @@
             </div>
             <div class='col-5 content text-center'>Mediano Plazo</div>
         </div>
-        <p class="card-title mt-3">Tus planes recomendados:</p>
+        <hr />
+        <p class="card-title">Planes que se adaptan para tu caso</p>
         <div class='items-container mt-2 row'>
             <div class='flip_card col-6 pe-2 pointer'>
                 <img class='plan-esencial card_front' 

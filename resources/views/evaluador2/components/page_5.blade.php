@@ -9,7 +9,7 @@
     </div>
     <div class='d-flex  align-items-center'>
         <img src='https://z-eval.s3.amazonaws.com/misc/path.png' alt='img' width='18' />
-        <p class='color-blue px-2 title'>¿Qué te gustaría planificar para tu futuro?</p>
+        <p class='color-blue px-2 title'>Planes para tu futuro</p>
     </div>
     <div class='card mt-2 px-3 pb-3'>
         <div class='plan-image-container'>
@@ -24,7 +24,7 @@
         </div>
         <hr />
         <div class='items-container mt-2 row'>
-            <p class='plan-description text-center mt-1 mb-3'>Podés elegir varias opciones</p>
+            <p class='plan-description text-center mt-1 mb-3'>¿Qué te gustaría planificar para tu futuro? Podés elegir varias opciones</p>
             <div class='col-6 item-btn mt-2 mb-1 px-2'>
                 <input type='checkbox' name='plan' id='plan-0' value='0'>
                 <label for='plan-0' class='item-label d-flex justify-content-center align-items-center px-1'>

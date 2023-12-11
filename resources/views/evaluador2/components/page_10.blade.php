@@ -12,7 +12,10 @@
         <p class='color-blue px-2 page-title'>Conocer mi perfil de inversor: foco</p>
     </div>
     <div class='card mt-2 p-3'>
-        <div class='d-flex justify-content-center align-items-center mt-4'>
+        <div class='position-relative d-flex justify-content-center align-items-center mt-4'>
+            <img src="https://z-eval.s3.amazonaws.com/misc/perdidas.png" alt="item" class="item-img" />  
+            <img src="https://z-eval.s3.amazonaws.com/misc/ganancias.png" alt="item" class="item-img" /> 
+            <img src="https://z-eval.s3.amazonaws.com/misc/equilibrio_perd_gan.png" alt="item" class="item-img" />
             <img src='https://z-eval.s3.amazonaws.com/pers/Nobi+a.png' alt='selected' class='selected-image' />
         </div>
         <hr />

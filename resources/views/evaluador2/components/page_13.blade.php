@@ -12,8 +12,9 @@
         <p class='color-blue px-2 page-title'>Conocer mi perfil de inversor: elección de escenario</p>
     </div>
     <div class='card mt-2 p-3'>
-        <div class='d-flex justify-content-center align-items-center mt-4'>
+        <div class='position-relative d-flex justify-content-center align-items-center mt-4'>
             <img src='https://z-eval.s3.amazonaws.com/pers/Nobi+a.png' alt='selected' class='selected-image' />
+            <img src="https://z-eval.s3.amazonaws.com/misc/Calculadora.png" alt="calculator" class="calculator-image" />
         </div>
         <hr />
         <p class='text-center mt-3 mb-0 subtitle mx-3'>¿Cuál de estos escenarios elegirías?</p>
