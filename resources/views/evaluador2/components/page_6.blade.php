@@ -1,5 +1,5 @@
-<!-- <section id="page_6" class="page-content animate__animated animate__fadeIn d-none"> -->
-<section id="page_6" class="page-content animate__animated animate__fadeIn ">
+<section id="page_6" class="page-content animate__animated animate__fadeIn d-none">
+<!-- <section id="page_6" class="page-content animate__animated animate__fadeIn "> -->
     <div class='d-flex justify-content-between align-items-center mb-4'>
         <p class='prev_link mt-2 mb-1' id='prev_page_5'>
             <span class="icon icon--arrow-long-left_24"></span>
