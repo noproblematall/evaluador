@@ -41,6 +41,10 @@ $(document).ready(function () {
       $('#age').parent().addClass('has-error');
       return $('#page_1 .error').text('Por favor completá tus datos');
     }
+    if (isNaN(parseInt(age1)) || age1 <= 0 || age1 > 99) {
+      $('#age').parent().addClass('has-error');
+      return $('#page_1 .error').text('Por favor completá tus datos');
+    }
     $('#page_1 .error').html('&nbsp;');
     $('#age').parent().removeClass('has-error');
     name = name1;
@@ -174,7 +178,7 @@ $(document).ready(function () {
     }
   });
   var todo = [];
-  var todo_str_arr = ['Comprar un auto', 'Comprar una casa', 'Viajar todos los años', 'Emprender un proyecto', 'generar un ahorro rentable', 'Ninguno de los anteriores'];
+  var todo_str_arr = ['Comprar un auto', 'Comprar una casa', 'Viajar todos los años', 'Emprender un proyecto', 'Generar un ahorro rentable', 'Ninguno de los anteriores'];
   $('#to_page_5').click(function () {
     todo = [];
     var elem = $('#page_4 input[type="checkbox"]:checked');

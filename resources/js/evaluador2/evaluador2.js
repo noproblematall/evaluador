@@ -36,6 +36,10 @@ $(document).ready(function () {
             $('#age').parent().addClass('has-error');
             return $('#page_1 .error').text('Por favor completá tus datos')
         }
+        if (isNaN(parseInt(age1)) || age1 <= 0 || age1 > 99) {
+            $('#age').parent().addClass('has-error');
+            return $('#page_1 .error').text('Por favor completá tus datos')
+        }
         $('#page_1 .error').html('&nbsp;')
         $('#age').parent().removeClass('has-error');
         name = name1; age = age1; character = character1;
