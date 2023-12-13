@@ -492,9 +492,9 @@ $(document).ready(function () {
         $('#page_10').removeClass('d-none');
         $('#page_11').addClass('d-none');
     });
-    let tolerancia_al_riesgo_2 = [];
-    $('#page_11 input[type="checkbox"]').change(function () {    
-        let elem = $('#page_11 input[type="checkbox"]:checked');
+    let tolerancia_al_riesgo_2 = 0;
+    $('#page_11 input[type="radio"]').change(function () {    
+        let elem = $('#page_11 input[type="radio"]:checked');
         if (elem.length > 0) {
             $('#page_11 .error').html('&nbsp; ');
         } else {
@@ -502,16 +502,14 @@ $(document).ready(function () {
         }
     });
     $('#to_page_12').click(function () {
-        tolerancia_al_riesgo_2 = [];
-        let elems = $('#page_11 input[type="checkbox"]:checked');
-        if (elems.length > 0) {
+        tolerancia_al_riesgo_2 = 0;
+        let elem = $('#page_11 input[type="radio"]:checked');
+        if (elem.length > 0) {
             $('#page_11 .error').html('&nbsp; ');
         } else {
             return $('#page_11 .error').text('Por favor, seleccioná una opción');
         }
-        $('#page_11 input[type="checkbox"]:checked').each(function () {
-            tolerancia_al_riesgo_2.push(parseInt($(this).val()));
-        });
+        tolerancia_al_riesgo_2 = parseInt(elem.val());
         console.log('tolerancia_al_riesgo_2', tolerancia_al_riesgo_2);
         let selectedImage1 = selectedImage;
         if (character == 'hombre') selectedImage1 = character_image_group_2[0];
@@ -582,7 +580,7 @@ $(document).ready(function () {
         console.log('tolerancia_al_riesgo_4', tolerancia_al_riesgo_4);
         horizonte_temporal = horizonte_temporal_0 + horizonte_temporal_1;
         console.log('horizontal_tempore', horizonte_temporal,horizonte_temporal_0, horizonte_temporal_1);
-        tolerancia_al_riesgo = tolerancia_al_riesgo_0 + tolerancia_al_riesgo_1 + tolerancia_al_riesgo_2.reduce((total, num) => total + num, 0) + tolerancia_al_riesgo_3 + tolerancia_al_riesgo_4;
+        tolerancia_al_riesgo = tolerancia_al_riesgo_0 + tolerancia_al_riesgo_1 + tolerancia_al_riesgo_2 + tolerancia_al_riesgo_3 + tolerancia_al_riesgo_4;
         console.log('tolerancia_al_riesgo', tolerancia_al_riesgo, tolerancia_al_riesgo_0, tolerancia_al_riesgo_1, tolerancia_al_riesgo_2, tolerancia_al_riesgo_3, tolerancia_al_riesgo_4);
         
         

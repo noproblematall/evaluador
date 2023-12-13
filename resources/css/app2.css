@@ -42,10 +42,10 @@ body .card {
 } */
 #page_0 .box {
     position: absolute;
-    top: calc(45px + var(--screen-width) * 0.30);
-    width: 70%;
-    left: 15%;
-    height : calc(var(--screen-width) * 0.55);
+    top: calc(45px + var(--screen-width) * 0.60);
+    width: 60%;
+    left: 20%;
+    height: calc(var(--screen-width) * 0.4);
     display: flex;
     align-items: center;
     justify-content: center;
