@@ -187,7 +187,7 @@ $(document).ready(function () {
         'Comprar una casa',
         'Viajar todos los años',
         'Emprender un proyecto',
-        'generar un ahorro rentable',
+        'Generar un ahorro rentable',
         'Ninguno de los anteriores'
     ]
     $('#to_page_5').click(function () {
