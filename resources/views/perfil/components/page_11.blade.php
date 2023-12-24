@@ -22,7 +22,7 @@
             <div class='col-6 item-btn mt-2 mb-1 px-2'>
                 <input type='radio' name='tolerancia_al_riesgo_2' id='tolerancia_al_riesgo_2-0' value='0'>
                 <label for='tolerancia_al_riesgo_2-0' class='item-label d-flex justify-content-center align-items-center px-1'>
-                    <p class='text-center'>Ninguna, plazo fijo o rendimiento pasivo</p>
+                    <p class='text-center'>Ninguna o solo plazo fijo</p>
                 </label>
             </div>
             <div class='col-6 item-btn mt-2 mb-1 px-2'>
@@ -40,7 +40,7 @@
             <div class='col-6 item-btn mt-2 mb-1 px-2'>
                 <input type='radio' name='tolerancia_al_riesgo_2' id='tolerancia_al_riesgo_2-3' value='8'>
                 <label for='tolerancia_al_riesgo_2-3' class='item-label d-flex justify-content-center align-items-center px-1'>
-                    <p class='text-center'>Renta fija y variable</p>
+                    <p class='text-center'>Ambas</p>
                 </label>
             </div>
         </div>

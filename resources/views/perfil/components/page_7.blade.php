@@ -1,7 +1,7 @@
 <!-- <section id="page_7" class="page-content animate__animated animate__fadeIn"> -->
 <section id="page_7" class="page-content animate__animated animate__fadeIn d-none ">
     <div class='d-flex justify-content-between align-items-center mb-4'>
-        <p class='prev_link mt-2 mb-1' id='prev_page_6'>
+        <p class='prev_link mt-2 mb-1' id='prev_page_1'>
             <span class="icon icon--arrow-long-left_24"></span>
             Regresar a la página anterior
         </p>
@@ -45,6 +45,6 @@
             </div>
         </div>
         <div class='error text-center text-danger my-2'>&nbsp;</div>
-        <button class='continue_btn mx-auto mb-4' id='to_page_8'>Continuar</button>
+        <button class='continue_btn mx-auto mb-4' id='to_page_9'>Continuar</button>
     </div>
 </section>

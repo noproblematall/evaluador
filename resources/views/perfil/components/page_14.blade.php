@@ -36,28 +36,35 @@
             <div class='col-5 content text-center'>Mediano Plazo</div>
         </div>
         <hr />
-        <p class="card-title">Planes que se adaptan para tu caso</p>
+        <div class="card-title row">
+            <div class="col-6 text-center">
+                Tolerancia al riesgo
+            </div>
+            <div class="col-6 text-center">
+                Horizonte temporal
+            </div>
+        </div>
         <div class='items-container mt-2 row'>
             <div class='flip_card col-6 pe-2 pointer'>
-                <img class='plan-esencial card_front' 
+                <img class='plan-tolerancia card_front' 
                     src='https://z-eval.s3.amazonaws.com/misc/plan+esencial.gif'
-                    alt='plan + esencial' />
+                    alt='plan + tolerancia' />
                 <img class='card_back' 
                     src='/img/card_back.png'
                     alt='card_back' />
             </div>
             <div class='flip_card col-6 ps-2 pointer'>
-                <img class='plan-extendido card_front' 
+                <img class='plan-horizonte card_front' 
                     src='https://z-eval.s3.amazonaws.com/misc/plan+extendido.gif'
-                    alt='plan + extendido' />
+                    alt='plan + horizonte' />
                 <img class='card_back' 
                     src='/img/card_back.png'
                     alt='card_back' />
             </div>
         </div>
         <div class='button-group my-4'>
-            <button class='continue_btn mx-auto my-2' id='to_whatsapp'>Enviar por Whastapp</button>
-            <button class='continue_btn mx-auto my-2' id='to_contact'>Quiero que me contacten</button>
+            <button class='continue_btn mx-auto my-2' id='to_download_result'>Descargar mis resultados</button>
+            <button class='continue_btn mx-auto my-2' id='to_whatsapp'>Recibir info por Whatsapp</button>
         </div>
     </div>
 </section>

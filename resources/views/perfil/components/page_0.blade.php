@@ -6,7 +6,7 @@
     </div>
     <img class=' w-100 bottom-0' src='https://z-eval.s3.amazonaws.com/full+console.png' alt='bottom' />
     <div class='box d-flex flex-col justify-content-between'>
-        <img class='w-100' src='https://z-eval.s3.amazonaws.com/texto+entrada.gif' alt='animation' />
+        <img class='w-100' src='https://z-eval.s3.amazonaws.com/texto+entrada+inversor.gif' alt='animation' />
         <button class='continue_btn mx-auto hide' id='to_page_1'>¡Vamos!</button>
     </div>
 </section>

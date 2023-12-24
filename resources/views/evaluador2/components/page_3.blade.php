@@ -33,7 +33,7 @@
             <div class='col-6 item-btn mt-2 mb-1 px-2'>
                 <input type='radio' name='job' id='job-2' value='2'>
                 <label for='job-2' class='item-label d-flex justify-content-center  align-items-center px-1'>
-                    <p class='text-center'>Si, administro mi casa</p>
+                    <p class='text-center'>No, pero mi pareja lo hace</p>
                 </label>
             </div>
             <div class='col-6 item-btn mt-2 mb-1 px-2'>

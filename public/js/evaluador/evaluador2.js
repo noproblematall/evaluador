@@ -8,6 +8,7 @@ $(document).ready(function () {
   var selectedImage = '';
   var name = '';
   var age = '';
+  var external_url = $('#external_url').val();
 
   /******** page 0  */
   $('#to_page_1').click(function () {
@@ -240,9 +241,13 @@ $(document).ready(function () {
       plan.push($(this).val());
     });
     console.log('plan', plan);
+    //select final-img        
+    var character_image_group_3 = ['https://z-eval.s3.amazonaws.com/pers/Perfil+H.png', 'https://z-eval.s3.amazonaws.com/pers/Perfil+M.png', 'https://z-eval.s3.amazonaws.com/pers/Perfil+Nobi.png'];
     var selectedImage1 = selectedImage;
-    if (character == 'hombre') selectedImage1 = character_image_group_2[0];else if (character == 'mujer') selectedImage1 = character_image_group_2[1];else selectedImage1 = character_image_group_2[2];
-    $('#page_6 .selected-image').attr('src', selectedImage1);
+    if (character == 'hombre') selectedImage1 = character_image_group_3[0];else if (character == 'mujer') selectedImage1 = character_image_group_3[1];else selectedImage1 = character_image_group_3[2];
+    $('#page_6 .final-img').attr('src', selectedImage1);
+    $('#page_6 .subtitle:first-of-type').text("\xA1Felicitaciones ".concat(name, "!"));
+
     //find card images
     var temp = [];
     var flag = false;
@@ -275,16 +280,14 @@ $(document).ready(function () {
     setTimeout(function () {
       $('#page_6').removeClass('d-none');
     }, 100);
-    // window.scrollTo(0,0);
   });
-
   $('#page_6 #to_whatsapp').click(function () {
     $('#send_email_modal .large_title:first-child').text('Recibí esta información detallada en tu WhatsApp. Completá por favor la siguiente información.');
     $('#send_email_modal').modal({
       backdrop: 'static'
     });
   });
-  $('#page_6 #to_contact').click(function () {
+  $('#page_6 #to_download_result').click(function () {
     $('#send_email_modal .large_title:first-child').text('Completá por favor la siguiente información y un asesor acreditado en Zurich International Life Sucursal Argentina te contactará en breve.');
     $('#send_email_modal').modal({
       backdrop: 'static'
@@ -303,9 +306,6 @@ $(document).ready(function () {
     $('#page_6 .selected-image ').toggleClass('opacity-0');
     $('#page_6 .flip_card img:first-child').toggleClass('opacity-0');
   });
-  $('#page_14 .flip_card').click(function () {
-    $(this).toggleClass('flipped');
-  });
   // $('#page_6 .flip_card').click(function() {
   //     $('#plan_card_modal').modal({ backdrop: 'static' });
   // });
@@ -313,254 +313,7 @@ $(document).ready(function () {
   //     $('#plan_card_modal').modal('hide');
   // });
   $('#to_page_7').click(function () {
-    var selectedImage1 = selectedImage;
-    if (character == 'hombre') selectedImage1 = character_image_group_1[0];else if (character == 'mujer') selectedImage1 = character_image_group_1[1];else selectedImage1 = character_image_group_1[2];
-    $('#page_7 .selected-image').attr('src', selectedImage1);
-    $('#page_7').removeClass('d-none');
-    $('#page_6').addClass('d-none');
-  });
-  /****************   page 7  */
-  $('#prev_page_6').click(function () {
-    $('#page_6').removeClass('d-none');
-    $('#page_7').addClass('d-none');
-  });
-  var horizonte_temporal = 0;
-  var horizonte_temporal_0 = 0;
-  $('#page_7 input[type="radio"]').change(function () {
-    $('#page_7 .error').html('&nbsp;');
-  });
-  $('#to_page_8').click(function () {
-    var elem = $('#page_7 input[type="radio"]:checked');
-    if (elem.length > 0) {
-      $('#page_7 .error').html('&nbsp;');
-    } else {
-      return $('#page_7 .error').text('Seleccionar una opción');
-    }
-    horizonte_temporal_0 = parseInt(elem.val());
-    var selectedImage1 = selectedImage;
-    if (character == 'hombre') selectedImage1 = character_image_group_2[0];else if (character == 'mujer') selectedImage1 = character_image_group_2[1];else selectedImage1 = character_image_group_2[2];
-    $('#page_8 .selected-image').attr('src', selectedImage1);
-    $('#page_8').removeClass('d-none');
-    $('#page_7').addClass('d-none');
-    console.log('horizonte_temporal_0', horizonte_temporal_0);
-  });
-  /******** page 8  */
-  $('#prev_page_7').click(function () {
-    $('#page_7').removeClass('d-none');
-    $('#page_8').addClass('d-none');
-  });
-  var horizonte_temporal_1 = 0;
-  $('#page_8 input[type="radio"]').change(function () {
-    $('#page_8 .error').html('&nbsp;');
-  });
-  $('#to_page_9').click(function () {
-    var elem = $('#page_8 input[type="radio"]:checked');
-    if (elem.length > 0) {
-      $('#page_8 .error').html('&nbsp;');
-    } else {
-      return $('#page_8 .error').text('Seleccionar una opción');
-    }
-    horizonte_temporal_1 = parseInt(elem.val());
-    var selectedImage1 = selectedImage;
-    if (character == 'hombre') selectedImage1 = character_image_group_1[0];else if (character == 'mujer') selectedImage1 = character_image_group_1[1];else selectedImage1 = character_image_group_1[2];
-    $('#page_9 .selected-image').attr('src', selectedImage1);
-    $('#page_9').removeClass('d-none');
-    $('#page_8').addClass('d-none');
-    console.log('horizonte_temporal_1', horizonte_temporal_1);
-  });
-  /******** page 9  */
-  $('#prev_page_8').click(function () {
-    $('#page_8').removeClass('d-none');
-    $('#page_9').addClass('d-none');
-  });
-  var tolerancia_al_riesgo = 0;
-  var tolerancia_al_riesgo_0 = 0;
-  $('#page_9 input[type="radio"]').change(function () {
-    $('#page_9 .error').html('&nbsp;');
-  });
-  $('#page_9 input[type="radio"]').on('change', function () {
-    elem = $('#page_9 input[type="radio"]:checked');
-    var val = elem.val();
-    $('#page_9 .item-img').removeClass('selected-item');
-    if (val == 0) $('#page_9 .item-img:nth-of-type(1)').addClass('selected-item');else if (val == 2) $('#page_9 .item-img:nth-of-type(2)').addClass('selected-item');else if (val == 4) $('#page_9 .item-img:nth-of-type(3)').addClass('selected-item');else $('#page_9 .item-img:nth-of-type(4)').addClass('selected-item');
-  });
-  $('#to_page_10').click(function () {
-    var elem = $('#page_9 input[type="radio"]:checked');
-    if (elem.length > 0) {
-      $('#page_9 .error').html('&nbsp;');
-    } else {
-      return $('#page_9 .error').text('Seleccionar una opción');
-    }
-    tolerancia_al_riesgo_0 = parseInt(elem.val());
-    var selectedImage1 = selectedImage;
-    if (character == 'hombre') selectedImage1 = character_image_group_2[0];else if (character == 'mujer') selectedImage1 = character_image_group_2[1];else selectedImage1 = character_image_group_2[2];
-    $('#page_10 .selected-image').attr('src', selectedImage1);
-    $('#page_10').removeClass('d-none');
-    $('#page_9').addClass('d-none');
-    console.log('tolerancia_al_riesgo_0', tolerancia_al_riesgo_0);
-  });
-  /******** page 10  */
-  $('#prev_page_9').click(function () {
-    $('#page_9').removeClass('d-none');
-    $('#page_10').addClass('d-none');
-  });
-  var tolerancia_al_riesgo_1 = 0;
-  $('#page_10 input[type="radio"]').change(function () {
-    $('#page_10 .error').html('&nbsp;');
-  });
-  $('#page_10 input[type="radio"]').on('change', function () {
-    elem = $('#page_10 input[type="radio"]:checked');
-    var val = elem.val();
-    $('#page_10 .item-img').removeClass('selected-item');
-    if (val == 0) $('#page_10 .item-img:nth-of-type(1)').addClass('selected-item');else if (val == 4) $('#page_10 .item-img:nth-of-type(2)').addClass('selected-item');else $('#page_10 .item-img:nth-of-type(3)').addClass('selected-item');
-  });
-  $('#to_page_11').click(function () {
-    var elem = $('#page_10 input[type="radio"]:checked');
-    if (elem.length > 0) {
-      $('#page_10 .error').html('&nbsp;');
-    } else {
-      return $('#page_10 .error').text('Seleccionar una opción');
-    }
-    tolerancia_al_riesgo_1 = parseInt(elem.val());
-    var selectedImage1 = selectedImage;
-    if (character == 'hombre') selectedImage1 = character_image_group_1[0];else if (character == 'mujer') selectedImage1 = character_image_group_1[1];else selectedImage1 = character_image_group_1[2];
-    $('#page_11 .selected-image').attr('src', selectedImage1);
-    $('#page_11').removeClass('d-none');
-    $('#page_10').addClass('d-none');
-    console.log('tolerancia_al_riesgo_1', tolerancia_al_riesgo_1);
-  });
-  /******** page 11  */
-  $('#prev_page_10').click(function () {
-    $('#page_10').removeClass('d-none');
-    $('#page_11').addClass('d-none');
-  });
-  var tolerancia_al_riesgo_2 = 0;
-  $('#page_11 input[type="radio"]').change(function () {
-    var elem = $('#page_11 input[type="radio"]:checked');
-    if (elem.length > 0) {
-      $('#page_11 .error').html('&nbsp; ');
-    } else {
-      return $('#page_11 .error').text('Por favor, seleccioná una opción');
-    }
-  });
-  $('#to_page_12').click(function () {
-    tolerancia_al_riesgo_2 = 0;
-    var elem = $('#page_11 input[type="radio"]:checked');
-    if (elem.length > 0) {
-      $('#page_11 .error').html('&nbsp; ');
-    } else {
-      return $('#page_11 .error').text('Por favor, seleccioná una opción');
-    }
-    tolerancia_al_riesgo_2 = parseInt(elem.val());
-    console.log('tolerancia_al_riesgo_2', tolerancia_al_riesgo_2);
-    var selectedImage1 = selectedImage;
-    if (character == 'hombre') selectedImage1 = character_image_group_2[0];else if (character == 'mujer') selectedImage1 = character_image_group_2[1];else selectedImage1 = character_image_group_2[2];
-    $('#page_12 .selected-image').attr('src', selectedImage1);
-    $('#page_12').removeClass('d-none');
-    $('#page_11').addClass('d-none');
-  });
-  /******** page 12  */
-  $('#prev_page_11').click(function () {
-    $('#page_11').removeClass('d-none');
-    $('#page_12').addClass('d-none');
-  });
-  var tolerancia_al_riesgo_3 = 0;
-  $('#page_12 input[type="radio"]').change(function () {
-    $('#page_12 .error').html('&nbsp;');
-  });
-  $('#to_page_13').click(function () {
-    var elem = $('#page_12 input[type="radio"]:checked');
-    if (elem.length > 0) {
-      $('#page_12 .error').html('&nbsp;');
-    } else {
-      return $('#page_12 .error').text('Seleccionar una opción');
-    }
-    tolerancia_al_riesgo_3 = parseInt(elem.val());
-    var selectedImage1 = selectedImage;
-    if (character == 'hombre') selectedImage1 = character_image_group_1[0];else if (character == 'mujer') selectedImage1 = character_image_group_1[1];else selectedImage1 = character_image_group_1[2];
-    $('#page_13 .selected-image').attr('src', selectedImage1);
-    $('#page_13').removeClass('d-none');
-    $('#page_12').addClass('d-none');
-    console.log('tolerancia_al_riesgo_3', tolerancia_al_riesgo_3);
-  });
-  /******** page 13  */
-  $('#prev_page_12').click(function () {
-    $('#page_12').removeClass('d-none');
-    $('#page_13').addClass('d-none');
-  });
-  var tolerancia_al_riesgo_4 = 0;
-  $('#page_13 input[type="radio"]').change(function () {
-    $('#page_13 .error').html('&nbsp;');
-  });
-  $('#to_page_14').click(function () {
-    var elem = $('#page_13 input[type="radio"]:checked');
-    if (elem.length > 0) {
-      $('#page_13 .error').html('&nbsp;');
-    } else {
-      return $('#page_13 .error').text('Seleccionar una opción');
-    }
-    tolerancia_al_riesgo_4 = parseInt(elem.val());
-    var character_image_group_3 = ['https://z-eval.s3.amazonaws.com/pers/Perfil+H.png', 'https://z-eval.s3.amazonaws.com/pers/Perfil+M.png', 'https://z-eval.s3.amazonaws.com/pers/Perfil+Nobi.png'];
-    var selectedImage1 = selectedImage;
-    if (character == 'hombre') selectedImage1 = character_image_group_3[0];else if (character == 'mujer') selectedImage1 = character_image_group_3[1];else selectedImage1 = character_image_group_3[2];
-    $('#page_14 .final-img').attr('src', selectedImage1);
-    $('#page_14').removeClass('d-none');
-    $('#page_13').addClass('d-none');
-    console.log('tolerancia_al_riesgo_4', tolerancia_al_riesgo_4);
-    horizonte_temporal = horizonte_temporal_0 + horizonte_temporal_1;
-    console.log('horizontal_tempore', horizonte_temporal, horizonte_temporal_0, horizonte_temporal_1);
-    tolerancia_al_riesgo = tolerancia_al_riesgo_0 + tolerancia_al_riesgo_1 + tolerancia_al_riesgo_2 + tolerancia_al_riesgo_3 + tolerancia_al_riesgo_4;
-    console.log('tolerancia_al_riesgo', tolerancia_al_riesgo, tolerancia_al_riesgo_0, tolerancia_al_riesgo_1, tolerancia_al_riesgo_2, tolerancia_al_riesgo_3, tolerancia_al_riesgo_4);
-    var icon_horizonte = ['https://z-eval.s3.amazonaws.com/misc/1-3.png', 'https://z-eval.s3.amazonaws.com/misc/2-3.png', 'https://z-eval.s3.amazonaws.com/misc/3-3.png'];
-    if (horizonte_temporal < 3) {
-      $('#page_14 .horizonte .content').text("Corto Plazo");
-      $('#page_14 .icon-horizonte').attr('src', icon_horizonte[0]);
-    } else if (horizonte_temporal >= 3 && horizonte_temporal <= 7) {
-      $('#page_14 .horizonte .content').text("Mediano Plazo");
-      $('#page_14 .icon-horizonte').attr('src', icon_horizonte[1]);
-    } else {
-      $('#page_14 .horizonte .content').text("Largo Plazo");
-      $('#page_14 .icon-horizonte').attr('src', icon_horizonte[2]);
-    }
-    var icon_tolerancia = ['https://z-eval.s3.amazonaws.com/misc/1-5.png', 'https://z-eval.s3.amazonaws.com/misc/2-5.png', 'https://z-eval.s3.amazonaws.com/misc/3-5.png', 'https://z-eval.s3.amazonaws.com/misc/4-5.png', 'https://z-eval.s3.amazonaws.com/misc/5-5.png'];
-    if (tolerancia_al_riesgo < 16) {
-      $('#page_14 .tolerancia .content').text('Conservador');
-      $('#page_14 .icon-tolerancia').attr('src', icon_tolerancia[0]);
-    } else if (tolerancia_al_riesgo >= 16 && tolerancia_al_riesgo <= 21) {
-      $('#page_14 .tolerancia .content').text('Algo Conservador');
-      $('#page_14 .icon-tolerancia').attr('src', icon_tolerancia[1]);
-    } else if (tolerancia_al_riesgo >= 22 && tolerancia_al_riesgo <= 26) {
-      $('#page_14 .tolerancia .content').text('Moderado');
-      $('#page_14 .icon-tolerancia').attr('src', icon_tolerancia[2]);
-    } else if (tolerancia_al_riesgo >= 27 && tolerancia_al_riesgo <= 31) {
-      $('#page_14 .tolerancia .content').text('Algo Arriesgado');
-      $('#page_14 .icon-tolerancia').attr('src', icon_tolerancia[3]);
-    } else {
-      $('#page_14 .tolerancia .content').text('Arriesgado');
-      $('#page_14 .icon-tolerancia').attr('src', icon_tolerancia[4]);
-    }
-    $('#confetti-image').removeClass('d-none');
-    setTimeout(function () {
-      $('#confetti-image').addClass('d-none');
-    }, 2500);
-    $('#page_14 .subtitle:first-of-type').text("\xA1Felicitaciones ".concat(name, "!"));
-  });
-  /******** page 14  */
-  $('#prev_page_13').click(function () {
-    $('#page_13').removeClass('d-none');
-    $('#page_14').addClass('d-none');
-  });
-  $('#page_14 #to_whatsapp').click(function () {
-    $('#send_email_modal .large_title:first-child').text('Recibí esta información detallada en tu WhatsApp. Completá por favor la siguiente información.');
-    $('#send_email_modal').modal({
-      backdrop: 'static'
-    });
-  });
-  $('#page_14 #to_contact').click(function () {
-    $('#send_email_modal .large_title:first-child').text('Completá por favor la siguiente información y un asesor acreditado en Zurich International Life Sucursal Argentina te contactará en breve.');
-    $('#send_email_modal').modal({
-      backdrop: 'static'
-    });
+    window.open("https://".concat(external_url, "?character=").concat(character, "&name=").concat(name, "&age=").concat(age));
   });
 });
 /******/ })()

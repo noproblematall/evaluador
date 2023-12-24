@@ -12,8 +12,14 @@
         <p class='color-blue px-2 title'>Planes que se adaptan para tu caso</p>
     </div>
     <div class='card mt-2 px-3 p-3'>
-        <div class='d-flex justify-content-center align-items-center mt-4'>
-            <img src='https://z-eval.s3.amazonaws.com/pers/Nobi+a.png' alt='selected' class='selected-image' />
+        <div class="row px-3 pt-3 pb-3">
+            <div class="col-3" >
+                <img class="final-img col-3 w-100"  src="https://z-eval.s3.amazonaws.com/pers/Perfil+H.png" />
+            </div>
+            <div class="col-9 d-flex flex-column justify-content-center">
+                <p class='text-center mb-0 subtitle mx-3'>¡Felicitaciones!</p>
+                <p class='text-center subtitle'>Completaste el perfil de inversor</p>
+            </div>
         </div>
         <hr />
         <div class='items-container mt-2 row px-0'>
@@ -35,9 +41,9 @@
             </div>
         </div>
         <div class='button-group my-4'>
-            <button class='continue_btn mx-auto my-2' id='to_whatsapp'>Enviar por Whastapp</button>
-            <button class='continue_btn mx-auto my-2' id='to_contact'>Quiero que me contacten</button>
-            <button class='continue_btn mx-auto my-2' id='to_page_7'>Continuar</button>
+            <button class='continue_btn mx-auto my-2' id='to_download_result'>Descargar mis resultados</button>
+            <button class='continue_btn mx-auto my-2' id='to_whatsapp'>Recibir info por Whatsapp</button>
+            <button class='continue_btn mx-auto my-2' id='to_page_7'>Quiero saber mi perfil de inversor</button>
         </div>
     </div>
 </section>

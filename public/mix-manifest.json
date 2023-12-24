@@ -1,7 +1,9 @@
 {
     "/js/app.js": "/js/app.js",
-    "/js/evaluador/evaluador2.js": "/js/evaluador/evaluador2.js",
     "/js/evaluador/evaluador.js": "/js/evaluador/evaluador.js",
-    "/css/app.css": "/css/app.css",
-    "/css/app2.css": "/css/app2.css"
+    "/js/evaluador/evaluador2.js": "/js/evaluador/evaluador2.js",
+    "/js/evaluador/perfil.js": "/js/evaluador/perfil.js",
+    "/css/perfil.css": "/css/perfil.css",
+    "/css/app2.css": "/css/app2.css",
+    "/css/app.css": "/css/app.css"
 }

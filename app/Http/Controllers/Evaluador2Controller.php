@@ -9,6 +9,8 @@ class Evaluador2Controller extends Controller
     //
     public function index(Request $request) 
     {
-        return view('evaluador2.welcome');
+        $external_url = env('PERFIL');
+
+        return view('evaluador2.welcome', compact('external_url'));
     }
 }
