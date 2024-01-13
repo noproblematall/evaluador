@@ -65,6 +65,7 @@
         <div class='button-group my-4'>
             <button class='continue_btn mx-auto my-2' id='to_download_result'>Descargar mis resultados</button>
             <button class='continue_btn mx-auto my-2' id='to_whatsapp'>Recibir info por Whatsapp</button>
+            <button class='continue_btn mx-auto my-2' id='to_page_15'>Quiero información de planes para mi</button>
         </div>
     </div>
 </section>

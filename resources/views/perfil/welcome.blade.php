@@ -36,6 +36,7 @@
 
         @include('perfil.components.modal')
     </div>
+    <input type="hidden" name="external_url" id="external_url" value="{{ $external_url }}" />
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>

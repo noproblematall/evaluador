@@ -3,6 +3,7 @@ $(document).ready(function () {
     let selectedImage = '';
     let name = '';
     let age = '';
+    var external_url = $('#external_url').val();
 
     const url = new URL(window.location.href);
     // Get the 'GET' parameters
@@ -13,11 +14,24 @@ $(document).ready(function () {
     age = params.get('age');
 
     console.log('character,name,age', character, name, age);
+    
+    var character_image_group_0 = [
+        "https://z-eval.s3.amazonaws.com/pers/hombre+a.png",
+        "https://z-eval.s3.amazonaws.com/pers/Mujer+a.png",
+        "https://z-eval.s3.amazonaws.com/pers/Mujer+a.png"
+    ];
 
     if (!!character && !!name && !!age) {
         $("#page_0").addClass('d-none');
         $('#page_7').removeClass('d-none');
         $('#prev_page_1').addClass('d-none');
+        $('#name').val(name);
+        $('#age').val(age);
+        $('input[name=character]').val(character);
+        if (character == 'hombre') selectedImage = character_image_group_0[0];
+        else if (character == 'mujer') selectedImage = character_image_group_0[1];
+        else  selectedImage = character_image_group_0[2];
+        $('#page_7 .selected-image').attr('src', selectedImage);
     }
     
     /******** page 0  */
@@ -34,6 +48,23 @@ $(document).ready(function () {
     setTimeout(() => {
         $('#to_page_1').removeClass('hide');
     }, 2000);
+
+    var character_image_group_1 = [
+        "https://z-eval.s3.amazonaws.com/pers/Hombre+Idle.gif",
+        "https://z-eval.s3.amazonaws.com/pers/Mujer+Idle.gif",
+        "https://z-eval.s3.amazonaws.com/pers/Nobi+Idle.gif"
+    ];
+    var character_image_group_2 = [
+        "https://z-eval.s3.amazonaws.com/pers/Hombre+Pensando.gif",
+        "https://z-eval.s3.amazonaws.com/pers/Mujer+Pensando.gif",
+        "https://z-eval.s3.amazonaws.com/pers/Nobi+Pensando.gif"
+    ];
+    //select final-img        
+    let character_image_group_3 = [
+        'https://z-eval.s3.amazonaws.com/pers/Perfil+H.png',
+        'https://z-eval.s3.amazonaws.com/pers/Perfil+M.png',
+        'https://z-eval.s3.amazonaws.com/pers/Perfil+Nobi.png'
+    ];
     /*********   page 1  ************/
     $('#to_page_7').click(function () {
         let name1 = $('#name').val();
@@ -59,10 +90,13 @@ $(document).ready(function () {
         $('#page_1 .error').html('&nbsp;')
         $('#age').parent().removeClass('has-error');
         name = name1; age = age1; character = character1;
-        selectedImage = $('#page_1 input[type="radio"]:checked').parent().siblings().filter('label').find('img.activated').attr('src');
+        if (character == 'hombre') selectedImage = character_image_group_0[0];
+        else if (character == 'mujer') selectedImage = character_image_group_0[1];
+        else  selectedImage = character_image_group_0[2];
         $('#page_1').addClass('d-none');
         $('#page_7').removeClass('d-none');
         console.log('selected Image', selectedImage)
+        $('#page_7 .selected-image').attr('src', selectedImage);
         window.scrollTo({top: 0, behavior: 'smooth'});
     })
     $('#page_1 input[type="radio"]').change(function () {
@@ -78,22 +112,6 @@ $(document).ready(function () {
         });
     })
 
-    var character_image_group_1 = [
-        "https://z-eval.s3.amazonaws.com/pers/Hombre+Idle.gif",
-        "https://z-eval.s3.amazonaws.com/pers/Mujer+Idle.gif",
-        "https://z-eval.s3.amazonaws.com/pers/Nobi+Idle.gif"
-    ];
-    var character_image_group_2 = [
-        "https://z-eval.s3.amazonaws.com/pers/Hombre+Pensando.gif",
-        "https://z-eval.s3.amazonaws.com/pers/Mujer+Pensando.gif",
-        "https://z-eval.s3.amazonaws.com/pers/Nobi+Pensando.gif"
-    ];
-    //select final-img        
-    let character_image_group_3 = [
-        'https://z-eval.s3.amazonaws.com/pers/Perfil+H.png',
-        'https://z-eval.s3.amazonaws.com/pers/Perfil+M.png',
-        'https://z-eval.s3.amazonaws.com/pers/Perfil+Nobi.png'
-    ];
 
     var cardImgsArr = [
         [
@@ -392,4 +410,7 @@ $(document).ready(function () {
         $('#send_email_modal .large_title:first-child').text('Completá por favor la siguiente información y un asesor acreditado en Zurich International Life Sucursal Argentina te contactará en breve.')
         $('#send_email_modal').modal({ backdrop: 'static' });
     })
+    $('#to_page_15').click(function () {
+        window.open(`https://${external_url}?character=${character}&name=${name}&age=${age}`);
+    });
 })

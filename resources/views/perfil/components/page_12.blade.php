@@ -9,6 +9,7 @@
     </div>
     <div class='d-flex  align-items-center'>
         <img src='https://z-eval.s3.amazonaws.com/misc/investment+icon.png' alt='img' width='18' />
+        <p class='color-blue px-2 page-title'>Conocer mi perfil de inversor: escenario desfavorable</p>
     </div>
     <div class='card mt-2 p-3'>
         <div class='d-flex justify-content-center align-items-center mt-4'>

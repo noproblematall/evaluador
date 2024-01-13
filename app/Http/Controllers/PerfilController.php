@@ -9,6 +9,8 @@ class PerfilController extends Controller
     //
     public function index(Request $request) 
     {
-        return view('perfil.welcome');
+        $external_url = env('EVALUADOR');
+
+        return view('perfil.welcome', compact('external_url'));
     }
 }

@@ -8,6 +8,7 @@ $(document).ready(function () {
   var selectedImage = '';
   var name = '';
   var age = '';
+  var external_url = $('#external_url').val();
   var url = new URL(window.location.href);
   // Get the 'GET' parameters
   var params = new URLSearchParams(url.search);
@@ -16,10 +17,16 @@ $(document).ready(function () {
   name = params.get('name');
   age = params.get('age');
   console.log('character,name,age', character, name, age);
+  var character_image_group_0 = ["https://z-eval.s3.amazonaws.com/pers/hombre+a.png", "https://z-eval.s3.amazonaws.com/pers/Mujer+a.png", "https://z-eval.s3.amazonaws.com/pers/Mujer+a.png"];
   if (!!character && !!name && !!age) {
     $("#page_0").addClass('d-none');
     $('#page_7').removeClass('d-none');
     $('#prev_page_1').addClass('d-none');
+    $('#name').val(name);
+    $('#age').val(age);
+    $('input[name=character]').val(character);
+    if (character == 'hombre') selectedImage = character_image_group_0[0];else if (character == 'mujer') selectedImage = character_image_group_0[1];else selectedImage = character_image_group_0[2];
+    $('#page_7 .selected-image').attr('src', selectedImage);
   }
 
   /******** page 0  */
@@ -36,6 +43,10 @@ $(document).ready(function () {
   setTimeout(function () {
     $('#to_page_1').removeClass('hide');
   }, 2000);
+  var character_image_group_1 = ["https://z-eval.s3.amazonaws.com/pers/Hombre+Idle.gif", "https://z-eval.s3.amazonaws.com/pers/Mujer+Idle.gif", "https://z-eval.s3.amazonaws.com/pers/Nobi+Idle.gif"];
+  var character_image_group_2 = ["https://z-eval.s3.amazonaws.com/pers/Hombre+Pensando.gif", "https://z-eval.s3.amazonaws.com/pers/Mujer+Pensando.gif", "https://z-eval.s3.amazonaws.com/pers/Nobi+Pensando.gif"];
+  //select final-img        
+  var character_image_group_3 = ['https://z-eval.s3.amazonaws.com/pers/Perfil+H.png', 'https://z-eval.s3.amazonaws.com/pers/Perfil+M.png', 'https://z-eval.s3.amazonaws.com/pers/Perfil+Nobi.png'];
   /*********   page 1  ************/
   $('#to_page_7').click(function () {
     var name1 = $('#name').val();
@@ -63,10 +74,11 @@ $(document).ready(function () {
     name = name1;
     age = age1;
     character = character1;
-    selectedImage = $('#page_1 input[type="radio"]:checked').parent().siblings().filter('label').find('img.activated').attr('src');
+    if (character == 'hombre') selectedImage = character_image_group_0[0];else if (character == 'mujer') selectedImage = character_image_group_0[1];else selectedImage = character_image_group_0[2];
     $('#page_1').addClass('d-none');
     $('#page_7').removeClass('d-none');
     console.log('selected Image', selectedImage);
+    $('#page_7 .selected-image').attr('src', selectedImage);
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
@@ -83,10 +95,6 @@ $(document).ready(function () {
       'animation': 'unset'
     });
   });
-  var character_image_group_1 = ["https://z-eval.s3.amazonaws.com/pers/Hombre+Idle.gif", "https://z-eval.s3.amazonaws.com/pers/Mujer+Idle.gif", "https://z-eval.s3.amazonaws.com/pers/Nobi+Idle.gif"];
-  var character_image_group_2 = ["https://z-eval.s3.amazonaws.com/pers/Hombre+Pensando.gif", "https://z-eval.s3.amazonaws.com/pers/Mujer+Pensando.gif", "https://z-eval.s3.amazonaws.com/pers/Nobi+Pensando.gif"];
-  //select final-img        
-  var character_image_group_3 = ['https://z-eval.s3.amazonaws.com/pers/Perfil+H.png', 'https://z-eval.s3.amazonaws.com/pers/Perfil+M.png', 'https://z-eval.s3.amazonaws.com/pers/Perfil+Nobi.png'];
   var cardImgsArr = [['https://z-eval.s3.amazonaws.com/cards/card_front_1_seg_vida.gif', 'https://z-eval.s3.amazonaws.com/cards/card_back_1_seg_vida.png'], ['https://z-eval.s3.amazonaws.com/cards/card_front_2_seg_vida_enf_grav.gif', 'https://z-eval.s3.amazonaws.com/cards/card_back_2_seg_vida_enf_grav.png'], ['https://z-eval.s3.amazonaws.com/cards/card_front_3_seg_vida_ah.gif', 'https://z-eval.s3.amazonaws.com/cards/card_back_3_seg_vida_ah.png'], ['https://z-eval.s3.amazonaws.com/cards/card_front_4_seg_vida_inv.gif', 'https://z-eval.s3.amazonaws.com/cards/card_back_4_seg_vida_inv.png'], ['https://z-eval.s3.amazonaws.com/cards/card_front_5_seg_vida_enf_grav_family.gif', 'https://z-eval.s3.amazonaws.com/cards/card_back_5_seg_vida_enf_grav_family.png']];
   var selectedCardImgsArr = [];
   /****************   page 7  */
@@ -313,6 +321,9 @@ $(document).ready(function () {
     $('#send_email_modal').modal({
       backdrop: 'static'
     });
+  });
+  $('#to_page_15').click(function () {
+    window.open("https://".concat(external_url, "?character=").concat(character, "&name=").concat(name, "&age=").concat(age));
   });
 });
 /******/ })()

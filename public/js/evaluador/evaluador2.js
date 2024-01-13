@@ -9,7 +9,24 @@ $(document).ready(function () {
   var name = '';
   var age = '';
   var external_url = $('#external_url').val();
-
+  var url = new URL(window.location.href);
+  // Get the 'GET' parameters
+  var params = new URLSearchParams(url.search);
+  // Retrieve specific parameter values
+  character = params.get('character');
+  name = params.get('name');
+  age = params.get('age');
+  console.log('character,name,age', character, name, age);
+  var character_image_group_0 = ["https://z-eval.s3.amazonaws.com/pers/hombre+a.png", "https://z-eval.s3.amazonaws.com/pers/Mujer+a.png", "https://z-eval.s3.amazonaws.com/pers/Mujer+a.png"];
+  if (!!character && !!name && !!age) {
+    $("#page_0").addClass('d-none');
+    $('#page_2').removeClass('d-none');
+    $('#prev_page_1').addClass('d-none');
+    $('#name').val(name);
+    $('#age').val(age);
+    $('input[name=character]').val(character);
+    if (character == 'hombre') selectedImage = character_image_group_0[0];else if (character == 'mujer') selectedImage = character_image_group_0[1];else selectedImage = character_image_group_0[2];
+  }
   /******** page 0  */
   $('#to_page_1').click(function () {
     $('#page_1').removeClass('d-none');
