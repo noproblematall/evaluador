@@ -18,7 +18,7 @@
             </div>
             <div class="col-9 d-flex flex-column justify-content-center">
                 <p class='text-center mb-0 subtitle mx-3'>¡Felicitaciones!</p>
-                <p class='text-center subtitle'>Completaste el perfil de inversor</p>
+                <p class='text-center subtitle'>Completaste tu evaluación</p>
             </div>
         </div>
         <hr />

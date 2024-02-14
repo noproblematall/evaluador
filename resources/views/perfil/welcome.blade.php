@@ -27,6 +27,7 @@
         @include('perfil.components.page_0')
         @include('perfil.components.page_1')
         @include('perfil.components.page_7')
+        @include('perfil.components.page_8')
         @include('perfil.components.page_9')
         @include('perfil.components.page_10')
         @include('perfil.components.page_11')

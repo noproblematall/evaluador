@@ -147,7 +147,7 @@ $(document).ready(function () {
     $('#page_7 input[type="radio"]').change(function () {        
         $('#page_7 .error').html('&nbsp;');
     });
-    $('#to_page_9').click(function () {
+    $('#to_page_8').click(function () {
         let elem = $('#page_7 input[type="radio"]:checked');
         if (elem.length > 0) {
             $('#page_7 .error').html('&nbsp;');
@@ -160,14 +160,41 @@ $(document).ready(function () {
         if (character == 'hombre') selectedImage1 = character_image_group_1[0];
         else if (character == 'mujer') selectedImage1 = character_image_group_1[1];
         else  selectedImage1 = character_image_group_1[2];
-        $('#page_9 .selected-image').attr('src', selectedImage1);
-        $('#page_9').removeClass('d-none');
+        $('#page_8 .selected-image').attr('src', selectedImage1);
+        $('#page_8').removeClass('d-none');
         $('#page_7').addClass('d-none');
         console.log('horizonte_temporal_0', horizonte_temporal_0);
     })
-    /******** page 9  */
+    /****************   page 8  */
     $('#prev_page_7').click(function () {
         $('#page_7').removeClass('d-none');
+        $('#page_8').addClass('d-none');
+    });
+    let horizonte_temporal_1 = 0;
+    $('#page_8 input[type="radio"]').change(function () {        
+        $('#page_8 .error').html('&nbsp;');
+    });
+    $('#to_page_9').click(function () {
+        let elem = $('#page_8 input[type="radio"]:checked');
+        if (elem.length > 0) {
+            $('#page_8 .error').html('&nbsp;');
+        } else {
+            return $('#page_8 .error').text('Seleccionar una opción');
+        }
+        horizonte_temporal_1 = parseInt(elem.val());
+
+        let selectedImage1 = selectedImage;
+        if (character == 'hombre') selectedImage1 = character_image_group_1[0];
+        else if (character == 'mujer') selectedImage1 = character_image_group_1[1];
+        else  selectedImage1 = character_image_group_1[2];
+        $('#page_9 .selected-image').attr('src', selectedImage1);
+        $('#page_9').removeClass('d-none');
+        $('#page_8').addClass('d-none');
+        console.log('horizonte_temporal_1', horizonte_temporal_1);
+    })
+    /******** page 9  */
+    $('#prev_page_8').click(function () {
+        $('#page_8').removeClass('d-none');
         $('#page_9').addClass('d-none');
     });
     let tolerancia_al_riesgo = 0;
@@ -334,65 +361,59 @@ $(document).ready(function () {
             'https://z-eval.s3.amazonaws.com/pers/Perfil+Nobi.png'
         ];
         let selectedImage1 = selectedImage;
-        if (character == 'hombre') selectedImage1 = character_image_group_3[0];
-        else if (character == 'mujer') selectedImage1 = character_image_group_3[1];
-        else  selectedImage1 = character_image_group_3[2];
+        let gender = "h";
+        if (character == 'hombre') {
+            selectedImage1 = character_image_group_3[0];
+            gender = "h";
+        } else if (character == 'mujer') {
+            selectedImage1 = character_image_group_3[1];
+            gender = "m";
+        } else  {
+            selectedImage1 = character_image_group_3[2];
+            gender = "n";
+        }
+
         $('#page_14 .final-img').attr('src', selectedImage1);
         $('#page_14').removeClass('d-none');
         $('#page_13').addClass('d-none');
         console.log('tolerancia_al_riesgo_4', tolerancia_al_riesgo_4);
-        horizonte_temporal = horizonte_temporal_0;
-        console.log('horizontal_tempore', horizonte_temporal,horizonte_temporal_0);
+        horizonte_temporal = horizonte_temporal_0 + horizonte_temporal_1;
+        console.log('horizontal_tempore', horizonte_temporal,horizonte_temporal_0, horizonte_temporal_1);
         tolerancia_al_riesgo = tolerancia_al_riesgo_0 + tolerancia_al_riesgo_1 + tolerancia_al_riesgo_2 + tolerancia_al_riesgo_3 + tolerancia_al_riesgo_4;
         console.log('tolerancia_al_riesgo', tolerancia_al_riesgo, tolerancia_al_riesgo_0, tolerancia_al_riesgo_1, tolerancia_al_riesgo_2, tolerancia_al_riesgo_3, tolerancia_al_riesgo_4);
-        
-        
-        let icon_horizonte = [
-            'https://z-eval.s3.amazonaws.com/misc/1-3.png',
-            'https://z-eval.s3.amazonaws.com/misc/2-3.png',
-            'https://z-eval.s3.amazonaws.com/misc/3-3.png'
-        ]
+                
         if (horizonte_temporal < 3) {
             $('#page_14 .horizonte .content').text("Corto Plazo");
-            $('#page_14 .icon-horizonte').attr('src', icon_horizonte[0]);
-            $('#page_14 .plan-horizonte.card_front').attr("src", second_card_images[0]);
+            $('#page_14 .horizonte img:first-child').attr('src', `https://z-eval.s3.amazonaws.com/inv/${gender}_conservador_on.png`);
+            $('#page_14 .horizonte img:nth-child(2)').attr('src', `https://z-eval.s3.amazonaws.com/inv/${gender}_moderado_off.png`);
+            $('#page_14 .horizonte img:nth-child(3)').attr('src', `https://z-eval.s3.amazonaws.com/inv/${gender}_arriesgado_off.png`);
         } else if (horizonte_temporal >= 3 && horizonte_temporal <= 7) {
             $('#page_14 .horizonte .content').text("Mediano Plazo");
-            $('#page_14 .icon-horizonte').attr('src', icon_horizonte[1]);
-            $('#page_14 .plan-horizonte.card_front').attr("src", second_card_images[1]);
+            $('#page_14 .horizonte img:first-child').attr('src', `https://z-eval.s3.amazonaws.com/inv/${gender}_conservador_on.png`);
+            $('#page_14 .horizonte img:nth-child(2)').attr('src', `https://z-eval.s3.amazonaws.com/inv/${gender}_moderado_off.png`);
+            $('#page_14 .horizonte img:nth-child(3)').attr('src', `https://z-eval.s3.amazonaws.com/inv/${gender}_arriesgado_off.png`);
         } else {
             $('#page_14 .horizonte .content').text("Largo Plazo");
-            $('#page_14 .icon-horizonte').attr('src', icon_horizonte[2]);
-            $('#page_14 .plan-horizonte.card_front').attr("src", second_card_images[2]);
+            $('#page_14 .horizonte img:first-child').attr('src', `https://z-eval.s3.amazonaws.com/inv/${gender}_conservador_on.png`);
+            $('#page_14 .horizonte img:nth-child(2)').attr('src', `https://z-eval.s3.amazonaws.com/inv/${gender}_moderado_off.png`);
+            $('#page_14 .horizonte img:nth-child(3)').attr('src', `https://z-eval.s3.amazonaws.com/inv/${gender}_arriesgado_off.png`);
         }
 
-        let icon_tolerancia = [
-            'https://z-eval.s3.amazonaws.com/misc/1-5.png',
-            'https://z-eval.s3.amazonaws.com/misc/2-5.png',
-            'https://z-eval.s3.amazonaws.com/misc/3-5.png',
-            'https://z-eval.s3.amazonaws.com/misc/4-5.png',
-            'https://z-eval.s3.amazonaws.com/misc/5-5.png'
-        ]
-        if (tolerancia_al_riesgo < 16) {
+        if (tolerancia_al_riesgo < 18) {
             $('#page_14 .tolerancia .content').text('Conservador');
-            $('#page_14 .icon-tolerancia').attr('src', icon_tolerancia[0]);
-            $('#page_14 .plan-tolerancia.card_front').attr("src", first_card_images[4]);
-        } else if (tolerancia_al_riesgo >= 16 && tolerancia_al_riesgo <= 21) {
-            $('#page_14 .tolerancia .content').text('Algo Conservador');
-            $('#page_14 .icon-tolerancia').attr('src', icon_tolerancia[1]);
-            $('#page_14 .plan-tolerancia.card_front').attr("src", first_card_images[3]);
-        } else if (tolerancia_al_riesgo >= 22 && tolerancia_al_riesgo <= 26) {
+            $('#page_14 .tolerancia img:first-child').attr('src', `https://z-eval.s3.amazonaws.com/inv/${gender}_conservador_on.png`);
+            $('#page_14 .tolerancia img:nth-child(2)').attr('src', `https://z-eval.s3.amazonaws.com/inv/${gender}_moderado_off.png`);
+            $('#page_14 .tolerancia img:nth-child(3)').attr('src', `https://z-eval.s3.amazonaws.com/inv/${gender}_arriesgado_off.png`);
+        } else if (tolerancia_al_riesgo >= 18 && tolerancia_al_riesgo <= 28) {
             $('#page_14 .tolerancia .content').text('Moderado');
-            $('#page_14 .icon-tolerancia').attr('src', icon_tolerancia[2]);
-            $('#page_14 .plan-tolerancia.card_front').attr("src", first_card_images[2]);
-        } else if (tolerancia_al_riesgo >= 27 && tolerancia_al_riesgo <= 31) {
-            $('#page_14 .tolerancia .content').text('Algo Arriesgado');
-            $('#page_14 .icon-tolerancia').attr('src', icon_tolerancia[3]);
-            $('#page_14 .plan-tolerancia.card_front').attr("src", first_card_images[1]);
+            $('#page_14 .tolerancia img:first-child').attr('src', `https://z-eval.s3.amazonaws.com/inv/${gender}_conservador_off.png`);
+            $('#page_14 .tolerancia img:nth-child(2)').attr('src', `https://z-eval.s3.amazonaws.com/inv/${gender}_moderado_on.png`);
+            $('#page_14 .tolerancia img:nth-child(3)').attr('src', `https://z-eval.s3.amazonaws.com/inv/${gender}_arriesgado_off.png`);
         } else {
             $('#page_14 .tolerancia .content').text('Arriesgado');
-            $('#page_14 .icon-tolerancia').attr('src', icon_tolerancia[4]);
-            $('#page_14 .plan-tolerancia.card_front').attr("src", first_card_images[0]);
+            $('#page_14 .tolerancia img:first-child').attr('src', `https://z-eval.s3.amazonaws.com/inv/${gender}_conservador_off.png`);
+            $('#page_14 .tolerancia img:nth-child(2)').attr('src', `https://z-eval.s3.amazonaws.com/inv/${gender}_moderado_off.png`);
+            $('#page_14 .tolerancia img:nth-child(3)').attr('src', `https://z-eval.s3.amazonaws.com/inv/${gender}_arriesgado_on.png`);
         } 
 
         $('#page_14 .subtitle:first-of-type').text(`¡Felicitaciones ${name}!`)

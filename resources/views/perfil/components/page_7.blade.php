@@ -45,6 +45,6 @@
             </div>
         </div>
         <div class='error text-center text-danger my-2'>&nbsp;</div>
-        <button class='continue_btn mx-auto mb-4' id='to_page_9'>Continuar</button>
+        <button class='continue_btn mx-auto mb-4' id='to_page_8'>Continuar</button>
     </div>
 </section>

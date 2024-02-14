@@ -673,10 +673,11 @@ img.selected-image {
 #page_14 .tolerancia, #page_14 .horizonte {
     font-family: 'ZurichSans-Medium', Arial, sans-serif;
     color: #215193;
-    font-size : 13px;
+    font-size : 15px;
 }
 #page_14 .content {
     color : #1FB1E6;
+    font-size : 16px;
 }
 #page_14 .card-title {
     font-family: 'ZurichSans-Medium', Arial, sans-serif;

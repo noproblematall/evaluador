@@ -12,54 +12,35 @@
         <p class='color-blue px-2 page-title'>Conocer mi perfil de inversor: resultados</p>
     </div>
     <div class='card mt-2 p-3'>
-        <div class="row px-3 pt-3 pb-5">
+        <div class="row px-3 pt-3 pb-4">
             <div class="col-3" >
                 <img class="final-img col-3 w-100"  src="https://z-eval.s3.amazonaws.com/pers/Perfil+H.png" />
             </div>
             <div class="col-9 d-flex flex-column justify-content-center">
                 <p class='text-center mb-0 subtitle mx-3'>¡Felicitaciones!</p>
-                <p class='text-center subtitle'>Completaste el perfil de inversor</p>
+                <p class='text-center subtitle'>Completaste tu evaluación</p>
             </div>
         </div>
         <div class='row tolerancia my-2'>
-            <div class='col-6 subject '>Tolerancia al riesgo</div>
-            <div class='col-1 text-center px-0'>
-                <img src="" width="16" alt="tolerancia" class="icon-tolerancia" />
+            <div class='col-12 mb-3'>
+                <span class="subject">Tolerancia al riesgo:</span>
+                <span class="content ms-3">Moderado</span>
             </div>
-            <div class='col-5 content text-center'>Algo Arriesgado</div>
-        </div>
-        <div class='row horizonte mt-2 mb-2'>
-            <div class='col-6 subject '>Horizonte temporal</div>
-            <div class='col-1 text-center px-0'>
-                <img src="" width="16" alt="horizonte" class="icon-horizonte" />
-            </div>
-            <div class='col-5 content text-center'>Mediano Plazo</div>
-        </div>
-        <hr />
-        <div class="card-title row">
-            <div class="col-6 text-center">
-                Tolerancia al riesgo
-            </div>
-            <div class="col-6 text-center">
-                Horizonte temporal
+            <div class="col-12 d-flex justify-content-evenly">
+                <img src="https://z-eval.s3.amazonaws.com/inv/h_conservador_on.png" alt="Conservador" class="col-3"/>
+                <img src="https://z-eval.s3.amazonaws.com/inv/h_moderado_off.png" alt="Conservador"  class="col-3"/>
+                <img src="https://z-eval.s3.amazonaws.com/inv/h_arriesgado_off.png" alt="Conservador"  class="col-3"/>
             </div>
         </div>
-        <div class='items-container mt-2 row'>
-            <div class='flip_card col-6 pe-2 pointer'>
-                <img class='plan-tolerancia card_front' 
-                    src='https://z-eval.s3.amazonaws.com/misc/plan+esencial.gif'
-                    alt='plan + tolerancia' />
-                <img class='card_back' 
-                    src='/img/card_back.png'
-                    alt='card_back' />
+        <div class='row horizonte mt-3 mb-2'>
+            <div class='col-12 mb-3'>
+                <span class="subject">Horizonte temporal:</span>
+                <span class="content ms-3">Mediano Plazo</span>
             </div>
-            <div class='flip_card col-6 ps-2 pointer'>
-                <img class='plan-horizonte card_front' 
-                    src='https://z-eval.s3.amazonaws.com/misc/plan+extendido.gif'
-                    alt='plan + horizonte' />
-                <img class='card_back' 
-                    src='/img/card_back.png'
-                    alt='card_back' />
+            <div class="col-12 d-flex justify-content-evenly">
+                <img src="https://z-eval.s3.amazonaws.com/inv/h_conservador_on.png" alt="Conservador" class="col-3"/>
+                <img src="https://z-eval.s3.amazonaws.com/inv/h_moderado_off.png" alt="Conservador"  class="col-3"/>
+                <img src="https://z-eval.s3.amazonaws.com/inv/h_arriesgado_off.png" alt="Conservador"  class="col-3"/>
             </div>
         </div>
         <div class='button-group my-4'>
