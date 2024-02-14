@@ -27,7 +27,7 @@
                 <span class="content ms-3">Moderado</span>
             </div>
             <div class="col-12 d-flex justify-content-evenly">
-                <img src="https://z-eval.s3.amazonaws.com/inv/h_conservador_on.png" alt="Conservador" class="col-3"/>
+                <img src="https://z-eval.s3.amazonaws.com/inv/h_conservador_off.png" alt="Conservador" class="col-3"/>
                 <img src="https://z-eval.s3.amazonaws.com/inv/h_moderado_off.png" alt="Conservador"  class="col-3"/>
                 <img src="https://z-eval.s3.amazonaws.com/inv/h_arriesgado_off.png" alt="Conservador"  class="col-3"/>
             </div>
@@ -38,7 +38,7 @@
                 <span class="content ms-3">Mediano Plazo</span>
             </div>
             <div class="col-12 d-flex justify-content-evenly">
-                <img src="https://z-eval.s3.amazonaws.com/inv/h_conservador_on.png" alt="Conservador" class="col-3"/>
+                <img src="https://z-eval.s3.amazonaws.com/inv/h_conservador_off.png" alt="Conservador" class="col-3"/>
                 <img src="https://z-eval.s3.amazonaws.com/inv/h_moderado_off.png" alt="Conservador"  class="col-3"/>
                 <img src="https://z-eval.s3.amazonaws.com/inv/h_arriesgado_off.png" alt="Conservador"  class="col-3"/>
             </div>
