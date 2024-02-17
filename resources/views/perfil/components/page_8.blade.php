@@ -17,30 +17,30 @@
             <!-- <img src="https://z-eval.s3.amazonaws.com/misc/calendar.png" alt="calendar" class="calendar-image" /> -->
         </div>
         <hr />
-        <p class='text-center mt-3 mb-2 subtitle mx-4'>Pienso en mi retiro o jubilación:</p>
+        <p class='text-center mt-3 mb-2 subtitle mx-4'>En tu opinión, ¿cuándo deberían las personas comenzar a planificar su retiro?</p>
         <div class='items-container mt-2 row'>
             <div class='col-6 item-btn mt-2 mb-1 px-2'>
                 <input type='radio' name='horizonte_temporal_1' id='horizonte_temporal_1-0' value='0'>
                 <label for='horizonte_temporal_1-0' class='item-label d-flex justify-content-center align-items-center px-1'>
-                    <p class='text-center'>Nunca</p>
+                    <p class='text-center'>En  los 20 años</p>
                 </label>
             </div>
             <div class='col-6 item-btn mt-2 mb-1 px-2'>
                 <input type='radio' name='horizonte_temporal_1' id='horizonte_temporal_1-1' value='1'>
                 <label for='horizonte_temporal_1-1' class='item-label d-flex justify-content-center  align-items-center px-1'>
-                    <p class='text-center'>A veces</p>
+                    <p class='text-center'>En  los 30</p>
                 </label>
             </div>
             <div class='col-6 item-btn mt-2 mb-1 px-2'>
                 <input type='radio' name='horizonte_temporal_1' id='horizonte_temporal_1-2' value='4'>
                 <label for='horizonte_temporal_1-2' class='item-label d-flex justify-content-center  align-items-center px-1'>
-                    <p class='text-center'>Seguido</p>
+                    <p class='text-center'>En los 40</p>
                 </label>
             </div>
             <div class='col-6 item-btn mt-2 mb-1 px-2'>
                 <input type='radio' name='horizonte_temporal_1' id='horizonte_temporal_1-3' value='8'>
                 <label for='horizonte_temporal_1-3' class='item-label d-flex justify-content-center  align-items-center px-1'>
-                    <p class='text-center'>Siempre</p>
+                    <p class='text-center'>En los 50</p>
                 </label>
             </div>
         </div>

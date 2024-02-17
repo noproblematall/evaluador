@@ -19,7 +19,6 @@ $(document).ready(function () {
   console.log('character,name,age', character, name, age);
   var character_image_group_0 = ["https://z-eval.s3.amazonaws.com/pers/hombre+a.png", "https://z-eval.s3.amazonaws.com/pers/Mujer+a.png", "https://z-eval.s3.amazonaws.com/pers/Mujer+a.png"];
   if (!!character && !!name && !!age) {
-    $("#page_0").addClass('d-none');
     $('#page_7').removeClass('d-none');
     $('#prev_page_1').addClass('d-none');
     $('#name').val(name);
@@ -27,6 +26,10 @@ $(document).ready(function () {
     $('input[name=character]').val(character);
     if (character == 'hombre') selectedImage = character_image_group_0[0];else if (character == 'mujer') selectedImage = character_image_group_0[1];else selectedImage = character_image_group_0[2];
     $('#page_7 .selected-image').attr('src', selectedImage);
+    $('#download_result_modal input[name=user_first_name]').val(character);
+    $('#send_email_modal input[name=user_first_name]').val(character);
+  } else {
+    $("#page_0").removeClass('d-none');
   }
 
   /******** page 0  */
@@ -42,7 +45,7 @@ $(document).ready(function () {
   }, 2000);
   setTimeout(function () {
     $('#to_page_1').removeClass('hide');
-  }, 2000);
+  }, 1000);
   var character_image_group_1 = ["https://z-eval.s3.amazonaws.com/pers/Hombre+Idle.gif", "https://z-eval.s3.amazonaws.com/pers/Mujer+Idle.gif", "https://z-eval.s3.amazonaws.com/pers/Nobi+Idle.gif"];
   var character_image_group_2 = ["https://z-eval.s3.amazonaws.com/pers/Hombre+Pensando.gif", "https://z-eval.s3.amazonaws.com/pers/Mujer+Pensando.gif", "https://z-eval.s3.amazonaws.com/pers/Nobi+Pensando.gif"];
   //select final-img        
@@ -65,9 +68,9 @@ $(document).ready(function () {
       $('#age').parent().addClass('has-error');
       return $('#page_1 .error').text('Por favor completá tus datos');
     }
-    if (isNaN(parseInt(age1)) || age1 <= 0 || age1 > 99) {
+    if (isNaN(parseInt(age1)) || age1 <= 17 || age1 > 99) {
       $('#age').parent().addClass('has-error');
-      return $('#page_1 .error').text('Por favor completá tus datos');
+      return $('#page_1 .error').text('Ingresá una edad de 18 a 99 años');
     }
     $('#page_1 .error').html('&nbsp;');
     $('#age').parent().removeClass('has-error');
@@ -341,19 +344,57 @@ $(document).ready(function () {
     $('#page_14').addClass('d-none');
   });
   $('#page_14 #to_whatsapp').click(function () {
-    $('#send_email_modal .large_title:first-child').text('Recibí esta información detallada en tu WhatsApp. Completá por favor la siguiente información.');
     $('#send_email_modal').modal({
       backdrop: 'static'
     });
   });
   $('#page_14 #to_download_result').click(function () {
-    $('#send_email_modal .large_title:first-child').text('Completá por favor la siguiente información y un asesor acreditado en Zurich International Life Sucursal Argentina te contactará en breve.');
-    $('#send_email_modal').modal({
+    $('#download_result_modal').modal({
       backdrop: 'static'
     });
   });
   $('#to_page_15').click(function () {
     window.open("https://".concat(external_url, "?character=").concat(character, "&name=").concat(name, "&age=").concat(age));
+  });
+  $('#send_email_modal_btn').on('click', function (e) {
+    console.log('close btn');
+    $('#send_email_modal_form').validate({
+      rules: {
+        user_first_name: 'required',
+        area_code: {
+          required: true,
+          minlength: 4,
+          maxlength: 6
+        },
+        tel_number: {
+          required: true,
+          minlength: 9,
+          maxlength: 11
+        }
+      }
+    });
+    if (!$('#send_email_modal_form').valid()) return;
+    $('#send_email_modal').modal('hide');
+  });
+  $('#download_result_modal_btn').on('click', function (e) {
+    console.log('close btn1');
+    $('#download_result_modal_form').validate({
+      rules: {
+        user_first_name: 'required',
+        area_code: {
+          required: true,
+          minlength: 4,
+          maxlength: 6
+        },
+        tel_number: {
+          required: true,
+          minlength: 9,
+          maxlength: 11
+        }
+      }
+    });
+    if (!$('#download_result_modal_form').valid()) return;
+    $('#download_result_modal').modal('hide');
   });
 });
 /******/ })()

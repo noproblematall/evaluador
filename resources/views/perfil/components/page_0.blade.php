@@ -1,5 +1,5 @@
-<section id="page_0" class="page-content animate__animated animate__fadeIn ">
-<!-- <section id="page_0" class="page-content animate__animated animate__fadeIn d-none"> -->
+<!-- <section id="page_0" class="page-content animate__animated animate__fadeIn "> -->
+<section id="page_0" class="page-content animate__animated animate__fadeIn d-none">
     <div class='d-flex justify-content-between align-items-center mb-2'>
         <p class='prev_link mt-2 mb-1' id=''></p>
         <img src="https://movilidadz.s3.amazonaws.com/Zurich+Top+Logo+Cot.png" height="25" alt="logo">

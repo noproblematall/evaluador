@@ -44,9 +44,12 @@
             </div>
         </div>
         <div class='button-group my-4'>
-            <button class='continue_btn mx-auto my-2' id='to_download_result'>Descargar mis resultados</button>
-            <button class='continue_btn mx-auto my-2' id='to_whatsapp'>Recibir info por Whatsapp</button>
-            <button class='continue_btn mx-auto my-2' id='to_page_15'>Quiero información de planes para mi</button>
+            <button class='continue_btn mx-auto my-2' id='to_download_result'>Guardar mis resultados</button>
+            <button class='continue_btn mx-auto my-2 d-flex justify-content-center align-items-center' id='to_whatsapp'>
+                Quiero saber más &nbsp;
+                <img src="https://z-eval.s3.amazonaws.com/WA.png" alt="whatsapp" class="col-1" />
+            </button>
+            <button class='continue_btn mx-auto my-2' id='to_page_15'>Evaluar mis necesidades financieras</button>
         </div>
     </div>
 </section>

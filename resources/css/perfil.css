@@ -817,7 +817,8 @@ h6 {
     line-height: 1.5;
     margin-bottom: 4px;
 }
-#send_email_modal .large_title {
+#send_email_modal .large_title,
+#download_result_modal .large_title {
     font-family: ZurichSans-Regular,Arial,sans-serif;
     font-size: 14px;
 }
@@ -886,4 +887,7 @@ h6 {
     width : 100%;
     font-size : 16px;
     padding : 10px;
+}
+label.error {
+    color : red;
 }

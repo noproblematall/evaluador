@@ -884,4 +884,6 @@ h6 {
     font-size : 16px;
     padding : 10px;
 }
-
+label.error {
+    color : red;
+}
