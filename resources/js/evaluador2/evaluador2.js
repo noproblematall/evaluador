@@ -31,8 +31,8 @@ $(document).ready(function () {
         else if (character == 'mujer') selectedImage = character_image_group_0[1];
         else  selectedImage = character_image_group_0[2];
         
-        $('#download_result_modal input[name=user_first_name]').val(character);
-        $('#send_email_modal input[name=user_first_name]').val(character);
+        $('#download_result_modal input[name=user_first_name]').val(name);
+        $('#send_email_modal input[name=user_first_name]').val(name);
     } else {        
         $("#page_0").removeClass('d-none');
     }

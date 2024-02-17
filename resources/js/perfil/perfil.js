@@ -32,8 +32,8 @@ $(document).ready(function () {
         else  selectedImage = character_image_group_0[2];
         $('#page_7 .selected-image').attr('src', selectedImage);
 
-        $('#download_result_modal input[name=user_first_name]').val(character);
-        $('#send_email_modal input[name=user_first_name]').val(character);
+        $('#download_result_modal input[name=user_first_name]').val(name);
+        $('#send_email_modal input[name=user_first_name]').val(name);
     } else {        
         $("#page_0").removeClass('d-none');
     }
