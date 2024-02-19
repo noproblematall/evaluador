@@ -568,9 +568,9 @@ img.selected-image {
   opacity: 1;
   transform: rotateY(0deg);
   position : fixed;
-  width : calc(var(--screen-width) - 40px);
-  left : calc(50% - var(--screen-width)/2 + 20px);
-  top : 12vh;
+  width : calc(var(--screen-width) * 2 / 3);
+  left : calc(50% - var(--screen-width) / 3);
+  top : 20vh;
   height : unset;
   box-shadow: 0 0 60px rgba(0,0,0,0.65);
   border-radius : 20px;
@@ -814,7 +814,8 @@ h6 {
     line-height: 1.5;
     margin-bottom: 4px;
 }
-#send_email_modal .large_title {
+#send_email_modal .large_title,
+#download_result_modal .large_title {
     font-family: ZurichSans-Regular,Arial,sans-serif;
     font-size: 14px;
 }
