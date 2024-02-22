@@ -642,11 +642,12 @@ img.selected-image {
     transform : translateY(50%);
     animation : fade-in 2s linear 0s 1;
 }
-#page_13 .calculator-image {
+#page_13 .car-image {
     position : absolute;
-    width : 12%;
+    width : 30vw;
+    max-width : 130px;
     bottom : 0;
-    left : 20%;
+    left : -1rem;
     animation: fade-in 2s linear 0s 1; 
 }
 .page-title {

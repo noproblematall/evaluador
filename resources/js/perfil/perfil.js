@@ -388,19 +388,19 @@ $(document).ready(function () {
                 
         if (horizonte_temporal < 3) {
             $('#page_14 .horizonte .content').text("Corto Plazo");
-            $('#page_14 .horizonte img:first-child').attr('src', `https://z-eval.s3.amazonaws.com/inv/${gender}_conservador_on.png`);
-            $('#page_14 .horizonte img:nth-child(2)').attr('src', `https://z-eval.s3.amazonaws.com/inv/${gender}_moderado_off.png`);
-            $('#page_14 .horizonte img:nth-child(3)').attr('src', `https://z-eval.s3.amazonaws.com/inv/${gender}_arriesgado_off.png`);
+            $('#page_14 .horizonte img:first-child').attr('src', `https://z-eval.s3.amazonaws.com/inv/corto_plazo_on.png`);
+            $('#page_14 .horizonte img:nth-child(2)').attr('src', `https://z-eval.s3.amazonaws.com/inv/mediano_plazo_off.png`);
+            $('#page_14 .horizonte img:nth-child(3)').attr('src', `https://z-eval.s3.amazonaws.com/inv/largo_plazo_off.png`);
         } else if (horizonte_temporal >= 3 && horizonte_temporal <= 7) {
             $('#page_14 .horizonte .content').text("Mediano Plazo");
-            $('#page_14 .horizonte img:first-child').attr('src', `https://z-eval.s3.amazonaws.com/inv/${gender}_conservador_on.png`);
-            $('#page_14 .horizonte img:nth-child(2)').attr('src', `https://z-eval.s3.amazonaws.com/inv/${gender}_moderado_off.png`);
-            $('#page_14 .horizonte img:nth-child(3)').attr('src', `https://z-eval.s3.amazonaws.com/inv/${gender}_arriesgado_off.png`);
+            $('#page_14 .horizonte img:first-child').attr('src', `https://z-eval.s3.amazonaws.com/inv/corto_plazo_off.png`);
+            $('#page_14 .horizonte img:nth-child(2)').attr('src', `https://z-eval.s3.amazonaws.com/inv/mediano_plazo_on.png`);
+            $('#page_14 .horizonte img:nth-child(3)').attr('src', `https://z-eval.s3.amazonaws.com/inv/largo_plazo_off.png`);
         } else {
             $('#page_14 .horizonte .content').text("Largo Plazo");
-            $('#page_14 .horizonte img:first-child').attr('src', `https://z-eval.s3.amazonaws.com/inv/${gender}_conservador_on.png`);
-            $('#page_14 .horizonte img:nth-child(2)').attr('src', `https://z-eval.s3.amazonaws.com/inv/${gender}_moderado_off.png`);
-            $('#page_14 .horizonte img:nth-child(3)').attr('src', `https://z-eval.s3.amazonaws.com/inv/${gender}_arriesgado_off.png`);
+            $('#page_14 .horizonte img:first-child').attr('src', `https://z-eval.s3.amazonaws.com/inv/corto_plazo_off.png`);
+            $('#page_14 .horizonte img:nth-child(2)').attr('src', `https://z-eval.s3.amazonaws.com/inv/mediano_plazo_off.png`);
+            $('#page_14 .horizonte img:nth-child(3)').attr('src', `https://z-eval.s3.amazonaws.com/inv/largo_plazo_on.png`);
         }
 
         if (tolerancia_al_riesgo < 18) {
