@@ -49,7 +49,7 @@ $(document).ready(function () {
     }, 2000);
     setTimeout(() => {
         $('#to_page_1').removeClass('hide');
-    }, 1000);
+    }, 500);
     /*********   page 1  ************/
     $('#to_page_2').click(function () {
         let name1 = $('#name').val();
@@ -235,7 +235,7 @@ $(document).ready(function () {
             return $('#page_4 .error').text('Por favor, seleccioná una opción');
         }
         $('#page_4 input[type="checkbox"]:checked').each(function () {
-            todo.push($(this).val());
+            todo.push(parseInt($(this).val()));
         });
         console.log('todo', todo);
         let selectedImage1 = selectedImage;
@@ -316,7 +316,7 @@ $(document).ready(function () {
             return $('#page_5 .error').text('Por favor, seleccioná una opción');
         }
         $('#page_5 input[type="checkbox"]:checked').each(function () {
-            plan.push($(this).val());
+            plan.push(parseInt($(this).val()));
         });
         console.log('plan', plan);
         //select final-img        
@@ -332,6 +332,30 @@ $(document).ready(function () {
         $('#page_6 .final-img').attr('src', selectedImage1);
         $('#page_6 .subtitle:first-of-type').text(`¡Felicitaciones ${name}!`)
 
+        //change back image of card-3
+        if (todo.includes(0)) {
+            $temp_img = "https://z-eval.s3.amazonaws.com/cards/card_back_3_seg_vida_ah_auto.png";
+            if (todo.includes(1)) $temp_img = "https://z-eval.s3.amazonaws.com/cards/card_back_3_seg_vida_ah_casa_auto.png";
+            if (todo.includes(2)) $temp_img = "https://z-eval.s3.amazonaws.com/cards/card_back_3_seg_vida_ah_viaje_auto.png";
+            if (todo.includes(3)) $temp_img = "https://z-eval.s3.amazonaws.com/cards/card_back_3_seg_vida_ah_auto_proyecto.png";
+            if (todo.includes(4)) $temp_img = "https://z-eval.s3.amazonaws.com/cards/card_back_3_seg_vida_ah_auto.png";
+        } else if (todo.includes(1)) {
+            $temp_img = "https://z-eval.s3.amazonaws.com/cards/card_back_3_seg_vida_ah_casa.png";
+            if (todo.includes(2)) $temp_img = "https://z-eval.s3.amazonaws.com/cards/card_back_3_seg_vida_ah_casa_viaje.png";
+            if (todo.includes(3)) $temp_img = "https://z-eval.s3.amazonaws.com/cards/card_back_3_seg_vida_ah_casa_proyecto.png";
+            if (todo.includes(4)) $temp_img = "https://z-eval.s3.amazonaws.com/cards/card_back_3_seg_vida_ah_casa.png";
+        } else if (todo.includes(2)) {
+            $temp_img = "https://z-eval.s3.amazonaws.com/cards/card_back_3_seg_vida_ah_viaje.png";
+            if (todo.includes(3)) $temp_img = "https://z-eval.s3.amazonaws.com/cards/card_back_3_seg_vida_ah_viaje_emprender.png";
+            if (todo.includes(4)) $temp_img = "https://z-eval.s3.amazonaws.com/cards/card_back_3_seg_vida_ah_viaje.png";
+        } else if (todo.includes(3)) {
+            $temp_img = "https://z-eval.s3.amazonaws.com/cards/card_back_3_seg_vida_ah_proyecto.png";
+            if (todo.includes(4)) $temp_img = "https://z-eval.s3.amazonaws.com/cards/card_back_3_seg_vida_ah_proyecto.png";
+        } else if (todo.includes(4)) {
+            $temp_img = "https://z-eval.s3.amazonaws.com/cards/card_back_3_seg_vida_ah_rentable.png";
+        }
+        if (todo.includes(5) || todo.length > 2 ) $temp_img = "https://z-eval.s3.amazonaws.com/cards/card_back_3_seg_vida_ah_todos.png";
+        cardImgsArr[2][1] = $temp_img;
         //find card images
         let temp = [];
         let flag = false;
@@ -355,10 +379,6 @@ $(document).ready(function () {
         $('#page_6 .plan-esencial + .card_back').attr("src", selectedCardImgsArr[0][1]);
         $('#page_6 .plan-extendido.card_front').attr("src", selectedCardImgsArr[1][0]);
         $('#page_6 .plan-extendido + .card_back').attr("src", selectedCardImgsArr[1][1]);
-        $('#page_14 .plan-esencial.card_front').attr("src", selectedCardImgsArr[0][0]);
-        $('#page_14 .plan-esencial + .card_back').attr("src", selectedCardImgsArr[0][1]);
-        $('#page_14 .plan-extendido.card_front').attr("src", selectedCardImgsArr[1][0]);
-        $('#page_14 .plan-extendido + .card_back').attr("src", selectedCardImgsArr[1][1]);
         $('#page_5').addClass('d-none');
         setTimeout(() => {
             $('#page_6').removeClass('d-none');
