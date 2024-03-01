@@ -5,6 +5,27 @@ $(document).ready(function () {
     let age = '';
     var external_url = $('#external_url').val();
 
+    $.validator.setDefaults({
+        debug: true,
+        onsubmit: false,
+        onfocusout: false,
+        invalidHandler: function (form, validator) {
+            var errors = validator.numberOfInvalids();
+            if (errors) {
+                validator.errorList[0].element.focus();
+            }
+        },
+        errorPlacement: function (error, element) {
+            return true;
+        },
+        highlight: function (element, errorClass) {
+            $(element).parent('.textfield').addClass('has-error');
+        },
+        unhighlight: function (element) {
+            $(element).parent('.textfield').removeClass('has-error');
+        },
+    });
+    
     const url = new URL(window.location.href);
     // Get the 'GET' parameters
     const params = new URLSearchParams(url.search);    
@@ -437,6 +458,48 @@ $(document).ready(function () {
         window.open(`https://${external_url}?character=${character}&name=${name}&age=${age}`);
     });
     
+    $('.area_code').on('focusin', function () {
+        $(this).mask("0 0000");
+        if ($(this).val() == '') {
+            $(this).val(0);
+        }
+    })
+    $('.area_code').on('focusout', function () {
+        if ($(this).val() == 0) {
+            $(this).mask("", { placeholder: "Código de area" });
+        }
+    })
+    $('.area_code').on('input', function () {
+        phone_flag = false;
+        let val = $(this).val();
+        if (val.charAt(0) != '0') {
+            $(this).val('0' + val);
+        }
+    })
+    $('.tel_number').on('focusin', function () {
+        $(this).mask("00 00000000");
+        if ($(this).val() == '') {
+            $(this).val(15);
+        }
+    })
+    $('.tel_number').on('focusout', function () {
+        if ($(this).val() == 15) {
+            $(this).mask("", { placeholder: "Número" });
+        }
+    })
+    $('.tel_number').on('input', function () {
+        phone_flag = false;
+        let val = $(this).val();
+        if (val.length < 2) {
+            $(this).val(15);
+        } else {
+            if (val.substring(0, 2) != '15') {
+                $(this).val('15' + val);
+            }
+        }
+
+    })
+
     $('#send_email_modal_btn').on('click', function (e) {
         console.log('close btn')
         $('#send_email_modal_form').validate({

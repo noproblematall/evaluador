@@ -13,7 +13,8 @@
     </div>
     <div class='card mt-2 p-3'>
         <div class='position-relative d-flex justify-content-center align-items-center mt-4'>
-            <img src='https://z-eval.s3.amazonaws.com/pers/Nobi+a.png' alt='selected' class='selected-image' />
+            <!-- <img src='https://z-eval.s3.amazonaws.com/pers/Nobi+a.png' alt='selected' class='selected-image' /> -->
+            <img src='' alt='selected' class='selected-image' />
             <img src="https://z-eval.s3.amazonaws.com/misc/plant.gif" class="plant-image" alt="plant" />
         </div>
         <hr />

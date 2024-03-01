@@ -5,6 +5,27 @@ $(document).ready(function () {
     let age = '';
     var external_url = $('#external_url').val();
 
+    $.validator.setDefaults({
+        debug: true,
+        onsubmit: false,
+        onfocusout: false,
+        invalidHandler: function (form, validator) {
+            var errors = validator.numberOfInvalids();
+            if (errors) {
+                validator.errorList[0].element.focus();
+            }
+        },
+        errorPlacement: function (error, element) {
+            return true;
+        },
+        highlight: function (element, errorClass) {
+            $(element).parent('.textfield').addClass('has-error');
+        },
+        unhighlight: function (element) {
+            $(element).parent('.textfield').removeClass('has-error');
+        },
+    });
+    
     const url = new URL(window.location.href);
     // Get the 'GET' parameters
     const params = new URLSearchParams(url.search);    
@@ -336,25 +357,30 @@ $(document).ready(function () {
         if (todo.includes(0)) {
             $temp_img = "https://z-eval.s3.amazonaws.com/cards/card_back_3_seg_vida_ah_auto.png";
             if (todo.includes(1)) $temp_img = "https://z-eval.s3.amazonaws.com/cards/card_back_3_seg_vida_ah_casa_auto.png";
-            if (todo.includes(2)) $temp_img = "https://z-eval.s3.amazonaws.com/cards/card_back_3_seg_vida_ah_viaje_auto.png";
-            if (todo.includes(3)) $temp_img = "https://z-eval.s3.amazonaws.com/cards/card_back_3_seg_vida_ah_auto_proyecto.png";
-            if (todo.includes(4)) $temp_img = "https://z-eval.s3.amazonaws.com/cards/card_back_3_seg_vida_ah_auto.png";
+            else if (todo.includes(2)) $temp_img = "https://z-eval.s3.amazonaws.com/cards/card_back_3_seg_vida_ah_viaje_auto.png";
+            else if (todo.includes(3)) $temp_img = "https://z-eval.s3.amazonaws.com/cards/card_back_3_seg_vida_ah_auto_proyecto.png";
+            else if (todo.includes(4)) $temp_img = "https://z-eval.s3.amazonaws.com/cards/card_back_3_seg_vida_ah_auto.png";
         } else if (todo.includes(1)) {
             $temp_img = "https://z-eval.s3.amazonaws.com/cards/card_back_3_seg_vida_ah_casa.png";
             if (todo.includes(2)) $temp_img = "https://z-eval.s3.amazonaws.com/cards/card_back_3_seg_vida_ah_casa_viaje.png";
-            if (todo.includes(3)) $temp_img = "https://z-eval.s3.amazonaws.com/cards/card_back_3_seg_vida_ah_casa_proyecto.png";
-            if (todo.includes(4)) $temp_img = "https://z-eval.s3.amazonaws.com/cards/card_back_3_seg_vida_ah_casa.png";
+            else if (todo.includes(3)) $temp_img = "https://z-eval.s3.amazonaws.com/cards/card_back_3_seg_vida_ah_casa_proyecto.png";
+            else if (todo.includes(4)) $temp_img = "https://z-eval.s3.amazonaws.com/cards/card_back_3_seg_vida_ah_casa.png";
         } else if (todo.includes(2)) {
             $temp_img = "https://z-eval.s3.amazonaws.com/cards/card_back_3_seg_vida_ah_viaje.png";
             if (todo.includes(3)) $temp_img = "https://z-eval.s3.amazonaws.com/cards/card_back_3_seg_vida_ah_viaje_emprender.png";
-            if (todo.includes(4)) $temp_img = "https://z-eval.s3.amazonaws.com/cards/card_back_3_seg_vida_ah_viaje.png";
+            else if (todo.includes(4)) $temp_img = "https://z-eval.s3.amazonaws.com/cards/card_back_3_seg_vida_ah_viaje.png";
         } else if (todo.includes(3)) {
             $temp_img = "https://z-eval.s3.amazonaws.com/cards/card_back_3_seg_vida_ah_proyecto.png";
             if (todo.includes(4)) $temp_img = "https://z-eval.s3.amazonaws.com/cards/card_back_3_seg_vida_ah_proyecto.png";
         } else if (todo.includes(4)) {
             $temp_img = "https://z-eval.s3.amazonaws.com/cards/card_back_3_seg_vida_ah_rentable.png";
         }
-        if (todo.includes(5) || todo.length > 2 ) $temp_img = "https://z-eval.s3.amazonaws.com/cards/card_back_3_seg_vida_ah_todos.png";
+        if (todo.includes(5)) $temp_img = "https://z-eval.s3.amazonaws.com/cards/card_back_3_seg_vida_ah_todos.png";
+        else if (todo.length > 2) {
+            if (todo.includes(0) && todo.includes(1) && !todo.includes(4)) $temp_img = "https://z-eval.s3.amazonaws.com/cards/card_back_3_seg_vida_ah_casa_auto_otros.png";
+            if (todo.includes(0) && todo.includes(2) && todo.includes(3)) $temp_img = "https://z-eval.s3.amazonaws.com/cards/card_back_3_seg_vida_ah_auto_viajes_otros.png";
+            if (todo.includes(1) && todo.includes(2) && todo.includes(3)) $temp_img = "https://z-eval.s3.amazonaws.com/cards/card_back_3_seg_vida_ah_casa_viajes_otros.png";
+        }
         cardImgsArr[2][1] = $temp_img;
         //find card images
         let temp = [];
@@ -452,6 +478,48 @@ $(document).ready(function () {
         window.open(`https://${external_url}?character=${character}&name=${name}&age=${age}`);
     });
     
+    $('.area_code').on('focusin', function () {
+        $(this).mask("0 0000");
+        if ($(this).val() == '') {
+            $(this).val(0);
+        }
+    })
+    $('.area_code').on('focusout', function () {
+        if ($(this).val() == 0) {
+            $(this).mask("", { placeholder: "Código de area" });
+        }
+    })
+    $('.area_code').on('input', function () {
+        phone_flag = false;
+        let val = $(this).val();
+        if (val.charAt(0) != '0') {
+            $(this).val('0' + val);
+        }
+    })
+    $('.tel_number').on('focusin', function () {
+        $(this).mask("00 00000000");
+        if ($(this).val() == '') {
+            $(this).val(15);
+        }
+    })
+    $('.tel_number').on('focusout', function () {
+        if ($(this).val() == 15) {
+            $(this).mask("", { placeholder: "Número" });
+        }
+    })
+    $('.tel_number').on('input', function () {
+        phone_flag = false;
+        let val = $(this).val();
+        if (val.length < 2) {
+            $(this).val(15);
+        } else {
+            if (val.substring(0, 2) != '15') {
+                $(this).val('15' + val);
+            }
+        }
+
+    })
+
     $('#send_email_modal, #download_result_modal').validate({
         rules: {
             user_first_name: 'required',
