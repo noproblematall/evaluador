@@ -18,26 +18,26 @@
         </div>
         <hr />
         <p class='text-center mt-3 mb-2 subtitle mx-3'>¿Qué inversiones hiciste últimamente?</p>
-        <div class='items-container mt-2 row'>
-            <div class='col-6 item-btn mt-2 mb-1 px-2'>
+        <div class='items-container mt-2 row mx-0'>
+            <div class='col-6 item-btn mt-2 mb-2 px-2 ps-0'>
                 <input type='radio' name='tolerancia_al_riesgo_2' id='tolerancia_al_riesgo_2-0' value='0'>
                 <label for='tolerancia_al_riesgo_2-0' class='item-label d-flex justify-content-center align-items-center px-1'>
                     <p class='text-center'>Ninguna o solo plazo fijo</p>
                 </label>
             </div>
-            <div class='col-6 item-btn mt-2 mb-1 px-2'>
+            <div class='col-6 item-btn mt-2 mb-2 px-2 pe-0'>
                 <input type='radio' name='tolerancia_al_riesgo_2' id='tolerancia_al_riesgo_2-1' value='3'>
                 <label for='tolerancia_al_riesgo_2-1' class='item-label d-flex justify-content-center align-items-center px-1'>
                     <p class='text-center'>Renta fija (bonos y fondos de bonos)</p>
                 </label>
             </div>
-            <div class='col-6 item-btn mt-2 mb-1 px-2'>
+            <div class='col-6 item-btn mt-2 mb-2 px-2 ps-0'>
                 <input type='radio' name='tolerancia_al_riesgo_2' id='tolerancia_al_riesgo_2-2' value='6'>
                 <label for='tolerancia_al_riesgo_2-2' class='item-label d-flex justify-content-center align-items-center px-1'>
                     <p class='text-center'>Renta variable (acciones y fondos de acciones)</p>
                 </label>
             </div>
-            <div class='col-6 item-btn mt-2 mb-1 px-2'>
+            <div class='col-6 item-btn mt-2 mb-2 px-2 pe-0'>
                 <input type='radio' name='tolerancia_al_riesgo_2' id='tolerancia_al_riesgo_2-3' value='8'>
                 <label for='tolerancia_al_riesgo_2-3' class='item-label d-flex justify-content-center align-items-center px-1'>
                     <p class='text-center'>Ambas</p>

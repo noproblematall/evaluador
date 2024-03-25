@@ -6,7 +6,7 @@
         <div class='inner'>
             <div class='console-small-container'>
                 <div class='title-container'>
-                    <p class='title'>Elegí tu personaje</p>
+                    <p class='title'>Elegí un personaje</p>
                 </div>
                 <div class='character-selector-box'>
                     <div class='character-selector'>

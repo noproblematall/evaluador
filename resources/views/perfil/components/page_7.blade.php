@@ -19,26 +19,26 @@
         </div>
         <hr />
         <p class='text-center mt-3 mb-2 subtitle'>Quiero invertir por un plazo de</p>
-        <div class='items-container mt-2 row'>
-            <div class='col-6 item-btn mt-2 mb-1 px-2'>
+        <div class='items-container mt-2 row mx-0'>
+            <div class='col-6 item-btn mt-2 mb-2 px-2 ps-0'>
                 <input type='radio' name='horizonte_temporal_0' id='horizonte_temporal_0-0' value='1'>
                 <label for='horizonte_temporal_0-0' class='item-label d-flex justify-content-center align-items-center px-1'>
                     <p class='text-center'>Menos de 2 años</p>
                 </label>
             </div>
-            <div class='col-6 item-btn mt-2 mb-1 px-2'>
+            <div class='col-6 item-btn mt-2 mb-2 px-2 pe-0'>
                 <input type='radio' name='horizonte_temporal_0' id='horizonte_temporal_0-1' value='3'>
                 <label for='horizonte_temporal_0-1' class='item-label d-flex justify-content-center  align-items-center px-1'>
                     <p class='text-center'>Entre 2 y 5 años</p>
                 </label>
             </div>
-            <div class='col-6 item-btn mt-2 mb-1 px-2'>
+            <div class='col-6 item-btn mt-2 mb-2 px-2 ps-0'>
                 <input type='radio' name='horizonte_temporal_0' id='horizonte_temporal_0-2' value='7'>
                 <label for='horizonte_temporal_0-2' class='item-label d-flex justify-content-center  align-items-center px-1'>
                     <p class='text-center'>Entre 5 y 10 años</p>
                 </label>
             </div>
-            <div class='col-6 item-btn mt-2 mb-1 px-2'>
+            <div class='col-6 item-btn mt-2 mb-2 px-2 pe-0'>
                 <input type='radio' name='horizonte_temporal_0' id='horizonte_temporal_0-3' value='10'>
                 <label for='horizonte_temporal_0-3' class='item-label d-flex justify-content-center  align-items-center px-1'>
                     <p class='text-center'>Más de 10 años</p>

@@ -4,11 +4,14 @@ var __webpack_exports__ = {};
   !*** ./resources/js/evaluador2/evaluador2.js ***!
   \***********************************************/
 $(document).ready(function () {
-  var character = '';
+  var _$$val, _$$val2, _$$val3, _$$val4;
   var selectedImage = '';
-  var name = '';
-  var age = '';
   var external_url = $('#external_url').val();
+  var ref = (_$$val = $('#ref').val()) !== null && _$$val !== void 0 ? _$$val : "";
+  var character = (_$$val2 = $('#cus_character').val()) !== null && _$$val2 !== void 0 ? _$$val2 : "";
+  var name = (_$$val3 = $('#cus_name').val()) !== null && _$$val3 !== void 0 ? _$$val3 : "";
+  var age = (_$$val4 = $('#cus_age').val()) !== null && _$$val4 !== void 0 ? _$$val4 : "";
+  console.log('character,name,age', character, name, age);
   $.validator.setDefaults({
     debug: true,
     onsubmit: false,
@@ -29,14 +32,6 @@ $(document).ready(function () {
       $(element).parent('.textfield').removeClass('has-error');
     }
   });
-  var url = new URL(window.location.href);
-  // Get the 'GET' parameters
-  var params = new URLSearchParams(url.search);
-  // Retrieve specific parameter values
-  character = params.get('character');
-  name = params.get('name');
-  age = params.get('age');
-  console.log('character,name,age', character, name, age);
   var character_image_group_0 = ["https://z-eval.s3.amazonaws.com/pers/hombre+a.png", "https://z-eval.s3.amazonaws.com/pers/Mujer+a.png", "https://z-eval.s3.amazonaws.com/pers/Mujer+a.png"];
   if (!!character && !!name && !!age) {
     $('#page_2').removeClass('d-none');
@@ -47,6 +42,7 @@ $(document).ready(function () {
     if (character == 'hombre') selectedImage = character_image_group_0[0];else if (character == 'mujer') selectedImage = character_image_group_0[1];else selectedImage = character_image_group_0[2];
     $('#download_result_modal input[name=user_first_name]').val(name);
     $('#send_email_modal input[name=user_first_name]').val(name);
+    $('#to_page_7').addClass('d-none');
   } else {
     $("#page_0").removeClass('d-none');
   }
@@ -77,6 +73,9 @@ $(document).ready(function () {
       $('#name').parent().addClass('has-error');
       return $('#page_1 .error').text('Por favor completá tus datos');
     }
+    if (name1.length > 35) {
+      return $('#page_1 .error').text('introduzca menos de 35 caracteres');
+    }
     $('#name').parent().removeClass('has-error');
     if (!age1) {
       $('#age').parent().addClass('has-error');
@@ -94,6 +93,8 @@ $(document).ready(function () {
     selectedImage = $('#page_1 input[type="radio"]:checked').parent().siblings().filter('label').find('img.activated').attr('src');
     $('#page_1').addClass('d-none');
     $('#page_2').removeClass('d-none');
+    //add four dots step.
+    $('.four-dots').removeClass('d-none');
     console.log('selected Image', selectedImage);
     window.scrollTo({
       top: 0,
@@ -160,6 +161,8 @@ $(document).ready(function () {
   $('#prev_page_1').click(function () {
     $('#page_1').removeClass('d-none');
     $('#page_2').addClass('d-none');
+    //hide four dots step
+    $('.four-dots').addClass('d-none');
   });
   $('#to_page_3').click(function () {
     $('#page_2').addClass('d-none');
@@ -169,12 +172,20 @@ $(document).ready(function () {
     var selectedImage1 = selectedImage;
     if (character == 'hombre') selectedImage1 = character_image_group_1[0];else if (character == 'mujer') selectedImage1 = character_image_group_1[1];else selectedImage1 = character_image_group_1[2];
     $('#page_3 .selected-image').attr('src', selectedImage1);
+    //add step 2
+    $('.dot-page-3').addClass('checked');
     console.log('member', member, selectedImage);
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   });
   /******** page 3  */
   $('#prev_page_2').click(function () {
     $('#page_2').removeClass('d-none');
     $('#page_3').addClass('d-none');
+    //remove step 3
+    $('.dot-page-3').removeClass('checked');
   });
   var job = '';
   $('#to_page_4').click(function () {
@@ -190,12 +201,20 @@ $(document).ready(function () {
     $('#page_4 .selected-image').attr('src', selectedImage1);
     $('#page_4').removeClass('d-none');
     $('#page_3').addClass('d-none');
+    //add step 4
+    $('.dot-page-4').addClass('checked');
     console.log('job', job);
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   });
   /******** page 4  */
   $('#prev_page_3').click(function () {
     $('#page_3').removeClass('d-none');
     $('#page_4').addClass('d-none');
+    //add step 4
+    $('.dot-page-4').removeClass('checked');
   });
   $('#page_4 input[type="checkbox"]').change(function () {
     var id = $(this).attr('id');
@@ -237,11 +256,19 @@ $(document).ready(function () {
     $('#page_5 .selected-image').attr('src', selectedImage1);
     $('#page_5').removeClass('d-none');
     $('#page_4').addClass('d-none');
+    //add step 5
+    $('.dot-page-5').addClass('checked');
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   });
   /******** page 5  */
   $('#prev_page_4').click(function () {
     $('#page_4').removeClass('d-none');
     $('#page_5').addClass('d-none');
+    //remove step 5
+    $('.dot-page-5').removeClass('checked');
   });
   $('#page_5 input[type="checkbox"]').change(function () {
     var id = $(this).attr('id');
@@ -338,6 +365,8 @@ $(document).ready(function () {
     setTimeout(function () {
       $('#page_6').removeClass('d-none');
     }, 100);
+    //remove four dots step
+    $('.four-dots').addClass('d-none');
   });
   $('#page_6 #to_whatsapp').click(function () {
     $('#send_email_modal').modal({
@@ -392,11 +421,20 @@ $(document).ready(function () {
   $('#prev_page_5').click(function () {
     $('#page_5').removeClass('d-none');
     $('#page_6').addClass('d-none');
+    //add four dots step
+    $('.four-dots').removeClass('d-none');
   });
   $('#page_6 .flip_card').click(function () {
     $(this).toggleClass('flipped');
     $('#page_6 .selected-image ').toggleClass('opacity-0');
     $('#page_6 .flip_card img:first-child').toggleClass('opacity-0');
+    $('#page_6 .card-backdrop').toggleClass('w-100 h-100');
+  });
+  $('#page_6 .card-backdrop').click(function () {
+    $('#page_6 .flip_card').removeClass('flipped');
+    $('#page_6 .selected-image ').removeClass('opacity-0');
+    $('#page_6 .flip_card img:first-child').removeClass('opacity-0');
+    $('#page_6 .card-backdrop').removeClass('w-100 h-100');
   });
   // $('#page_6 .flip_card').click(function() {
   //     $('#plan_card_modal').modal({ backdrop: 'static' });
@@ -405,7 +443,7 @@ $(document).ready(function () {
   //     $('#plan_card_modal').modal('hide');
   // });
   $('#to_page_7').click(function () {
-    window.open("https://".concat(external_url, "?character=").concat(character, "&name=").concat(name, "&age=").concat(age));
+    window.open("https://".concat(external_url, "?character=").concat(character, "&name=").concat(name, "&age=").concat(age, "&ref=").concat(ref));
   });
   $('.area_code').on('focusin', function () {
     $(this).mask("0 0000");

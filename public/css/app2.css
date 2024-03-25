@@ -218,18 +218,19 @@ body .card {
     font-family: 'ZurichSans-Medium', Arial, sans-serif;
 }
 
-#page_2 .minus-btn,
-#page_2 .plus-btn {
-    padding: 4px 6px;
-    border: 1px solid #1fb1e6;
-    border-radius: 50px;
+#page_2 .plus-btn {    
+    width: 36px;
+    height: 36px;
+    background-image: url(https://z-eval.s3.amazonaws.com/misc/Plus+circle.png);
+    background-size: cover;
     cursor: pointer;
 }
-
-#page_2 .minus-btn .icon,
-#page_2 .plus-btn .icon {
-    color: #2159ae;
-    font-size: 16px;
+#page_2 .minus-btn {   
+    width: 36px;
+    height: 36px;
+    background-image: url(https://z-eval.s3.amazonaws.com/misc/Minus+circle.png);
+    background-size: cover;
+    cursor: pointer;
 }
 
 #page_2 .item-value {
@@ -682,19 +683,6 @@ img.selected-image {
     font-size : 14px;
     color : #1FB1E6;
 }
-@media screen and (max-width : 400px) {
-    .page-container {
-        width : 100vw;
-    }
-    #page_6 .continue_btn, #page_14 .continue_btn {
-        font-size : 14px;
-    }
-    .page-title {
-        font-size: 13.5px;
-    }
-    #page_13 .item-btn * {font-size : 13px; }
-}
-
 #to_download_result {
     background-color : transparent;
     border : 2px solid  #19BAB6;
@@ -823,11 +811,11 @@ h6 {
 .modal .large_title {
     font-family: ZurichSans-Bold,Arial,sans-serif;
     font-size: 16px;
-    color: #23366F;
+    color: #2167AE;
     margin-bottom: 10px;
 }
 #send_email_modal .large_title .datos_first {
-    color: #23366F;
+    color: #2167AE;
     font-size: 12px !important;
 }
 #send_email_modal .large_title .datos_second {
@@ -889,3 +877,88 @@ h6 {
 label.error {
     color : red;
 }
+.wizard > .steps ul {
+    display: flex;
+    justify-content: center;
+}
+.wizard ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.wizard ul li {
+    margin: 0;
+    font-size: 1rem;
+}
+.wizard > .steps li:last-child a {
+    margin-right: 0;
+}
+.wizard > .steps li.checked a {
+    background: #63bdff;
+}
+.wizard > .steps li a {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #d9d9d9;
+    margin-right: 30px;
+    position: relative;
+    text-decoration: none;
+}
+.wizard > .steps li.real a:before {
+    content: "";
+    width: 30px;
+    height: 2px;
+    background: #d9d9d9;
+    position: absolute;
+    right: 8px;
+    top: 3px;
+}
+.wizard > .steps li.real a:after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background: #63bdff;
+    position: absolute;
+    left: -30px;
+    top: 3px;
+    transition: all 0.6s ease;
+}
+.wizard > .steps li.real.checked a:after {
+    width: 30px;
+}
+.footer-legend, .footer-legend a {
+    font-family: 'ZurichSans-Regular', Arial, sans-serif;
+    color: #2167AE;
+    font-size: 13px;
+}
+.broker-info-section {
+    background-color: #5495CF;
+}
+.broker-info-section * {
+    font-family: 'ZurichSans-Regular', Arial, sans-serif;
+    color: white;
+}
+.agency-name { 
+    font-size: 14px;
+}
+.broker-legend {
+    font-size: 12px;
+}
+@media screen and (max-width : 400px) {
+    .page-container {
+        width : 100vw;
+    }
+    #page_6 .continue_btn, #page_14 .continue_btn {
+        font-size : 14px;
+    }
+    .page-title {
+        font-size: 13.5px;
+    }
+    #page_13 .item-btn * {font-size : 13px; }
+    .footer-legend, .footer-legend a {
+        font-size: 11px;
+    }
+}
+

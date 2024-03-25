@@ -1,9 +1,11 @@
 $(document).ready(function () {
-    let character = '';
     let selectedImage = '';
-    let name = '';
-    let age = '';
     var external_url = $('#external_url').val();
+    var ref = $('#ref').val() ?? "";
+    var character = $('#cus_character').val() ?? "";
+    var name = $('#cus_name').val() ?? "";
+    var age = $('#cus_age').val() ?? "";
+    console.log('character,name,age', character, name, age);
 
     $.validator.setDefaults({
         debug: true,
@@ -25,17 +27,7 @@ $(document).ready(function () {
             $(element).parent('.textfield').removeClass('has-error');
         },
     });
-    
-    const url = new URL(window.location.href);
-    // Get the 'GET' parameters
-    const params = new URLSearchParams(url.search);    
-    // Retrieve specific parameter values
-    character = params.get('character');
-    name = params.get('name');
-    age = params.get('age');
-
-    console.log('character,name,age', character, name, age);
-    
+        
     var character_image_group_0 = [
         "https://z-eval.s3.amazonaws.com/pers/hombre+a.png",
         "https://z-eval.s3.amazonaws.com/pers/Mujer+a.png",
@@ -55,6 +47,7 @@ $(document).ready(function () {
 
         $('#download_result_modal input[name=user_first_name]').val(name);
         $('#send_email_modal input[name=user_first_name]').val(name);
+        $('#to_page_15').addClass('d-none');
     } else {        
         $("#page_0").removeClass('d-none');
     }
@@ -102,6 +95,9 @@ $(document).ready(function () {
         if (!name1) {
             $('#name').parent().addClass('has-error');
             return $('#page_1 .error').text('Por favor completá tus datos')
+        }
+        if (name1.length > 35) {
+            return $('#page_1 .error').text('introduzca menos de 35 caracteres')
         }
         $('#name').parent().removeClass('has-error');
         if (!age1) {
@@ -455,7 +451,7 @@ $(document).ready(function () {
         $('#download_result_modal').modal({ backdrop: 'static' });
     })
     $('#to_page_15').click(function () {
-        window.open(`https://${external_url}?character=${character}&name=${name}&age=${age}`);
+        window.open(`https://${external_url}?character=${character}&name=${name}&age=${age}&ref=${ref}`);
     });
     
     $('.area_code').on('focusin', function () {

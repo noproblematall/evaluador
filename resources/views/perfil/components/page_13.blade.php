@@ -19,26 +19,26 @@
         <hr />
         <p class='text-center mt-3 mb-0 subtitle mx-3'>¿Si tuvieras que contratar un seguro para tu auto, qué cobertura elegirías?</p>
         <p class='text-center mb-2 subtitle-1 mt-0'>(cada uno de ellos tiene oportunidades y riesgos)</p>
-        <div class='items-container mt-2 row'>
-            <div class='col-6 item-btn mt-2 mb-1 px-2'>
+        <div class='items-container mt-2 row mx-0'>
+            <div class='col-6 item-btn mt-2 mb-2 px-2 ps-0'>
                 <input type='radio' name='tolerancia_al_riesgo_4' id='tolerancia_al_riesgo_4-0' value='0'>
                 <label for='tolerancia_al_riesgo_4-0' class='item-label d-flex justify-content-center align-items-center px-1'>
                     <p class='text-center px-2'>Todo riesgo ($$$)</p>
                 </label>
             </div>
-            <div class='col-6 item-btn mt-2 mb-1 px-2'>
+            <div class='col-6 item-btn mt-2 mb-2 px-2 pe-0'>
                 <input type='radio' name='tolerancia_al_riesgo_4' id='tolerancia_al_riesgo_4-1' value='2'>
                 <label for='tolerancia_al_riesgo_4-1' class='item-label d-flex justify-content-center  align-items-center px-1'>
                     <p class='text-center px-2'>Terceros ($$)</p>
                 </label>
             </div>
-            <div class='col-6 item-btn mt-2 mb-1 px-2'>
+            <div class='col-6 item-btn mt-2 mb-2 px-2 ps-0'>
                 <input type='radio' name='tolerancia_al_riesgo_4' id='tolerancia_al_riesgo_4-2' value='5'>
                 <label for='tolerancia_al_riesgo_4-2' class='item-label d-flex justify-content-center  align-items-center px-1'>
                     <p class='text-center px-2'>La más barata ($)</p>
                 </label>
             </div>
-            <div class='col-6 item-btn mt-2 mb-1 px-2'>
+            <div class='col-6 item-btn mt-2 mb-2 px-2 pe-0'>
                 <input type='radio' name='tolerancia_al_riesgo_4' id='tolerancia_al_riesgo_4-3' value='8'>
                 <label for='tolerancia_al_riesgo_4-3' class='item-label d-flex justify-content-center  align-items-center px-1'>
                     <p class='text-center px-2'>Si pudiese, no tendria seguro</p>

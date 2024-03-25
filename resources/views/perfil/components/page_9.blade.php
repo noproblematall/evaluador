@@ -21,26 +21,26 @@
         </div>
         <hr />
         <p class='text-center mt-3 mb-2 subtitle mx-3'>Mi conocimiento sobre inversiones es:</p>
-        <div class='items-container mt-2 row'>
-            <div class='col-6 item-btn mt-2 mb-1 px-2'>
+        <div class='items-container mt-2 row mx-0'>
+            <div class='col-6 item-btn mt-2 mb-2 px-2 ps-0'>
                 <input type='radio' name='tolerancia_al_riesgo_0' id='tolerancia_al_riesgo_0-0' value='0'>
                 <label for='tolerancia_al_riesgo_0-0' class='item-label d-flex justify-content-center align-items-center px-1'>
                     <p class='text-center'>Principiante</p>
                 </label>
             </div>
-            <div class='col-6 item-btn mt-2 mb-1 px-2'>
+            <div class='col-6 item-btn mt-2 mb-2 px-2 pe-0'>
                 <input type='radio' name='tolerancia_al_riesgo_0' id='tolerancia_al_riesgo_0-1' value='2'>
                 <label for='tolerancia_al_riesgo_0-1' class='item-label d-flex justify-content-center  align-items-center px-1'>
                     <p class='text-center'>Básico</p>
                 </label>
             </div>
-            <div class='col-6 item-btn mt-2 mb-1 px-2'>
+            <div class='col-6 item-btn mt-2 mb-2 px-2 ps-0'>
                 <input type='radio' name='tolerancia_al_riesgo_0' id='tolerancia_al_riesgo_0-2' value='4'>
                 <label for='tolerancia_al_riesgo_0-2' class='item-label d-flex justify-content-center  align-items-center px-1'>
                     <p class='text-center'>Intermedio</p>
                 </label>
             </div>
-            <div class='col-6 item-btn mt-2 mb-1 px-2'>
+            <div class='col-6 item-btn mt-2 mb-2 px-2 pe-0'>
                 <input type='radio' name='tolerancia_al_riesgo_0' id='tolerancia_al_riesgo_0-3' value='6'>
                 <label for='tolerancia_al_riesgo_0-3' class='item-label d-flex justify-content-center  align-items-center px-1'>
                     <p class='text-center'>Avanzado</p>

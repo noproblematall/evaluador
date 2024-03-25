@@ -20,20 +20,20 @@
         </div>
         <hr />
         <p class='text-center mt-3 mb-2 subtitle mx-3'>Cuando decido invertir:</p>
-        <div class='items-container mt-2 row'>
-            <div class='col-6 item-btn mt-2 mb-1 px-2'>
+        <div class='items-container mt-2 row mx-0'>
+            <div class='col-6 item-btn mt-2 mb-2 px-2 ps-0'>
                 <input type='radio' name='tolerancia_al_riesgo_1' id='tolerancia_al_riesgo_1-0' value='0'>
                 <label for='tolerancia_al_riesgo_1-0' class='item-label d-flex justify-content-center align-items-center px-1'>
                     <p class='text-center px-2'>Me preocupan más las pérdidas</p>
                 </label>
             </div>
-            <div class='col-6 item-btn mt-2 mb-1 px-2'>
+            <div class='col-6 item-btn mt-2 mb-2 px-2 pe-0'>
                 <input type='radio' name='tolerancia_al_riesgo_1' id='tolerancia_al_riesgo_1-1' value='4'>
                 <label for='tolerancia_al_riesgo_1-1' class='item-label d-flex justify-content-center  align-items-center px-1'>
                     <p class='text-center px-2'>Me motivan más las ganancias</p>
                 </label>
             </div>
-            <div class='col-6 item-btn mt-2 mb-1 px-2'>
+            <div class='col-6 item-btn mt-2 mb-2 px-2 ps-0'>
                 <input type='radio' name='tolerancia_al_riesgo_1' id='tolerancia_al_riesgo_1-2' value='8'>
                 <label for='tolerancia_al_riesgo_1-2' class='item-label d-flex justify-content-center  align-items-center px-1'>
                     <p class='text-center px-2'>Considero ambas por igual</p>

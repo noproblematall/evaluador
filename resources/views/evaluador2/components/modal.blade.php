@@ -4,7 +4,7 @@
 
             <!-- Modal Header -->
             <div class="modal-header">
-                <h5 class="modal-title"><button type="button" class="" data-dismiss="modal">Cerrar</button></h5>
+                <h5 class="modal-title"><button type="button" class="" data-dismiss="modal"></button></h5>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
 
@@ -47,10 +47,10 @@
                             <p class="phone_error color_red font_small d-none">El código de área y/o el teléfono ingresado es inválido</p>
                         </div>
                     </div>
-                    <!-- <p class="large_title">
+                    <p class="large_title">
                         <span class="datos_first">Al ingresar tus datos personales a través de este sitio y presionar el botón “Continuar” estarás de acuerdo con </span>
-                        <a class="datos_second" target="_blank" href="/datos-personales"> el aviso de protección de datos personales</a>
-                    </p> -->
+                        <a class="datos_second" target="_blank" href="https://hogar.zurich.ar.onmtc.com/datos-personales"> el aviso de protección de datos personales</a>
+                    </p>
                     <div class="text-center mt-3">
                         <button type="button" class="btn 
                                 btn--primary-custom
@@ -72,13 +72,13 @@
 
             <!-- Modal Header -->
             <div class="modal-header">
-                <h5 class="modal-title"><button type="button" class="" data-dismiss="modal">Cerrar</button></h5>
+                <h5 class="modal-title"><button type="button" class="" data-dismiss="modal"></button></h5>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
 
             <!-- Modal body -->
             <div class="modal-body">
-                <p class="large_title mt-4">Completá tu número de celular y te enviaremos esta información a tu WhatsaApp.</p>
+                <p class="large_title mt-4">Completá tu número de celular y te enviaremos esta información a tu WhatsApp.</p>
                 <form action="#" id="download_result_modal_form">
                     <div class="textfield  ">
                         <span class="icon icon--pencil_24_outline"></span>
@@ -104,6 +104,10 @@
                             <p class="phone_error color_red font_small d-none">El código de área y/o el teléfono ingresado es inválido</p>
                         </div>
                     </div>
+                    <p class="large_title">
+                        <span class="datos_first">Al ingresar tus datos personales a través de este sitio y presionar el botón “Continuar” estarás de acuerdo con </span>
+                        <a class="datos_second" target="_blank" href="https://hogar.zurich.ar.onmtc.com/datos-personales"> el aviso de protección de datos personales</a>
+                    </p>
                     <div class="text-center mt-3">
                         <button type="button" class="btn 
                                 btn--primary-custom
@@ -125,7 +129,7 @@
 
             <!-- Modal Header -->
             <div class="modal-header">
-                <h5 class="modal-title"><button type="button" class="" data-dismiss="modal">Cerrar</button></h5>
+                <h5 class="modal-title"><button type="button" class="" data-dismiss="modal"></button></h5>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
 

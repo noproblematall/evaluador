@@ -26,37 +26,37 @@
         </div>
         <div class='items-container mt-2 row'>
             <p class='plan-description text-center my-1'>Podés elegir varias opciones</p>
-            <div class='col-6 item-btn mt-2 mb-1 px-2'>
+            <div class='col-6 item-btn mt-2 mb-2 px-2'>
                 <input type='checkbox' name='plan' id='plan-0' value='0' >
                 <label for='plan-0' class='item-label d-flex justify-content-center align-items-center px-1'>
                     <p class='text-center'>Rentabilizar mis ahorros</p>
                 </label>
             </div>
-            <div class='col-6 item-btn mt-2 mb-1 px-2'>
+            <div class='col-6 item-btn mt-2 mb-2 px-2'>
                 <input type='checkbox' name='plan' id='plan-1' value='1' >
                 <label for='plan-1' class='item-label d-flex justify-content-center align-items-center px-1'>
                     <p class='text-center'>Educación de alto nivel para mis hijos</p>
                 </label>
             </div>
-            <div class='col-6 item-btn mt-2 mb-1 px-2'>
+            <div class='col-6 item-btn mt-2 mb-2 px-2'>
                 <input type='checkbox' name='plan' id='plan-2' value='2' >
                 <label for='plan-2' class='item-label d-flex justify-content-center align-items-center px-1'>
                     <p class='text-center'>Conservar mi nivel de vida en el retiro</p>
                 </label>
             </div>
-            <div class='col-6 item-btn mt-2 mb-1 px-2'>
+            <div class='col-6 item-btn mt-2 mb-2 px-2'>
                 <input type='checkbox' name='plan' id='plan-3' value='3' >
                 <label for='plan-3' class='item-label d-flex justify-content-center align-items-center px-1'>
                     <p class='text-center'>La continuidad de mi empresa o proyecto</p>
                 </label>
             </div>
-            <div class='col-6 item-btn mt-2 mb-1 px-2'>
+            <div class='col-6 item-btn mt-2 mb-2 px-2'>
                 <input type='checkbox' name='plan' id='plan-4' value='4' >
                 <label for='plan-4' class='item-label d-flex justify-content-center align-items-center px-1'>
                     <p class='text-center'>Tener un fondo para emergencias</p>
                 </label>
             </div>
-            <div class='col-6 item-btn mt-2 mb-1 px-2'>
+            <div class='col-6 item-btn mt-2 mb-2 px-2'>
                 <input type='checkbox' name='plan' id='plan-5' value='5' >
                 <label for='plan-5' class='item-label d-flex justify-content-center align-items-center px-1'>
                     <p class='text-center'>No tengo planes</p>

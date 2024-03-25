@@ -25,7 +25,7 @@
 <body class="">
     <div class='page-container'>
         @include('perfil.components.page_0')
-        @include('perfil.components.page_1')
+        @include('perfil.components.page_1', compact('broker_detail'))
         @include('perfil.components.page_7')
         @include('perfil.components.page_8')
         @include('perfil.components.page_9')
@@ -33,12 +33,19 @@
         @include('perfil.components.page_11')
         @include('perfil.components.page_12')
         @include('perfil.components.page_13')
-        @include('perfil.components.page_14')
+        @include('perfil.components.page_14', compact('broker_detail'))
 
         @include('perfil.components.modal')
     </div>
     <input type="hidden" name="external_url" id="external_url" value="{{ $external_url }}" />
-
+    @if (!empty($broker_detail))            
+        <input type="hidden" name="ref" id="ref" value="{{ $broker_detail['ref'] }}" />
+    @endif
+    @if (!empty($customer_detail))            
+        <input type="hidden" name="cus_character" id="cus_character" value="{{ $customer_detail['character'] }}" />
+        <input type="hidden" name="cus_name" id="cus_name" value="{{ $customer_detail['name'] }}" />
+        <input type="hidden" name="cus_age" id="cus_age" value="{{ $customer_detail['age'] }}" />
+    @endif
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="{{asset('lib/zurich2.0/js/scripts.min.js')}}"></script>

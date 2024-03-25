@@ -4,11 +4,14 @@ var __webpack_exports__ = {};
   !*** ./resources/js/perfil/perfil.js ***!
   \***************************************/
 $(document).ready(function () {
-  var character = '';
+  var _$$val, _$$val2, _$$val3, _$$val4;
   var selectedImage = '';
-  var name = '';
-  var age = '';
   var external_url = $('#external_url').val();
+  var ref = (_$$val = $('#ref').val()) !== null && _$$val !== void 0 ? _$$val : "";
+  var character = (_$$val2 = $('#cus_character').val()) !== null && _$$val2 !== void 0 ? _$$val2 : "";
+  var name = (_$$val3 = $('#cus_name').val()) !== null && _$$val3 !== void 0 ? _$$val3 : "";
+  var age = (_$$val4 = $('#cus_age').val()) !== null && _$$val4 !== void 0 ? _$$val4 : "";
+  console.log('character,name,age', character, name, age);
   $.validator.setDefaults({
     debug: true,
     onsubmit: false,
@@ -29,14 +32,6 @@ $(document).ready(function () {
       $(element).parent('.textfield').removeClass('has-error');
     }
   });
-  var url = new URL(window.location.href);
-  // Get the 'GET' parameters
-  var params = new URLSearchParams(url.search);
-  // Retrieve specific parameter values
-  character = params.get('character');
-  name = params.get('name');
-  age = params.get('age');
-  console.log('character,name,age', character, name, age);
   var character_image_group_0 = ["https://z-eval.s3.amazonaws.com/pers/hombre+a.png", "https://z-eval.s3.amazonaws.com/pers/Mujer+a.png", "https://z-eval.s3.amazonaws.com/pers/Mujer+a.png"];
   if (!!character && !!name && !!age) {
     $('#page_7').removeClass('d-none');
@@ -48,6 +43,7 @@ $(document).ready(function () {
     $('#page_7 .selected-image').attr('src', selectedImage);
     $('#download_result_modal input[name=user_first_name]').val(name);
     $('#send_email_modal input[name=user_first_name]').val(name);
+    $('#to_page_15').addClass('d-none');
   } else {
     $("#page_0").removeClass('d-none');
   }
@@ -82,6 +78,9 @@ $(document).ready(function () {
     if (!name1) {
       $('#name').parent().addClass('has-error');
       return $('#page_1 .error').text('Por favor completá tus datos');
+    }
+    if (name1.length > 35) {
+      return $('#page_1 .error').text('introduzca menos de 35 caracteres');
     }
     $('#name').parent().removeClass('has-error');
     if (!age1) {
@@ -374,7 +373,7 @@ $(document).ready(function () {
     });
   });
   $('#to_page_15').click(function () {
-    window.open("https://".concat(external_url, "?character=").concat(character, "&name=").concat(name, "&age=").concat(age));
+    window.open("https://".concat(external_url, "?character=").concat(character, "&name=").concat(name, "&age=").concat(age, "&ref=").concat(ref));
   });
   $('.area_code').on('focusin', function () {
     $(this).mask("0 0000");

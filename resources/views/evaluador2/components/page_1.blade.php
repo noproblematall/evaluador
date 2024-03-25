@@ -4,16 +4,22 @@
         <div> &nbsp; </div>
         <img src="https://movilidadz.s3.amazonaws.com/Zurich+Top+Logo+Cot.png" height="25" alt="logo">
     </div>
-    <!-- <div class='card bg-blue d-flex justify-content-center align-items-center flex-row p-3'>
-        <img class='p-1 pe-3' src='https://z-eval.s3.amazonaws.com/misc/megaphone.png' alt='Megaphone' height='90' />
-        <div class='text-white ps-1'>
-            <p class='plan'>¿Querés saber cuál es el plan que se adapta mejor a tus necesidades?</p>
-            <p class='info w-100 px-3 py-2 text-center'>Completá esta información</p>
+    @if (!empty($broker_detail))
+        <div class="broker-info-section row px-0 py-2 mb-4">
+            <div class="col-4 text-center">
+                <img src="{{ $broker_detail['broker_image'] }}" alt="broker image" width="90" />
+            </div>
+            <div class="col-8 text-center">
+                <span class="agency-name">{{ $broker_detail['agency_name'] }}</span>
+                <h5 class="broker-name">{{ $broker_detail['broker_name'] }}</h5>
+                <p class="broker-legend">{{ $broker_detail['broker_legend'] }}</p>
+            </div>
         </div>
-    </div> -->
+    @endif
+
     <div class='d-flex  align-items-center'>
         <img src='https://z-eval.s3.amazonaws.com/misc/select.png' alt='img' width='18' />
-        <p class='color-blue px-2'>Elegí tu personaje</p>
+        <p class='color-blue px-2'>Elegí un personaje</p>
     </div>
     <div class='card mt-2'>
         <div class='character-selector  d-flex justify-content-around align-items-center'>

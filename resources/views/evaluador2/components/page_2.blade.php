@@ -1,11 +1,33 @@
 <!-- <section id="page_1" class="page-content animate__animated animate__fadeIn d-none"> -->
 <section id="page_2" class="page-content animate__animated animate__fadeIn d-none">
-    <div class='d-flex justify-content-between align-items-center mb-4'>
+    <div class='d-flex justify-content-between align-items-center mb-3'>
         <p class='prev_link mt-2 mb-1' id='prev_page_1'>
             <span class="icon icon--arrow-long-left_24"></span>
             Regresar a la página anterior
         </p>
         <img src="https://movilidadz.s3.amazonaws.com/Zurich+Top+Logo+Cot.png" height="25" alt="logo">
+    </div>
+    <div class="dots pb-2 text-center wizard">
+        <div class="four-dots text-center d-none steps clearfix">
+            <ul role="tablist">
+                <li role="tab" aria-disabled="false" class="dot-page-2 first current checked" aria-selected="true">
+                    <a href="javascript:;">
+                    </a>
+                </li>
+                <li role="tab" aria-disabled="false" class="dot-page-3 real">
+                    <a href="javascript:;">
+                    </a>
+                </li>
+                <li role="tab" aria-disabled="false" class="dot-page-4 real">
+                    <a href="javascript:;">
+                    </a>
+                </li>
+                <li role="tab" aria-disabled="false" class="dot-page-5 last real">
+                    <a href="javascript:;">
+                    </a>
+                </li>
+            </ul>
+        </div>
     </div>
     <div class='d-flex  align-items-center'>
         <img src='https://z-eval.s3.amazonaws.com/misc/people.png' alt='img' width='18' />
@@ -65,11 +87,9 @@
                 <div class='d-flex justify-content-center align-items-center'>
                     <input type='hidden' name='bebes' value='0' id='bebes' />
                     <div class='bebes minus-btn d-inline-block'>
-                        <span class="icon icon--minus_24"></span>
                     </div>
                     <span class='bebes item-value'>0</span>
                     <div class='bebes plus-btn d-inline-block'>
-                        <span class="icon icon--plus_24"></span>
                     </div>
                 </div>
             </div>
@@ -81,11 +101,9 @@
                 <div class='d-flex justify-content-center align-items-center'>
                     <input type='hidden' name='ninos' value='0' id='ninos' />
                     <div class='ninos minus-btn d-inline-block'>
-                        <span class="icon icon--minus_24"></span>
                     </div>
                     <span class='ninos item-value'>0</span>
                     <div class='ninos plus-btn d-inline-block'>
-                        <span class="icon icon--plus_24"></span>
                     </div>
                 </div>
             </div>
@@ -97,15 +115,13 @@
                 <div class='d-flex justify-content-center align-items-center'>
                     <input type='hidden' name='jovenes' value='0' id='jovenes' />
                     <div class='jovenes minus-btn d-inline-block'>
-                        <span class="icon icon--minus_24"></span>
                     </div>
                     <span class='jovenes item-value'>0</span>
                     <div class='jovenes plus-btn d-inline-block'>
-                        <span class="icon icon--plus_24"></span>
                     </div>
                 </div>
             </div>
-            <div data-item='adultos'  class='item adultos d-flex justify-content-between align-items-center'>
+            <div data-item='adultos'  class='item adultos d-flex justify-content-between align-items-center mt-1'>
                 <div>
                     <div class='item-title'>Adultos</div>
                     <p class='item-description'>26 o más años</p>
@@ -113,11 +129,9 @@
                 <div class='d-flex justify-content-center align-items-center'>
                     <input type='hidden' name='adultos' value='0' id='adultos' />
                     <div class='adultos minus-btn d-inline-block'>
-                        <span class="icon icon--minus_24"></span>
                     </div>
                     <span class='adultos_value item-value'>0</span>
                     <div class='adultos plus-btn d-inline-block'>
-                        <span class="icon icon--plus_24"></span>
                     </div>
                 </div>
             </div>

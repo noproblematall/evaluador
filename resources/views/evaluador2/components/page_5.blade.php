@@ -1,11 +1,33 @@
 <!-- <section id="page_1" class="page-content animate__animated animate__fadeIn d-none"> -->
 <section id="page_5" class="page-content animate__animated animate__fadeIn d-none">
-    <div class='d-flex justify-content-between align-items-center mb-4'>
+    <div class='d-flex justify-content-between align-items-center mb-3'>
         <p class='prev_link mt-2 mb-1' id='prev_page_4'>
             <span class="icon icon--arrow-long-left_24"></span>
             Regresar a la página anterior
         </p>
         <img src="https://movilidadz.s3.amazonaws.com/Zurich+Top+Logo+Cot.png" height="25" alt="logo">
+    </div>
+    <div class="dots pb-2 text-center wizard">
+        <div class="four-dots text-center d-none steps clearfix">
+            <ul role="tablist">
+                <li role="tab" aria-disabled="false" class="dot-page-2 first current checked" aria-selected="true">
+                    <a href="javascript:;">
+                    </a>
+                </li>
+                <li role="tab" aria-disabled="false" class="dot-page-3 real">
+                    <a href="javascript:;">
+                    </a>
+                </li>
+                <li role="tab" aria-disabled="false" class="dot-page-4 real">
+                    <a href="javascript:;">
+                    </a>
+                </li>
+                <li role="tab" aria-disabled="false" class="dot-page-5 last real">
+                    <a href="javascript:;">
+                    </a>
+                </li>
+            </ul>
+        </div>
     </div>
     <div class='d-flex  align-items-center'>
         <img src='https://z-eval.s3.amazonaws.com/misc/path.png' alt='img' width='18' />
@@ -23,39 +45,39 @@
             </div>
         </div>
         <hr />
-        <div class='items-container mt-2 row'>
+        <div class='items-container mt-2 row mx-0'>
             <p class='plan-description text-center mt-1 mb-3'>¿Qué te gustaría planificar para tu futuro? Podés elegir varias opciones</p>
-            <div class='col-6 item-btn mt-2 mb-1 px-2'>
+            <div class='col-6 item-btn mt-2 mb-2 px-2 ps-0'>
                 <input type='checkbox' name='plan' id='plan-0' value='0'>
                 <label for='plan-0' class='item-label d-flex justify-content-center align-items-center px-1'>
                     <p class='text-center'>Que mi dinero rinda</p>
                 </label>
             </div>
-            <div class='col-6 item-btn mt-2 mb-1 px-2'>
+            <div class='col-6 item-btn mt-2 mb-2 px-2 pe-0'>
                 <input type='checkbox' name='plan' id='plan-1' value='1'>
                 <label for='plan-1' class='item-label d-flex justify-content-center align-items-center px-1'>
                     <p class='text-center'>Buena educación para mis hijos</p>
                 </label>
             </div>
-            <div class='col-6 item-btn mt-2 mb-1 px-2'>
+            <div class='col-6 item-btn mt-2 mb-2 px-2 ps-0'>
                 <input type='checkbox' name='plan' id='plan-2' value='2'>
                 <label for='plan-2' class='item-label d-flex justify-content-center align-items-center px-1'>
                     <p class='text-center'>Conservar mi nivel de vida en el retiro</p>
                 </label>
             </div>
-            <div class='col-6 item-btn mt-2 mb-1 px-2'>
+            <div class='col-6 item-btn mt-2 mb-2 px-2 pe-0'>
                 <input type='checkbox' name='plan' id='plan-3' value='3'>
                 <label for='plan-3' class='item-label d-flex justify-content-center align-items-center px-1'>
                     <p class='text-center'>La continuidad de mi empresa</p>
                 </label>
             </div>
-            <div class='col-6 item-btn mt-2 mb-1 px-2'>
+            <div class='col-6 item-btn mt-2 mb-2 px-2 ps-0'>
                 <input type='checkbox' name='plan' id='plan-4' value='4'>
                 <label for='plan-4' class='item-label d-flex justify-content-center align-items-center px-1'>
                     <p class='text-center'>Tener un fondo para emergencias</p>
                 </label>
             </div>
-            <div class='col-6 item-btn mt-2 mb-1 px-2'>
+            <div class='col-6 item-btn mt-2 mb-2 px-2 pe-0'>
                 <input type='checkbox' name='plan' id='plan-5' value='5'>
                 <label for='plan-5' class='item-label d-flex justify-content-center align-items-center px-1'>
                     <p class='text-center'>No tengo planes</p>

@@ -1,10 +1,12 @@
 $(document).ready(function () {
-    let character = '';
     let selectedImage = '';
-    let name = '';
-    let age = '';
     var external_url = $('#external_url').val();
-
+    var ref = $('#ref').val() ?? "";
+    var character = $('#cus_character').val() ?? "";
+    var name = $('#cus_name').val() ?? "";
+    var age = $('#cus_age').val() ?? "";
+    console.log('character,name,age', character, name, age);
+    
     $.validator.setDefaults({
         debug: true,
         onsubmit: false,
@@ -25,17 +27,7 @@ $(document).ready(function () {
             $(element).parent('.textfield').removeClass('has-error');
         },
     });
-    
-    const url = new URL(window.location.href);
-    // Get the 'GET' parameters
-    const params = new URLSearchParams(url.search);    
-    // Retrieve specific parameter values
-    character = params.get('character');
-    name = params.get('name');
-    age = params.get('age');
-
-    console.log('character,name,age', character, name, age);
-    
+        
     var character_image_group_0 = [
         "https://z-eval.s3.amazonaws.com/pers/hombre+a.png",
         "https://z-eval.s3.amazonaws.com/pers/Mujer+a.png",
@@ -54,6 +46,8 @@ $(document).ready(function () {
         
         $('#download_result_modal input[name=user_first_name]').val(name);
         $('#send_email_modal input[name=user_first_name]').val(name);
+        
+        $('#to_page_7').addClass('d-none');
     } else {        
         $("#page_0").removeClass('d-none');
     }
@@ -84,6 +78,9 @@ $(document).ready(function () {
             $('#name').parent().addClass('has-error');
             return $('#page_1 .error').text('Por favor completá tus datos')
         }
+        if (name1.length > 35) {
+            return $('#page_1 .error').text('introduzca menos de 35 caracteres')
+        }
         $('#name').parent().removeClass('has-error');
         if (!age1) {
             $('#age').parent().addClass('has-error');
@@ -99,6 +96,8 @@ $(document).ready(function () {
         selectedImage = $('#page_1 input[type="radio"]:checked').parent().siblings().filter('label').find('img.activated').attr('src');
         $('#page_1').addClass('d-none');
         $('#page_2').removeClass('d-none');
+        //add four dots step.
+        $('.four-dots').removeClass('d-none');
         console.log('selected Image', selectedImage)
         window.scrollTo({ top: 0, behavior: 'smooth' });
     })
@@ -173,6 +172,8 @@ $(document).ready(function () {
     $('#prev_page_1').click(function () {
         $('#page_1').removeClass('d-none');
         $('#page_2').addClass('d-none');
+        //hide four dots step
+        $('.four-dots').addClass('d-none');
     });
     $('#to_page_3').click(function () {
         $('#page_2').addClass('d-none');
@@ -185,12 +186,17 @@ $(document).ready(function () {
         else if (character == 'mujer') selectedImage1 = character_image_group_1[1];
         else selectedImage1 = character_image_group_1[2];
         $('#page_3 .selected-image').attr('src', selectedImage1);
+        //add step 2
+        $('.dot-page-3').addClass('checked');
         console.log('member', member, selectedImage)
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     })
     /******** page 3  */
     $('#prev_page_2').click(function () {
         $('#page_2').removeClass('d-none');
         $('#page_3').addClass('d-none');
+        //remove step 3
+        $('.dot-page-3').removeClass('checked');
     });
     let job = '';
     $('#to_page_4').click(function () {
@@ -209,12 +215,17 @@ $(document).ready(function () {
         $('#page_4 .selected-image').attr('src', selectedImage1);
         $('#page_4').removeClass('d-none');
         $('#page_3').addClass('d-none');
+        //add step 4
+        $('.dot-page-4').addClass('checked');
         console.log('job', job);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     })
     /******** page 4  */
     $('#prev_page_3').click(function () {
         $('#page_3').removeClass('d-none');
         $('#page_4').addClass('d-none');
+        //add step 4
+        $('.dot-page-4').removeClass('checked');
     });
     $('#page_4 input[type="checkbox"]').change(function () {
         let id = $(this).attr('id');
@@ -267,11 +278,16 @@ $(document).ready(function () {
 
         $('#page_5').removeClass('d-none');
         $('#page_4').addClass('d-none');
+        //add step 5
+        $('.dot-page-5').addClass('checked');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     })
     /******** page 5  */
     $('#prev_page_4').click(function () {
         $('#page_4').removeClass('d-none');
         $('#page_5').addClass('d-none');
+        //remove step 5
+        $('.dot-page-5').removeClass('checked');
     });
     $('#page_5 input[type="checkbox"]').change(function () {
         let id = $(this).attr('id');
@@ -409,6 +425,8 @@ $(document).ready(function () {
         setTimeout(() => {
             $('#page_6').removeClass('d-none');
         }, 100);
+        //remove four dots step
+        $('.four-dots').addClass('d-none');
     })
     $('#page_6 #to_whatsapp').click(function () {
         $('#send_email_modal').modal({ backdrop: 'static' });
@@ -462,11 +480,20 @@ $(document).ready(function () {
     $('#prev_page_5').click(function () {
         $('#page_5').removeClass('d-none');
         $('#page_6').addClass('d-none');
+        //add four dots step
+        $('.four-dots').removeClass('d-none');
     });
     $('#page_6 .flip_card').click(function () {
         $(this).toggleClass('flipped')
         $('#page_6 .selected-image ').toggleClass('opacity-0');
         $('#page_6 .flip_card img:first-child').toggleClass('opacity-0');
+        $('#page_6 .card-backdrop').toggleClass('w-100 h-100');
+    });
+    $('#page_6 .card-backdrop').click(function () {
+        $('#page_6 .flip_card').removeClass('flipped')
+        $('#page_6 .selected-image ').removeClass('opacity-0');
+        $('#page_6 .flip_card img:first-child').removeClass('opacity-0');
+        $('#page_6 .card-backdrop').removeClass('w-100 h-100');
     });
     // $('#page_6 .flip_card').click(function() {
     //     $('#plan_card_modal').modal({ backdrop: 'static' });
@@ -475,7 +502,7 @@ $(document).ready(function () {
     //     $('#plan_card_modal').modal('hide');
     // });
     $('#to_page_7').click(function () {
-        window.open(`https://${external_url}?character=${character}&name=${name}&age=${age}`);
+        window.open(`https://${external_url}?character=${character}&name=${name}&age=${age}&ref=${ref}`);
     });
     
     $('.area_code').on('focusin', function () {

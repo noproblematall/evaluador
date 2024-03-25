@@ -7,6 +7,18 @@
         </p>
         <img src="https://movilidadz.s3.amazonaws.com/Zurich+Top+Logo+Cot.png" height="25" alt="logo">
     </div>
+    @if (!empty($broker_detail))
+        <div class="broker-info-section row px-0 py-2 mb-4">
+            <div class="col-4 text-center">
+                <img src="{{ $broker_detail['broker_image'] }}" alt="broker image" width="90" />
+            </div>
+            <div class="col-8 text-center">
+                <span class="agency-name">{{ $broker_detail['agency_name'] }}</span>
+                <h5 class="broker-name">{{ $broker_detail['broker_name'] }}</h5>
+                <p class="broker-legend">{{ $broker_detail['broker_legend'] }}</p>
+            </div>
+        </div>
+    @endif
     <div class='d-flex  align-items-center'>
         <img src='https://z-eval.s3.amazonaws.com/misc/investment+icon.png' alt='img' width='18' />
         <p class='color-blue px-2 page-title'>Conocer mi perfil de inversor: resultados</p>
@@ -51,5 +63,12 @@
             </button>
             <button class='continue_btn mx-auto my-2' id='to_page_15'>Evaluar mis necesidades financieras</button>
         </div>
+    </div>
+    <p class="footer-legend px-2">
+        Consultá los términos y condiciones del producto ingresando a
+        <a href="https://www.zurich.com.ar/es-ar/personas/vida" target="_blank">https://www.zurich.com.ar/es-ar/personas/vida</a>
+    </p>
+    <div class="text-center">
+        <img class="col-8" src="https://z-eval.s3.amazonaws.com/Pie+SSN+evaluador.png" data-xblocker="passed" style="visibility: visible;">
     </div>
 </section>
